@@ -53,7 +53,6 @@ Partial Class frmPecas
         '
         'btnImpirmir
         '
-        Me.btnImpirmir.Image = Global.Oficina_Mecânica.My.Resources.Resources.imageres_50
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnImpirmir.Location = New System.Drawing.Point(676, 501)
         Me.btnImpirmir.Name = "btnImpirmir"
@@ -80,8 +79,6 @@ Partial Class frmPecas
         Me.lblValor.Text = "Valor"
         '
         'btnSair
-        '
-        Me.btnSair.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_15
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSair.Location = New System.Drawing.Point(676, 447)
         Me.btnSair.Name = "btnSair"
@@ -93,7 +90,6 @@ Partial Class frmPecas
         '
         'btnExcluir
         '
-        Me.btnExcluir.Image = Global.Oficina_Mecânica.My.Resources.Resources.imageres_54
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluir.Location = New System.Drawing.Point(676, 329)
         Me.btnExcluir.Name = "btnExcluir"
@@ -105,7 +101,6 @@ Partial Class frmPecas
         '
         'btnConsultar
         '
-        Me.btnConsultar.Image = Global.Oficina_Mecânica.My.Resources.Resources.shell32_023
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConsultar.Location = New System.Drawing.Point(676, 388)
         Me.btnConsultar.Name = "btnConsultar"
@@ -151,7 +146,6 @@ Partial Class frmPecas
         '
         'btnNovo
         '
-        Me.btnNovo.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_13
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNovo.Location = New System.Drawing.Point(676, 171)
         Me.btnNovo.Name = "btnNovo"
@@ -163,7 +157,6 @@ Partial Class frmPecas
         '
         'btnAlterar
         '
-        Me.btnAlterar.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_19
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAlterar.Location = New System.Drawing.Point(676, 274)
         Me.btnAlterar.Name = "btnAlterar"
@@ -175,7 +168,6 @@ Partial Class frmPecas
         '
         'btnSalvar
         '
-        Me.btnSalvar.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_18
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalvar.Location = New System.Drawing.Point(676, 222)
         Me.btnSalvar.Name = "btnSalvar"

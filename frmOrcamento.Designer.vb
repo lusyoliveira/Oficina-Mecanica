@@ -199,7 +199,6 @@ Partial Class frmOrcamento
         '
         'btnAprovar
         '
-        Me.btnAprovar.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_17
         Me.btnAprovar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAprovar.Location = New System.Drawing.Point(774, 136)
         Me.btnAprovar.Name = "btnAprovar"
@@ -261,7 +260,6 @@ Partial Class frmOrcamento
         '
         'btnExcluirservico
         '
-        Me.btnExcluirservico.Image = Global.Oficina_Mecânica.My.Resources.Resources.imageres_54
         Me.btnExcluirservico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluirservico.Location = New System.Drawing.Point(536, 27)
         Me.btnExcluirservico.Name = "btnExcluirservico"
@@ -273,7 +271,6 @@ Partial Class frmOrcamento
         '
         'btnOkservico
         '
-        Me.btnOkservico.Image = Global.Oficina_Mecânica.My.Resources.Resources.imageres_23
         Me.btnOkservico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnOkservico.Location = New System.Drawing.Point(438, 27)
         Me.btnOkservico.Name = "btnOkservico"
@@ -343,7 +340,6 @@ Partial Class frmOrcamento
         '
         'btnExcluirpeca
         '
-        Me.btnExcluirpeca.Image = Global.Oficina_Mecânica.My.Resources.Resources.imageres_54
         Me.btnExcluirpeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluirpeca.Location = New System.Drawing.Point(536, 229)
         Me.btnExcluirpeca.Name = "btnExcluirpeca"
@@ -355,7 +351,6 @@ Partial Class frmOrcamento
         '
         'btnOkpeca
         '
-        Me.btnOkpeca.Image = Global.Oficina_Mecânica.My.Resources.Resources.imageres_23
         Me.btnOkpeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnOkpeca.Location = New System.Drawing.Point(438, 229)
         Me.btnOkpeca.Name = "btnOkpeca"
@@ -543,7 +538,6 @@ Partial Class frmOrcamento
         '
         'btnNovo
         '
-        Me.btnNovo.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_13
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNovo.Location = New System.Drawing.Point(774, 25)
         Me.btnNovo.Name = "btnNovo"
@@ -555,7 +549,6 @@ Partial Class frmOrcamento
         '
         'btnSalvar
         '
-        Me.btnSalvar.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_18
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalvar.Location = New System.Drawing.Point(774, 76)
         Me.btnSalvar.Name = "btnSalvar"
@@ -567,7 +560,6 @@ Partial Class frmOrcamento
         '
         'btnConsultar
         '
-        Me.btnConsultar.Image = Global.Oficina_Mecânica.My.Resources.Resources.shell32_023
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConsultar.Location = New System.Drawing.Point(774, 193)
         Me.btnConsultar.Name = "btnConsultar"
@@ -579,7 +571,6 @@ Partial Class frmOrcamento
         '
         'btnSair
         '
-        Me.btnSair.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_15
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSair.Location = New System.Drawing.Point(774, 251)
         Me.btnSair.Name = "btnSair"
@@ -613,7 +604,6 @@ Partial Class frmOrcamento
         '
         'btnExcluir
         '
-        Me.btnExcluir.Image = Global.Oficina_Mecânica.My.Resources.Resources.imageres_54
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluir.Location = New System.Drawing.Point(774, 300)
         Me.btnExcluir.Name = "btnExcluir"

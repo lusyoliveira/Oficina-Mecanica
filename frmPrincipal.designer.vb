@@ -66,7 +66,6 @@ Partial Class frmPrincipal
         'InícioToolStripMenuItem
         '
         Me.InícioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CriarUsuárioToolStripMenuItem, Me.ConfiguraçõesToolStripMenuItem})
-        Me.InícioToolStripMenuItem.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_09
         Me.InícioToolStripMenuItem.Name = "InícioToolStripMenuItem"
         Me.InícioToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.InícioToolStripMenuItem.Text = "Início"
@@ -74,7 +73,6 @@ Partial Class frmPrincipal
         'CriarUsuárioToolStripMenuItem
         '
         Me.CriarUsuárioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NovoUsuárioToolStripMenuItem, Me.PermissãoToolStripMenuItem})
-        Me.CriarUsuárioToolStripMenuItem.Image = Global.Oficina_Mecânica.My.Resources.Resources.ntshrui_07
         Me.CriarUsuárioToolStripMenuItem.Name = "CriarUsuárioToolStripMenuItem"
         Me.CriarUsuárioToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.CriarUsuárioToolStripMenuItem.Text = "Criar Usuário"
@@ -100,28 +98,24 @@ Partial Class frmPrincipal
         'CadastrosToolStripMenuItem
         '
         Me.CadastrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.FuncináriosToolStripMenuItem, Me.PeçasToolStripMenuItem, Me.VeículosToolStripMenuItem})
-        Me.CadastrosToolStripMenuItem.Image = Global.Oficina_Mecânica.My.Resources.Resources.ntshrui_08
         Me.CadastrosToolStripMenuItem.Name = "CadastrosToolStripMenuItem"
         Me.CadastrosToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
         Me.CadastrosToolStripMenuItem.Text = "Cadastros"
         '
         'ClientesToolStripMenuItem
         '
-        Me.ClientesToolStripMenuItem.Image = Global.Oficina_Mecânica.My.Resources.Resources.ntshrui_06
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'FuncináriosToolStripMenuItem
         '
-        Me.FuncináriosToolStripMenuItem.Image = Global.Oficina_Mecânica.My.Resources.Resources.p2phost_1
         Me.FuncináriosToolStripMenuItem.Name = "FuncináriosToolStripMenuItem"
         Me.FuncináriosToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.FuncináriosToolStripMenuItem.Text = "Funcionários"
         '
         'PeçasToolStripMenuItem
         '
-        Me.PeçasToolStripMenuItem.Image = Global.Oficina_Mecânica.My.Resources.Resources.mstsc
         Me.PeçasToolStripMenuItem.Name = "PeçasToolStripMenuItem"
         Me.PeçasToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.PeçasToolStripMenuItem.Text = "Peças"
@@ -135,14 +129,12 @@ Partial Class frmPrincipal
         'ServiçosToolStripMenuItem
         '
         Me.ServiçosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FToolStripMenuItem})
-        Me.ServiçosToolStripMenuItem.Image = Global.Oficina_Mecânica.My.Resources.Resources.calc
         Me.ServiçosToolStripMenuItem.Name = "ServiçosToolStripMenuItem"
         Me.ServiçosToolStripMenuItem.Size = New System.Drawing.Size(78, 20)
         Me.ServiçosToolStripMenuItem.Text = "Serviços"
         '
         'FToolStripMenuItem
         '
-        Me.FToolStripMenuItem.Image = Global.Oficina_Mecânica.My.Resources.Resources.notepad
         Me.FToolStripMenuItem.Name = "FToolStripMenuItem"
         Me.FToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.FToolStripMenuItem.Text = "Fazer Orçamento"

@@ -82,7 +82,6 @@ Partial Class frmLogin
         '
         'btnSair
         '
-        Me.btnSair.Image = Global.Oficina_Mecânica.My.Resources.Resources.mobsync_15
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSair.Location = New System.Drawing.Point(344, 157)
         Me.btnSair.Name = "btnSair"
@@ -94,7 +93,6 @@ Partial Class frmLogin
         '
         'btnEntrar
         '
-        Me.btnEntrar.Image = Global.Oficina_Mecânica.My.Resources.Resources.imageres_26
         Me.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEntrar.Location = New System.Drawing.Point(208, 157)
         Me.btnEntrar.Name = "btnEntrar"
