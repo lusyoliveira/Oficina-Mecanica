@@ -1,36 +1,75 @@
 ﻿Imports System.IO
+Imports System.ServiceProcess
 Module mdlconexao
     Dim x As Integer
     Private aConexao As New ADODB.Connection
     Private aconexao2 As New ADODB.Connection
 
-    Dim server, acess_db, user, acess_pwd
+    Dim server, database, user, password
 
-    Public Function OpenRecordset(ByVal sqlquery As String)
+    'Public Function OpenRecordset(ByVal sqlquery As String)
+    '    Dim aResultado As New ADODB.Recordset
+
+    '    database = "dbOficina"
+    '    user = "userOficina"
+    '    password = "1234"
+    '    server = GetNomeSQLServer()
+
+    '    If aConexao.State = 0 Then
+    '        aConexao.ConnectionString = $"Data Source={server};Initial Catalog={database};User ID={user}; Password={password};Integrated Security=True"
+    '        aConexao.ConnectionTimeout = 30
+    '        aConexao.CommandTimeout = 180
+    '        aConexao.Open()
+    '    End If
+
+    '    aResultado.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+    '    aResultado.Open(sqlquery, aConexao, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
+    '    OpenRecordset = aResultado
+    '    aResultado = Nothing
+
+    'End Function
+    Public Function OpenRecordset(ByVal sqlquery As String) As ADODB.Recordset
         Dim aResultado As New ADODB.Recordset
+        Dim aConexao As New ADODB.Connection
 
-        database = "dbOficina"
-        user = "userOficina"
-        password = "1234"
-        server = "(local)"
+        Dim database As String = "dbOficina"
+        Dim user As String = "userOficina"
+        Dim password As String = "1234"
+        Dim server As String = GetNomeSQLServer()
 
-        If aConexao.State = 0 Then
-            aConexao.ConnectionString = "driver={sql server};" & _
-                                            "server=" + server + ";" & _
-                                            "Database=" + database + ";" & _
-                                            "PWD=" + password + ";" & _
-                                            "UID=" + user + ";"
-            aConexao.ConnectionTimeout = 30
-            aConexao.CommandTimeout = 180
-            aConexao.Open()
-        End If
+        Try
+            If aConexao.State = 0 Then
+                aConexao.ConnectionString = $"Data Source={server};Initial Catalog={database};User ID={user};Password={password}"
+                aConexao.ConnectionTimeout = 30
+                aConexao.CommandTimeout = 180
+                aConexao.Open()
+            End If
 
-        aResultado.CursorLocation = ADODB.CursorLocationEnum.adUseClient
-        aResultado.Open(sqlquery, aConexao, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
-        OpenRecordset = aResultado
-        aResultado = Nothing
+            If aConexao.State = 1 Then ' Verifica se a conexão está aberta
+                aResultado.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+                aResultado.Open(sqlquery, aConexao, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
+            End If
 
+            Return aResultado
+        Catch ex As Exception
+            Throw New ApplicationException("Erro ao abrir o Recordset: " & ex.Message)
+        Finally
+            ' Certifique-se de liberar recursos em caso de erro
+            If Not aResultado Is Nothing Then
+                If aResultado.State = ADODB.ObjectStateEnum.adStateOpen Then
+                    aResultado.Close()
+                End If
+                aResultado = Nothing
+            End If
+            If Not aConexao Is Nothing Then
+                If aConexao.State = ADODB.ObjectStateEnum.adStateOpen Then
+                    aConexao.Close()
+                End If
+                aConexao = Nothing
+            End If
+        End Try
     End Function
+
     Public Function abrir(ByVal sql As String)
 
         Dim aResultado As New ADODB.Recordset
@@ -58,5 +97,36 @@ Module mdlconexao
         abrir = aResultado
         aResultado = Nothing
 
+    End Function
+
+    ''' <summary>
+    ''' Esta função obtem o nome do servidor SQL Server.
+    ''' </summary>
+    ''' <returns>Retorna o nome do servidor.</returns>
+    Public Function GetNomeSQLServer() As String
+        'Nome do PC local
+        Dim strPCname As String = Environment.MachineName
+        ' nome do serviço do SQL Server Express
+        Dim strInstancia As String = "MSSQL$SQLEXPRESS"
+        Dim strNomeSQLServer As String = String.Empty
+
+        ' Inclua uma referência a : System.ServiceProcess;
+        Dim servicos As ServiceController() = ServiceController.GetServices()
+        ' percorre os serviços 
+        For Each servico As ServiceController In servicos
+            If servico Is Nothing Then
+                Continue For
+            End If
+            Dim strNomeDoServico As String = servico.ServiceName
+            If strNomeDoServico.Contains(strInstancia) Then
+                strNomeSQLServer = strNomeDoServico
+            End If
+        Next
+        Dim IndiceInicio As Integer = strNomeSQLServer.IndexOf("$")
+        If IndiceInicio > -1 Then
+            'strSqlServerName=NomeDoSeuPC\SQLEXPRESS;
+            strNomeSQLServer = strPCname + "\" + strNomeSQLServer.Substring(IndiceInicio + 1)
+        End If
+        Return strNomeSQLServer
     End Function
 End Module
