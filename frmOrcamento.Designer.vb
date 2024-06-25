@@ -19,69 +19,69 @@ Partial Class frmOrcamento
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmOrcamento))
-        Me.gpbOrcamento = New System.Windows.Forms.GroupBox
-        Me.cboFuncionario = New System.Windows.Forms.ComboBox
-        Me.lblFuncionario = New System.Windows.Forms.Label
-        Me.cboClientes = New System.Windows.Forms.ComboBox
-        Me.lblCliente = New System.Windows.Forms.Label
-        Me.txtData = New System.Windows.Forms.TextBox
-        Me.lblData = New System.Windows.Forms.Label
-        Me.cbxAprovado = New System.Windows.Forms.CheckBox
-        Me.txtNumero = New System.Windows.Forms.TextBox
-        Me.lblNumero = New System.Windows.Forms.Label
-        Me.btnImpirmir = New System.Windows.Forms.Button
-        Me.btnAprovar = New System.Windows.Forms.Button
-        Me.lblServico = New System.Windows.Forms.Label
-        Me.cboServico = New System.Windows.Forms.ComboBox
-        Me.lblTotalservico = New System.Windows.Forms.Label
-        Me.txtTotalservico = New System.Windows.Forms.TextBox
-        Me.gpbServico = New System.Windows.Forms.GroupBox
-        Me.btnExcluirservico = New System.Windows.Forms.Button
-        Me.btnOkservico = New System.Windows.Forms.Button
-        Me.Gradeservico = New System.Windows.Forms.DataGridView
-        Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.data = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.funcionario = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.servico = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.valorservico = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.gpbPecas = New System.Windows.Forms.GroupBox
-        Me.btnExcluirpeca = New System.Windows.Forms.Button
-        Me.btnOkpeca = New System.Windows.Forms.Button
-        Me.Gradepeca = New System.Windows.Forms.DataGridView
-        Me.nrorcamento1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.peca = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.valorpeca = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.quantidade = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.totalpeca = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.txtTotalpeca = New System.Windows.Forms.TextBox
-        Me.txtValorpeca = New System.Windows.Forms.TextBox
-        Me.lblPeca = New System.Windows.Forms.Label
-        Me.txtQuantidadepeca = New System.Windows.Forms.TextBox
-        Me.lblTotalpeca = New System.Windows.Forms.Label
-        Me.lblQuantidadepeca = New System.Windows.Forms.Label
-        Me.lblValorpeca = New System.Windows.Forms.Label
-        Me.cboPecas = New System.Windows.Forms.ComboBox
-        Me.txtDesconto = New System.Windows.Forms.TextBox
-        Me.lblDesconto = New System.Windows.Forms.Label
-        Me.cbxDesconto = New System.Windows.Forms.CheckBox
-        Me.txtValortotalservico = New System.Windows.Forms.TextBox
-        Me.lblValortotalservico = New System.Windows.Forms.Label
-        Me.txtValortotalpeca = New System.Windows.Forms.TextBox
-        Me.lblValortotalpeca = New System.Windows.Forms.Label
-        Me.txtTotalgeral = New System.Windows.Forms.TextBox
-        Me.lblTotalgeral = New System.Windows.Forms.Label
-        Me.btnNovo = New System.Windows.Forms.Button
-        Me.btnSalvar = New System.Windows.Forms.Button
-        Me.btnConsultar = New System.Windows.Forms.Button
-        Me.btnSair = New System.Windows.Forms.Button
+        Me.gpbOrcamento = New System.Windows.Forms.GroupBox()
+        Me.cboFuncionario = New System.Windows.Forms.ComboBox()
+        Me.lblFuncionario = New System.Windows.Forms.Label()
+        Me.cboClientes = New System.Windows.Forms.ComboBox()
+        Me.lblCliente = New System.Windows.Forms.Label()
+        Me.txtData = New System.Windows.Forms.TextBox()
+        Me.lblData = New System.Windows.Forms.Label()
+        Me.cbxAprovado = New System.Windows.Forms.CheckBox()
+        Me.txtNumero = New System.Windows.Forms.TextBox()
+        Me.lblNumero = New System.Windows.Forms.Label()
+        Me.btnImpirmir = New System.Windows.Forms.Button()
+        Me.btnAprovar = New System.Windows.Forms.Button()
+        Me.lblServico = New System.Windows.Forms.Label()
+        Me.cboServico = New System.Windows.Forms.ComboBox()
+        Me.lblTotalservico = New System.Windows.Forms.Label()
+        Me.txtTotalservico = New System.Windows.Forms.TextBox()
+        Me.gpbServico = New System.Windows.Forms.GroupBox()
+        Me.btnExcluirservico = New System.Windows.Forms.Button()
+        Me.btnOkservico = New System.Windows.Forms.Button()
+        Me.Gradeservico = New System.Windows.Forms.DataGridView()
+        Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.data = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.funcionario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.servico = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.valorservico = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.gpbPecas = New System.Windows.Forms.GroupBox()
+        Me.btnExcluirpeca = New System.Windows.Forms.Button()
+        Me.btnOkpeca = New System.Windows.Forms.Button()
+        Me.Gradepeca = New System.Windows.Forms.DataGridView()
+        Me.nrorcamento1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.peca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.valorpeca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.quantidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.totalpeca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtTotalpeca = New System.Windows.Forms.TextBox()
+        Me.txtValorpeca = New System.Windows.Forms.TextBox()
+        Me.lblPeca = New System.Windows.Forms.Label()
+        Me.txtQuantidadepeca = New System.Windows.Forms.TextBox()
+        Me.lblTotalpeca = New System.Windows.Forms.Label()
+        Me.lblQuantidadepeca = New System.Windows.Forms.Label()
+        Me.lblValorpeca = New System.Windows.Forms.Label()
+        Me.cboPecas = New System.Windows.Forms.ComboBox()
+        Me.txtDesconto = New System.Windows.Forms.TextBox()
+        Me.lblDesconto = New System.Windows.Forms.Label()
+        Me.cbxDesconto = New System.Windows.Forms.CheckBox()
+        Me.txtValortotalservico = New System.Windows.Forms.TextBox()
+        Me.lblValortotalservico = New System.Windows.Forms.Label()
+        Me.txtValortotalpeca = New System.Windows.Forms.TextBox()
+        Me.lblValortotalpeca = New System.Windows.Forms.Label()
+        Me.txtTotalgeral = New System.Windows.Forms.TextBox()
+        Me.lblTotalgeral = New System.Windows.Forms.Label()
+        Me.btnNovo = New System.Windows.Forms.Button()
+        Me.btnSalvar = New System.Windows.Forms.Button()
+        Me.btnConsultar = New System.Windows.Forms.Button()
+        Me.btnSair = New System.Windows.Forms.Button()
         Me.er = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog
-        Me.btnExcluir = New System.Windows.Forms.Button
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.btnExcluir = New System.Windows.Forms.Button()
         Me.gpbOrcamento.SuspendLayout()
         Me.gpbServico.SuspendLayout()
         CType(Me.Gradeservico, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,9 +102,11 @@ Partial Class frmOrcamento
         Me.gpbOrcamento.Controls.Add(Me.txtNumero)
         Me.gpbOrcamento.Controls.Add(Me.lblNumero)
         Me.gpbOrcamento.Controls.Add(Me.btnImpirmir)
-        Me.gpbOrcamento.Location = New System.Drawing.Point(87, 12)
+        Me.gpbOrcamento.Location = New System.Drawing.Point(13, 13)
+        Me.gpbOrcamento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gpbOrcamento.Name = "gpbOrcamento"
-        Me.gpbOrcamento.Size = New System.Drawing.Size(664, 130)
+        Me.gpbOrcamento.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbOrcamento.Size = New System.Drawing.Size(809, 123)
         Me.gpbOrcamento.TabIndex = 21
         Me.gpbOrcamento.TabStop = False
         '
@@ -113,17 +115,19 @@ Partial Class frmOrcamento
         Me.cboFuncionario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboFuncionario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboFuncionario.FormattingEnabled = True
-        Me.cboFuncionario.Location = New System.Drawing.Point(353, 95)
+        Me.cboFuncionario.Location = New System.Drawing.Point(386, 83)
+        Me.cboFuncionario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboFuncionario.Name = "cboFuncionario"
-        Me.cboFuncionario.Size = New System.Drawing.Size(270, 21)
+        Me.cboFuncionario.Size = New System.Drawing.Size(406, 24)
         Me.cboFuncionario.TabIndex = 4
         '
         'lblFuncionario
         '
         Me.lblFuncionario.AutoSize = True
-        Me.lblFuncionario.Location = New System.Drawing.Point(350, 69)
+        Me.lblFuncionario.Location = New System.Drawing.Point(383, 63)
+        Me.lblFuncionario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFuncionario.Name = "lblFuncionario"
-        Me.lblFuncionario.Size = New System.Drawing.Size(62, 13)
+        Me.lblFuncionario.Size = New System.Drawing.Size(77, 16)
         Me.lblFuncionario.TabIndex = 31
         Me.lblFuncionario.Text = "Funcionário"
         '
@@ -132,67 +136,75 @@ Partial Class frmOrcamento
         Me.cboClientes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboClientes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboClientes.FormattingEnabled = True
-        Me.cboClientes.Location = New System.Drawing.Point(38, 95)
+        Me.cboClientes.Location = New System.Drawing.Point(19, 83)
+        Me.cboClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboClientes.Name = "cboClientes"
-        Me.cboClientes.Size = New System.Drawing.Size(270, 21)
+        Me.cboClientes.Size = New System.Drawing.Size(359, 24)
         Me.cboClientes.TabIndex = 3
         '
         'lblCliente
         '
         Me.lblCliente.AutoSize = True
-        Me.lblCliente.Location = New System.Drawing.Point(39, 69)
+        Me.lblCliente.Location = New System.Drawing.Point(16, 63)
+        Me.lblCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCliente.Name = "lblCliente"
-        Me.lblCliente.Size = New System.Drawing.Size(39, 13)
+        Me.lblCliente.Size = New System.Drawing.Size(48, 16)
         Me.lblCliente.TabIndex = 30
         Me.lblCliente.Text = "Cliente"
         '
         'txtData
         '
-        Me.txtData.Location = New System.Drawing.Point(353, 43)
+        Me.txtData.Location = New System.Drawing.Point(120, 38)
+        Me.txtData.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtData.Name = "txtData"
-        Me.txtData.Size = New System.Drawing.Size(71, 20)
+        Me.txtData.Size = New System.Drawing.Size(93, 22)
         Me.txtData.TabIndex = 15
         '
         'lblData
         '
         Me.lblData.AutoSize = True
-        Me.lblData.Location = New System.Drawing.Point(350, 16)
+        Me.lblData.Location = New System.Drawing.Point(117, 18)
+        Me.lblData.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblData.Name = "lblData"
-        Me.lblData.Size = New System.Drawing.Size(30, 13)
+        Me.lblData.Size = New System.Drawing.Size(36, 16)
         Me.lblData.TabIndex = 29
         Me.lblData.Text = "Data"
         '
         'cbxAprovado
         '
         Me.cbxAprovado.AutoSize = True
-        Me.cbxAprovado.Location = New System.Drawing.Point(194, 15)
+        Me.cbxAprovado.Location = New System.Drawing.Point(234, 38)
+        Me.cbxAprovado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbxAprovado.Name = "cbxAprovado"
-        Me.cbxAprovado.Size = New System.Drawing.Size(72, 17)
+        Me.cbxAprovado.Size = New System.Drawing.Size(89, 20)
         Me.cbxAprovado.TabIndex = 1
         Me.cbxAprovado.Text = "Aprovado"
         Me.cbxAprovado.UseVisualStyleBackColor = True
         '
         'txtNumero
         '
-        Me.txtNumero.Location = New System.Drawing.Point(42, 40)
+        Me.txtNumero.Location = New System.Drawing.Point(19, 38)
+        Me.txtNumero.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNumero.Name = "txtNumero"
-        Me.txtNumero.Size = New System.Drawing.Size(71, 20)
+        Me.txtNumero.Size = New System.Drawing.Size(93, 22)
         Me.txtNumero.TabIndex = 0
         '
         'lblNumero
         '
         Me.lblNumero.AutoSize = True
-        Me.lblNumero.Location = New System.Drawing.Point(39, 16)
+        Me.lblNumero.Location = New System.Drawing.Point(16, 18)
+        Me.lblNumero.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNumero.Name = "lblNumero"
-        Me.lblNumero.Size = New System.Drawing.Size(74, 13)
+        Me.lblNumero.Size = New System.Drawing.Size(91, 16)
         Me.lblNumero.TabIndex = 28
         Me.lblNumero.Text = "Nº Orçamento"
         '
         'btnImpirmir
         '
-        Me.btnImpirmir.Location = New System.Drawing.Point(687, 571)
+        Me.btnImpirmir.Location = New System.Drawing.Point(916, 703)
+        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnImpirmir.Name = "btnImpirmir"
-        Me.btnImpirmir.Size = New System.Drawing.Size(75, 23)
+        Me.btnImpirmir.Size = New System.Drawing.Size(100, 28)
         Me.btnImpirmir.TabIndex = 7
         Me.btnImpirmir.Text = "Imprimir"
         Me.btnImpirmir.UseVisualStyleBackColor = True
@@ -200,9 +212,10 @@ Partial Class frmOrcamento
         'btnAprovar
         '
         Me.btnAprovar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAprovar.Location = New System.Drawing.Point(774, 136)
+        Me.btnAprovar.Location = New System.Drawing.Point(842, 199)
+        Me.btnAprovar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAprovar.Name = "btnAprovar"
-        Me.btnAprovar.Size = New System.Drawing.Size(82, 34)
+        Me.btnAprovar.Size = New System.Drawing.Size(109, 42)
         Me.btnAprovar.TabIndex = 16
         Me.btnAprovar.Text = "Aprovar"
         Me.btnAprovar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -211,9 +224,10 @@ Partial Class frmOrcamento
         'lblServico
         '
         Me.lblServico.AutoSize = True
-        Me.lblServico.Location = New System.Drawing.Point(35, 15)
+        Me.lblServico.Location = New System.Drawing.Point(16, 18)
+        Me.lblServico.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblServico.Name = "lblServico"
-        Me.lblServico.Size = New System.Drawing.Size(43, 13)
+        Me.lblServico.Size = New System.Drawing.Size(53, 16)
         Me.lblServico.TabIndex = 32
         Me.lblServico.Text = "Serviço"
         '
@@ -222,25 +236,28 @@ Partial Class frmOrcamento
         Me.cboServico.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboServico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboServico.FormattingEnabled = True
-        Me.cboServico.Location = New System.Drawing.Point(38, 40)
+        Me.cboServico.Location = New System.Drawing.Point(19, 38)
+        Me.cboServico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboServico.Name = "cboServico"
-        Me.cboServico.Size = New System.Drawing.Size(284, 21)
+        Me.cboServico.Size = New System.Drawing.Size(412, 24)
         Me.cboServico.TabIndex = 5
         '
         'lblTotalservico
         '
         Me.lblTotalservico.AutoSize = True
-        Me.lblTotalservico.Location = New System.Drawing.Point(352, 15)
+        Me.lblTotalservico.Location = New System.Drawing.Point(436, 18)
+        Me.lblTotalservico.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalservico.Name = "lblTotalservico"
-        Me.lblTotalservico.Size = New System.Drawing.Size(31, 13)
+        Me.lblTotalservico.Size = New System.Drawing.Size(39, 16)
         Me.lblTotalservico.TabIndex = 35
         Me.lblTotalservico.Text = "Valor"
         '
         'txtTotalservico
         '
-        Me.txtTotalservico.Location = New System.Drawing.Point(353, 41)
+        Me.txtTotalservico.Location = New System.Drawing.Point(439, 39)
+        Me.txtTotalservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTotalservico.Name = "txtTotalservico"
-        Me.txtTotalservico.Size = New System.Drawing.Size(71, 20)
+        Me.txtTotalservico.Size = New System.Drawing.Size(93, 22)
         Me.txtTotalservico.TabIndex = 8
         '
         'gpbServico
@@ -252,18 +269,21 @@ Partial Class frmOrcamento
         Me.gpbServico.Controls.Add(Me.lblServico)
         Me.gpbServico.Controls.Add(Me.txtTotalservico)
         Me.gpbServico.Controls.Add(Me.lblTotalservico)
-        Me.gpbServico.Location = New System.Drawing.Point(87, 148)
+        Me.gpbServico.Location = New System.Drawing.Point(13, 144)
+        Me.gpbServico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gpbServico.Name = "gpbServico"
-        Me.gpbServico.Size = New System.Drawing.Size(664, 242)
+        Me.gpbServico.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbServico.Size = New System.Drawing.Size(809, 278)
         Me.gpbServico.TabIndex = 44
         Me.gpbServico.TabStop = False
         '
         'btnExcluirservico
         '
         Me.btnExcluirservico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluirservico.Location = New System.Drawing.Point(536, 27)
+        Me.btnExcluirservico.Location = New System.Drawing.Point(683, 22)
+        Me.btnExcluirservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExcluirservico.Name = "btnExcluirservico"
-        Me.btnExcluirservico.Size = New System.Drawing.Size(82, 34)
+        Me.btnExcluirservico.Size = New System.Drawing.Size(109, 42)
         Me.btnExcluirservico.TabIndex = 24
         Me.btnExcluirservico.Text = "Excluir"
         Me.btnExcluirservico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -272,9 +292,10 @@ Partial Class frmOrcamento
         'btnOkservico
         '
         Me.btnOkservico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOkservico.Location = New System.Drawing.Point(438, 27)
+        Me.btnOkservico.Location = New System.Drawing.Point(552, 22)
+        Me.btnOkservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOkservico.Name = "btnOkservico"
-        Me.btnOkservico.Size = New System.Drawing.Size(82, 34)
+        Me.btnOkservico.Size = New System.Drawing.Size(109, 42)
         Me.btnOkservico.TabIndex = 9
         Me.btnOkservico.Text = "OK"
         Me.btnOkservico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -284,40 +305,54 @@ Partial Class frmOrcamento
         '
         Me.Gradeservico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Gradeservico.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numero, Me.data, Me.cliente, Me.funcionario, Me.servico, Me.valorservico})
-        Me.Gradeservico.Location = New System.Drawing.Point(38, 67)
+        Me.Gradeservico.Location = New System.Drawing.Point(19, 71)
+        Me.Gradeservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Gradeservico.Name = "Gradeservico"
-        Me.Gradeservico.Size = New System.Drawing.Size(580, 150)
+        Me.Gradeservico.RowHeadersWidth = 51
+        Me.Gradeservico.Size = New System.Drawing.Size(773, 185)
         Me.Gradeservico.TabIndex = 27
         '
         'numero
         '
         Me.numero.HeaderText = "Número do Orçamento"
+        Me.numero.MinimumWidth = 6
         Me.numero.Name = "numero"
+        Me.numero.Width = 125
         '
         'data
         '
         Me.data.HeaderText = "Data"
+        Me.data.MinimumWidth = 6
         Me.data.Name = "data"
+        Me.data.Width = 125
         '
         'cliente
         '
         Me.cliente.HeaderText = "Cliente"
+        Me.cliente.MinimumWidth = 6
         Me.cliente.Name = "cliente"
+        Me.cliente.Width = 125
         '
         'funcionario
         '
         Me.funcionario.HeaderText = "Funcionário"
+        Me.funcionario.MinimumWidth = 6
         Me.funcionario.Name = "funcionario"
+        Me.funcionario.Width = 125
         '
         'servico
         '
         Me.servico.HeaderText = "Serviço"
+        Me.servico.MinimumWidth = 6
         Me.servico.Name = "servico"
+        Me.servico.Width = 125
         '
         'valorservico
         '
         Me.valorservico.HeaderText = "Valor do Serviço"
+        Me.valorservico.MinimumWidth = 6
         Me.valorservico.Name = "valorservico"
+        Me.valorservico.Width = 125
         '
         'gpbPecas
         '
@@ -332,18 +367,21 @@ Partial Class frmOrcamento
         Me.gpbPecas.Controls.Add(Me.lblQuantidadepeca)
         Me.gpbPecas.Controls.Add(Me.lblValorpeca)
         Me.gpbPecas.Controls.Add(Me.cboPecas)
-        Me.gpbPecas.Location = New System.Drawing.Point(87, 411)
+        Me.gpbPecas.Location = New System.Drawing.Point(13, 430)
+        Me.gpbPecas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.gpbPecas.Name = "gpbPecas"
-        Me.gpbPecas.Size = New System.Drawing.Size(664, 274)
+        Me.gpbPecas.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbPecas.Size = New System.Drawing.Size(809, 337)
         Me.gpbPecas.TabIndex = 45
         Me.gpbPecas.TabStop = False
         '
         'btnExcluirpeca
         '
         Me.btnExcluirpeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluirpeca.Location = New System.Drawing.Point(536, 229)
+        Me.btnExcluirpeca.Location = New System.Drawing.Point(683, 282)
+        Me.btnExcluirpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExcluirpeca.Name = "btnExcluirpeca"
-        Me.btnExcluirpeca.Size = New System.Drawing.Size(82, 34)
+        Me.btnExcluirpeca.Size = New System.Drawing.Size(109, 42)
         Me.btnExcluirpeca.TabIndex = 25
         Me.btnExcluirpeca.Text = "Excluir"
         Me.btnExcluirpeca.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -352,9 +390,10 @@ Partial Class frmOrcamento
         'btnOkpeca
         '
         Me.btnOkpeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOkpeca.Location = New System.Drawing.Point(438, 229)
+        Me.btnOkpeca.Location = New System.Drawing.Point(552, 282)
+        Me.btnOkpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOkpeca.Name = "btnOkpeca"
-        Me.btnOkpeca.Size = New System.Drawing.Size(82, 34)
+        Me.btnOkpeca.Size = New System.Drawing.Size(109, 42)
         Me.btnOkpeca.TabIndex = 14
         Me.btnOkpeca.Text = "OK"
         Me.btnOkpeca.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -364,91 +403,110 @@ Partial Class frmOrcamento
         '
         Me.Gradepeca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Gradepeca.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nrorcamento1, Me.peca, Me.valorpeca, Me.quantidade, Me.totalpeca})
-        Me.Gradepeca.Location = New System.Drawing.Point(38, 73)
+        Me.Gradepeca.Location = New System.Drawing.Point(19, 78)
+        Me.Gradepeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Gradepeca.Name = "Gradepeca"
-        Me.Gradepeca.Size = New System.Drawing.Size(580, 150)
+        Me.Gradepeca.RowHeadersWidth = 51
+        Me.Gradepeca.Size = New System.Drawing.Size(773, 185)
         Me.Gradepeca.TabIndex = 26
         '
         'nrorcamento1
         '
         Me.nrorcamento1.HeaderText = "Número do Orcamento"
+        Me.nrorcamento1.MinimumWidth = 6
         Me.nrorcamento1.Name = "nrorcamento1"
+        Me.nrorcamento1.Width = 125
         '
         'peca
         '
         Me.peca.HeaderText = "Peças"
+        Me.peca.MinimumWidth = 6
         Me.peca.Name = "peca"
+        Me.peca.Width = 125
         '
         'valorpeca
         '
         Me.valorpeca.HeaderText = "Valor Unitário"
+        Me.valorpeca.MinimumWidth = 6
         Me.valorpeca.Name = "valorpeca"
+        Me.valorpeca.Width = 125
         '
         'quantidade
         '
         Me.quantidade.HeaderText = "Quantidade"
+        Me.quantidade.MinimumWidth = 6
         Me.quantidade.Name = "quantidade"
+        Me.quantidade.Width = 125
         '
         'totalpeca
         '
         Me.totalpeca.HeaderText = "Total"
+        Me.totalpeca.MinimumWidth = 6
         Me.totalpeca.Name = "totalpeca"
+        Me.totalpeca.Width = 125
         '
         'txtTotalpeca
         '
-        Me.txtTotalpeca.Location = New System.Drawing.Point(547, 38)
+        Me.txtTotalpeca.Location = New System.Drawing.Point(557, 42)
+        Me.txtTotalpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTotalpeca.Name = "txtTotalpeca"
-        Me.txtTotalpeca.Size = New System.Drawing.Size(71, 20)
+        Me.txtTotalpeca.Size = New System.Drawing.Size(93, 22)
         Me.txtTotalpeca.TabIndex = 13
         '
         'txtValorpeca
         '
-        Me.txtValorpeca.Location = New System.Drawing.Point(291, 38)
+        Me.txtValorpeca.Location = New System.Drawing.Point(355, 42)
+        Me.txtValorpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtValorpeca.Name = "txtValorpeca"
-        Me.txtValorpeca.Size = New System.Drawing.Size(71, 20)
+        Me.txtValorpeca.Size = New System.Drawing.Size(93, 22)
         Me.txtValorpeca.TabIndex = 11
         '
         'lblPeca
         '
         Me.lblPeca.AutoSize = True
-        Me.lblPeca.Location = New System.Drawing.Point(35, 12)
+        Me.lblPeca.Location = New System.Drawing.Point(16, 22)
+        Me.lblPeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPeca.Name = "lblPeca"
-        Me.lblPeca.Size = New System.Drawing.Size(37, 13)
+        Me.lblPeca.Size = New System.Drawing.Size(46, 16)
         Me.lblPeca.TabIndex = 36
         Me.lblPeca.Text = "Peças"
         '
         'txtQuantidadepeca
         '
-        Me.txtQuantidadepeca.Location = New System.Drawing.Point(415, 38)
+        Me.txtQuantidadepeca.Location = New System.Drawing.Point(456, 42)
+        Me.txtQuantidadepeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtQuantidadepeca.Name = "txtQuantidadepeca"
-        Me.txtQuantidadepeca.Size = New System.Drawing.Size(71, 20)
+        Me.txtQuantidadepeca.Size = New System.Drawing.Size(93, 22)
         Me.txtQuantidadepeca.TabIndex = 12
         Me.txtQuantidadepeca.Text = "0"
         '
         'lblTotalpeca
         '
         Me.lblTotalpeca.AutoSize = True
-        Me.lblTotalpeca.Location = New System.Drawing.Point(544, 12)
+        Me.lblTotalpeca.Location = New System.Drawing.Point(554, 22)
+        Me.lblTotalpeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalpeca.Name = "lblTotalpeca"
-        Me.lblTotalpeca.Size = New System.Drawing.Size(31, 13)
+        Me.lblTotalpeca.Size = New System.Drawing.Size(38, 16)
         Me.lblTotalpeca.TabIndex = 39
         Me.lblTotalpeca.Text = "Total"
         '
         'lblQuantidadepeca
         '
         Me.lblQuantidadepeca.AutoSize = True
-        Me.lblQuantidadepeca.Location = New System.Drawing.Point(412, 12)
+        Me.lblQuantidadepeca.Location = New System.Drawing.Point(453, 22)
+        Me.lblQuantidadepeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblQuantidadepeca.Name = "lblQuantidadepeca"
-        Me.lblQuantidadepeca.Size = New System.Drawing.Size(62, 13)
+        Me.lblQuantidadepeca.Size = New System.Drawing.Size(77, 16)
         Me.lblQuantidadepeca.TabIndex = 38
         Me.lblQuantidadepeca.Text = "Quantidade"
         '
         'lblValorpeca
         '
         Me.lblValorpeca.AutoSize = True
-        Me.lblValorpeca.Location = New System.Drawing.Point(288, 12)
+        Me.lblValorpeca.Location = New System.Drawing.Point(353, 22)
+        Me.lblValorpeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblValorpeca.Name = "lblValorpeca"
-        Me.lblValorpeca.Size = New System.Drawing.Size(70, 13)
+        Me.lblValorpeca.Size = New System.Drawing.Size(88, 16)
         Me.lblValorpeca.TabIndex = 37
         Me.lblValorpeca.Text = "Valor Unitário"
         '
@@ -457,91 +515,102 @@ Partial Class frmOrcamento
         Me.cboPecas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboPecas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboPecas.FormattingEnabled = True
-        Me.cboPecas.Location = New System.Drawing.Point(38, 37)
+        Me.cboPecas.Location = New System.Drawing.Point(19, 42)
+        Me.cboPecas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboPecas.Name = "cboPecas"
-        Me.cboPecas.Size = New System.Drawing.Size(228, 21)
+        Me.cboPecas.Size = New System.Drawing.Size(328, 24)
         Me.cboPecas.TabIndex = 10
         '
         'txtDesconto
         '
-        Me.txtDesconto.Location = New System.Drawing.Point(774, 370)
+        Me.txtDesconto.Location = New System.Drawing.Point(842, 481)
+        Me.txtDesconto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDesconto.Name = "txtDesconto"
-        Me.txtDesconto.Size = New System.Drawing.Size(71, 20)
+        Me.txtDesconto.Size = New System.Drawing.Size(93, 22)
         Me.txtDesconto.TabIndex = 19
         '
         'lblDesconto
         '
         Me.lblDesconto.AutoSize = True
-        Me.lblDesconto.Location = New System.Drawing.Point(771, 352)
+        Me.lblDesconto.Location = New System.Drawing.Point(838, 465)
+        Me.lblDesconto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDesconto.Name = "lblDesconto"
-        Me.lblDesconto.Size = New System.Drawing.Size(53, 13)
+        Me.lblDesconto.Size = New System.Drawing.Size(65, 16)
         Me.lblDesconto.TabIndex = 40
         Me.lblDesconto.Text = "Desconto"
         '
         'cbxDesconto
         '
         Me.cbxDesconto.AutoSize = True
-        Me.cbxDesconto.Location = New System.Drawing.Point(774, 413)
+        Me.cbxDesconto.Location = New System.Drawing.Point(842, 511)
+        Me.cbxDesconto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbxDesconto.Name = "cbxDesconto"
-        Me.cbxDesconto.Size = New System.Drawing.Size(122, 17)
+        Me.cbxDesconto.Size = New System.Drawing.Size(150, 20)
         Me.cbxDesconto.TabIndex = 20
         Me.cbxDesconto.Text = "Somente no Serviço"
         Me.cbxDesconto.UseVisualStyleBackColor = True
         '
         'txtValortotalservico
         '
-        Me.txtValortotalservico.Location = New System.Drawing.Point(774, 473)
+        Me.txtValortotalservico.Location = New System.Drawing.Point(841, 559)
+        Me.txtValortotalservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtValortotalservico.Name = "txtValortotalservico"
-        Me.txtValortotalservico.Size = New System.Drawing.Size(71, 20)
+        Me.txtValortotalservico.Size = New System.Drawing.Size(93, 22)
         Me.txtValortotalservico.TabIndex = 21
         '
         'lblValortotalservico
         '
         Me.lblValortotalservico.AutoSize = True
-        Me.lblValortotalservico.Location = New System.Drawing.Point(771, 447)
+        Me.lblValortotalservico.Location = New System.Drawing.Point(838, 539)
+        Me.lblValortotalservico.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblValortotalservico.Name = "lblValortotalservico"
-        Me.lblValortotalservico.Size = New System.Drawing.Size(112, 13)
+        Me.lblValortotalservico.Size = New System.Drawing.Size(141, 16)
         Me.lblValortotalservico.TabIndex = 41
         Me.lblValortotalservico.Text = "Valor Total do Serviço"
         '
         'txtValortotalpeca
         '
-        Me.txtValortotalpeca.Location = New System.Drawing.Point(774, 534)
+        Me.txtValortotalpeca.Location = New System.Drawing.Point(842, 612)
+        Me.txtValortotalpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtValortotalpeca.Name = "txtValortotalpeca"
-        Me.txtValortotalpeca.Size = New System.Drawing.Size(71, 20)
+        Me.txtValortotalpeca.Size = New System.Drawing.Size(93, 22)
         Me.txtValortotalpeca.TabIndex = 22
         '
         'lblValortotalpeca
         '
         Me.lblValortotalpeca.AutoSize = True
-        Me.lblValortotalpeca.Location = New System.Drawing.Point(771, 508)
+        Me.lblValortotalpeca.Location = New System.Drawing.Point(839, 592)
+        Me.lblValortotalpeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblValortotalpeca.Name = "lblValortotalpeca"
-        Me.lblValortotalpeca.Size = New System.Drawing.Size(106, 13)
+        Me.lblValortotalpeca.Size = New System.Drawing.Size(134, 16)
         Me.lblValortotalpeca.TabIndex = 42
         Me.lblValortotalpeca.Text = "Valor Total do Peças"
         '
         'txtTotalgeral
         '
-        Me.txtTotalgeral.Location = New System.Drawing.Point(774, 595)
+        Me.txtTotalgeral.Location = New System.Drawing.Point(842, 664)
+        Me.txtTotalgeral.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTotalgeral.Name = "txtTotalgeral"
-        Me.txtTotalgeral.Size = New System.Drawing.Size(71, 20)
+        Me.txtTotalgeral.Size = New System.Drawing.Size(93, 22)
         Me.txtTotalgeral.TabIndex = 23
         '
         'lblTotalgeral
         '
         Me.lblTotalgeral.AutoSize = True
-        Me.lblTotalgeral.Location = New System.Drawing.Point(771, 569)
+        Me.lblTotalgeral.Location = New System.Drawing.Point(838, 644)
+        Me.lblTotalgeral.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalgeral.Name = "lblTotalgeral"
-        Me.lblTotalgeral.Size = New System.Drawing.Size(59, 13)
+        Me.lblTotalgeral.Size = New System.Drawing.Size(74, 16)
         Me.lblTotalgeral.TabIndex = 43
         Me.lblTotalgeral.Text = "Total Geral"
         '
         'btnNovo
         '
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovo.Location = New System.Drawing.Point(774, 25)
+        Me.btnNovo.Location = New System.Drawing.Point(842, 63)
+        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnNovo.Name = "btnNovo"
-        Me.btnNovo.Size = New System.Drawing.Size(82, 34)
+        Me.btnNovo.Size = New System.Drawing.Size(109, 42)
         Me.btnNovo.TabIndex = 2
         Me.btnNovo.Text = "Novo"
         Me.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -550,9 +619,10 @@ Partial Class frmOrcamento
         'btnSalvar
         '
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalvar.Location = New System.Drawing.Point(774, 76)
+        Me.btnSalvar.Location = New System.Drawing.Point(842, 126)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(82, 34)
+        Me.btnSalvar.Size = New System.Drawing.Size(109, 42)
         Me.btnSalvar.TabIndex = 15
         Me.btnSalvar.Text = "Salvar"
         Me.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -561,9 +631,10 @@ Partial Class frmOrcamento
         'btnConsultar
         '
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(774, 193)
+        Me.btnConsultar.Location = New System.Drawing.Point(842, 270)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(82, 34)
+        Me.btnConsultar.Size = New System.Drawing.Size(109, 42)
         Me.btnConsultar.TabIndex = 17
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -572,9 +643,10 @@ Partial Class frmOrcamento
         'btnSair
         '
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSair.Location = New System.Drawing.Point(774, 251)
+        Me.btnSair.Location = New System.Drawing.Point(842, 341)
+        Me.btnSair.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSair.Name = "btnSair"
-        Me.btnSair.Size = New System.Drawing.Size(82, 34)
+        Me.btnSair.Size = New System.Drawing.Size(109, 42)
         Me.btnSair.TabIndex = 18
         Me.btnSair.Text = "Sair"
         Me.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -605,9 +677,10 @@ Partial Class frmOrcamento
         'btnExcluir
         '
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluir.Location = New System.Drawing.Point(774, 300)
+        Me.btnExcluir.Location = New System.Drawing.Point(842, 401)
+        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExcluir.Name = "btnExcluir"
-        Me.btnExcluir.Size = New System.Drawing.Size(82, 34)
+        Me.btnExcluir.Size = New System.Drawing.Size(109, 42)
         Me.btnExcluir.TabIndex = 46
         Me.btnExcluir.Text = "Excluir"
         Me.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -615,9 +688,9 @@ Partial Class frmOrcamento
         '
         'frmOrcamento
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1284, 712)
+        Me.ClientSize = New System.Drawing.Size(1008, 876)
         Me.Controls.Add(Me.btnExcluir)
         Me.Controls.Add(Me.txtTotalgeral)
         Me.Controls.Add(Me.lblTotalgeral)
@@ -636,6 +709,7 @@ Partial Class frmOrcamento
         Me.Controls.Add(Me.btnAprovar)
         Me.Controls.Add(Me.btnSair)
         Me.Controls.Add(Me.gpbServico)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmOrcamento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Fazer Orçamento"

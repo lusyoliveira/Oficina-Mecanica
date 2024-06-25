@@ -180,6 +180,10 @@
         montargrade()
     End Sub
 
+    Private Sub gpbVeiculos_Enter(sender As Object, e As EventArgs) Handles gpbVeiculos.Enter
+
+    End Sub
+
     Private Sub Grade_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Grade.CellContentClick
 
     End Sub

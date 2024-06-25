@@ -1,45 +1,27 @@
 ﻿Imports System.IO
 Imports System.ServiceProcess
+Imports System.Data.Common
+Imports System.Configuration
+Imports System.Data.SqlClient
 Module mdlconexao
     Dim x As Integer
     Private aConexao As New ADODB.Connection
     Private aconexao2 As New ADODB.Connection
 
-    Dim server, database, user, password
+    'Dim server, database, user, password As String
 
-    'Public Function OpenRecordset(ByVal sqlquery As String)
-    '    Dim aResultado As New ADODB.Recordset
+    Dim database = "dbOficina"
+    Dim user = "sa"
+    Dim password = "123456"
+    Dim server = GetNomeSQLServer()
 
-    '    database = "dbOficina"
-    '    user = "userOficina"
-    '    password = "1234"
-    '    server = GetNomeSQLServer()
+    Public Function OpenRecordset(ByVal sqlquery As String) As DataTable 'As ADODB.Recordset
 
-    '    If aConexao.State = 0 Then
-    '        aConexao.ConnectionString = $"Data Source={server};Initial Catalog={database};User ID={user}; Password={password};Integrated Security=True"
-    '        aConexao.ConnectionTimeout = 30
-    '        aConexao.CommandTimeout = 180
-    '        aConexao.Open()
-    '    End If
-
-    '    aResultado.CursorLocation = ADODB.CursorLocationEnum.adUseClient
-    '    aResultado.Open(sqlquery, aConexao, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
-    '    OpenRecordset = aResultado
-    '    aResultado = Nothing
-
-    'End Function
-    Public Function OpenRecordset(ByVal sqlquery As String) As ADODB.Recordset
         Dim aResultado As New ADODB.Recordset
         Dim aConexao As New ADODB.Connection
-
-        Dim database As String = "dbOficina"
-        Dim user As String = "userOficina"
-        Dim password As String = "1234"
-        Dim server As String = GetNomeSQLServer()
-
         Try
             If aConexao.State = 0 Then
-                aConexao.ConnectionString = $"Data Source={server};Initial Catalog={database};User ID={user};Password={password}"
+                aConexao.ConnectionString = $"Provider=SqlServer;Server={server};Database={database};User Id={user};Password={password};"
                 aConexao.ConnectionTimeout = 30
                 aConexao.CommandTimeout = 180
                 aConexao.Open()

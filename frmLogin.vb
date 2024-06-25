@@ -58,6 +58,7 @@ Public Class frmLogin
     End Sub
 
     Private Sub frmLogin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         tbConfig = OpenRecordset("Select * from tbconfig")
 
         If muncripto(tbConfig.Fields("ctrl").Value.ToString).ToString.ToUpper <> "OK" Then
