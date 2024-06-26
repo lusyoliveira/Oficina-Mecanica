@@ -1,3 +1,6 @@
+
+Imports System.Data.SqlClient
+
 Public Class frmLogin
     Dim tbUsuarios, tbConfig As ADODB.Recordset
     Dim existe As Boolean
@@ -47,39 +50,70 @@ Public Class frmLogin
     Private Sub txtSenha_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtSenha.LostFocus
         If txtSenha.Text <> "" Then
             sql = "select * from tbUsuarios where codigo= " & txtCodigo.Text
-            tbUsuarios = OpenRecordset(sql)
-            If tbUsuarios.RecordCount <> 0 Then
-                txtPermissao.Text = tbUsuarios.Fields("permissao").Value
+            'tbUsuarios = OpenRecordset(sql)
+            Dim tbUsuarios As DataTable = OpenRecordset(sql)
+
+
+            If tbUsuarios.Columns.Count() <> 0 Then
+                txtPermissao.Text = tbUsuarios.Rows(0)("permissao").ToString
             Else
                 MsgBox("Esse Usuário não existe!")
             End If
+
+
+            'If tbUsuarios.RecordCount <> 0 Then
+            '    txtPermissao.Text = tbUsuarios.Fields("permissao").Value
+            'Else
+            '    MsgBox("Esse Usuário não existe!")
+            'End If
         End If
 
     End Sub
 
     Private Sub frmLogin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim tbConfig As DataTable = OpenRecordset("Select * from tbconfig")
 
-        tbConfig = OpenRecordset("Select * from tbconfig")
-
-        If muncripto(tbConfig.Fields("ctrl").Value.ToString).ToString.ToUpper <> "OK" Then
-            If tbConfig.Fields("ctrl").Value.ToString = "" Then
-                sql = "update tbconfig set ctrl = '" & mcripto(Date.Now.Date.ToString.Replace("/", "").Substring(0, 8)) & "'"
-                tbConfig = OpenRecordset(sql)
+        If muncripto(tbConfig.Rows(0)("ctrl").ToString()).ToUpper() <> "OK" Then
+            If tbConfig.Rows(0)("ctrl").ToString() = "" Then
+                Dim sql As String = "update tbconfig set ctrl = '" & mcripto(Date.Now.Date.ToString("yyyyMMdd")) & "'"
+                OpenRecordset(sql)
                 sql = "Select * from tbconfig"
                 tbConfig = OpenRecordset(sql)
             End If
-            If CDate(tratadata2(muncripto(tbConfig.Fields("ctrl").Value.ToString))).AddDays(30) > Date.Now.Date Then
+            If CDate(tratadata2(muncripto(tbConfig.Rows(0)("ctrl").ToString()))).AddDays(30) > Date.Now.Date Then
                 MsgBox("Sua versão de testes venceu! Por favor, entre em contato com desenvolvedor !", MsgBoxStyle.Critical)
                 End
             End If
         End If 'Versão trial
+
         tbConfig = OpenRecordset("Select * from tbusuarios order by usuario")
-        If tbConfig.RecordCount <> 0 Then
-            tbConfig.MoveFirst()
-            While tbConfig.EOF = False
-                txtUsuario.AutoCompleteCustomSource.Add(tbConfig.Fields("usuario").Value.ToString)
-                tbConfig.MoveNext()
-            End While
+        If tbConfig.Rows.Count <> 0 Then
+            For Each row As DataRow In tbConfig.Rows
+                txtUsuario.AutoCompleteCustomSource.Add(row("usuario").ToString())
+            Next
         End If
+
+        'tbConfig = OpenRecordset("Select * from tbconfig", tpServidor.SqlServer)
+
+        'If muncripto(tbConfig.Fields("ctrl").Value.ToString).ToString.ToUpper <> "OK" Then
+        '    If tbConfig.Fields("ctrl").Value.ToString = "" Then
+        '        sql = "update tbconfig set ctrl = '" & mcripto(Date.Now.Date.ToString.Replace("/", "").Substring(0, 8)) & "'"
+        '        tbConfig = OpenRecordset(sql)
+        '        sql = "Select * from tbconfig"
+        '        tbConfig = OpenRecordset(sql)
+        '    End If
+        '    If CDate(tratadata2(muncripto(tbConfig.Fields("ctrl").Value.ToString))).AddDays(30) > Date.Now.Date Then
+        '        MsgBox("Sua versão de testes venceu! Por favor, entre em contato com desenvolvedor !", MsgBoxStyle.Critical)
+        '        End
+        '    End If
+        'End If 'Versão trial
+        'tbConfig = OpenRecordset("Select * from tbusuarios order by usuario", tpServidor.SqlServer)
+        'If tbConfig.RecordCount <> 0 Then
+        '    tbConfig.MoveFirst()
+        '    While tbConfig.EOF = False
+        '        txtUsuario.AutoCompleteCustomSource.Add(tbConfig.Fields("usuario").Value.ToString)
+        '        tbConfig.MoveNext()
+        '    End While
+        'End If
     End Sub
 End Class

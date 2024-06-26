@@ -3,88 +3,77 @@ Imports System.ServiceProcess
 Imports System.Data.Common
 Imports System.Configuration
 Imports System.Data.SqlClient
+
 Module mdlconexao
-    Dim x As Integer
+    'Dim x As Integer
     Private aConexao As New ADODB.Connection
     Private aconexao2 As New ADODB.Connection
 
-    'Dim server, database, user, password As String
+    ''Dim server, database, user, password As String
 
-    Dim database = "dbOficina"
-    Dim user = "sa"
-    Dim password = "123456"
-    Dim server = GetNomeSQLServer()
+    'Dim database = "dbOficina"
+    'Dim user = "sa"
+    'Dim password = "123456"
+    'Dim server = GetNomeSQLServer()
+    'Private cn As DbConnection
 
-    Public Function OpenRecordset(ByVal sqlquery As String) As DataTable 'As ADODB.Recordset
+    Private DataBase = "dbOficina"
+    Const user = "sa"
+    Const password = "123456"
+    Private Server = "(local)"
+    Public Enum tpServidor
+        Access = 0
+        SqlServer = 1
+        MySQL = 2
+        PostgreSQL = 3
+        Oracle = 4
+        SQLite = 5
+    End Enum
 
-        Dim aResultado As New ADODB.Recordset
-        Dim aConexao As New ADODB.Connection
-        Try
-            If aConexao.State = 0 Then
-                aConexao.ConnectionString = $"Provider=SqlServer;Server={server};Database={database};User Id={user};Password={password};"
-                aConexao.ConnectionTimeout = 30
-                aConexao.CommandTimeout = 180
-                aConexao.Open()
-            End If
-
-            If aConexao.State = 1 Then ' Verifica se a conexão está aberta
-                aResultado.CursorLocation = ADODB.CursorLocationEnum.adUseClient
-                aResultado.Open(sqlquery, aConexao, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
-            End If
-
-            Return aResultado
-        Catch ex As Exception
-            Throw New ApplicationException("Erro ao abrir o Recordset: " & ex.Message)
-        Finally
-            ' Certifique-se de liberar recursos em caso de erro
-            If Not aResultado Is Nothing Then
-                If aResultado.State = ADODB.ObjectStateEnum.adStateOpen Then
-                    aResultado.Close()
-                End If
-                aResultado = Nothing
-            End If
-            If Not aConexao Is Nothing Then
-                If aConexao.State = ADODB.ObjectStateEnum.adStateOpen Then
-                    aConexao.Close()
-                End If
-                aConexao = Nothing
-            End If
-        End Try
+    Private Function GetConnectionString(ByVal servidor As tpServidor) As String
+        Select Case servidor
+            Case tpServidor.SqlServer
+                Return $"Server={Server};Database={DataBase};User Id={user};Password={password};"
+            Case tpServidor.MySQL
+                Return $"Server={Server};Database={DataBase};User={user};Password={password};"
+            Case tpServidor.PostgreSQL
+                Return $"Host={Server};Database={DataBase};Username={user};Password={password};"
+            Case tpServidor.Oracle
+                Return $"Data Source={Server};User Id={user};Password={password};"
+            Case tpServidor.SQLite
+                Dim dbPath As String = My.Computer.FileSystem.CurrentDirectory & If(Right(My.Computer.FileSystem.CurrentDirectory, 1) = "\", "", "\") & DataBase & ".sqlite"
+                Return $"Data Source={dbPath};Version=3;"
+            Case Else ' Access
+                Dim acess_db2 As String = My.Computer.FileSystem.CurrentDirectory
+                acess_db2 &= If(Right(acess_db2, 1) = "\", "", "\")
+                acess_db2 &= DataBase & ".mdb"
+                Return $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={DataBase};Persist Security Info=False"
+        End Select
     End Function
 
-    Public Function abrir(ByVal sql As String)
-
-        Dim aResultado As New ADODB.Recordset
-
-        database = "C:\Documents and Settings\Administrador\Meus documentos\Técnico\2º Período\VB.net\Permissões\dbexemplo.mdb"
-        If File.Exists(database) = False Then
-            Return Nothing
-            Exit Function
-        End If
-
-        If sql.ToUpper = "FECHAR" Then
-            aconexao2.Close()
-            Return False
-            Exit Function
-        End If
-
-        If aconexao2.State = 0 Then
-            aconexao2.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & database
-            aconexao2.Open()
-        End If
-
-        'aResultado2.Open(sql, aconexao2, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
-        aResultado.CursorLocation = ADODB.CursorLocationEnum.adUseClient
-        aResultado.Open(sql, aconexao2, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
-        abrir = aResultado
-        aResultado = Nothing
-
+    Private Function GetProviderInvariantName(ByVal servidor As tpServidor) As String
+        Select Case servidor
+            Case tpServidor.SqlServer
+                Server = GetNomeSQLServer()
+                Return "System.Data.SqlClient"
+            Case tpServidor.MySQL
+                Return "MySql.Data.MySqlClient"
+            Case tpServidor.PostgreSQL
+                Return "Npgsql"
+            Case tpServidor.Oracle
+                Return "Oracle.ManagedDataAccess.Client"
+            Case tpServidor.SQLite
+                Return "System.Data.SQLite"
+            Case Else ' Access
+                Return "System.Data.OleDb"
+        End Select
     End Function
 
     ''' <summary>
     ''' Esta função obtem o nome do servidor SQL Server.
     ''' </summary>
     ''' <returns>Retorna o nome do servidor.</returns>
+
     Public Function GetNomeSQLServer() As String
         'Nome do PC local
         Dim strPCname As String = Environment.MachineName
@@ -111,4 +100,79 @@ Module mdlconexao
         End If
         Return strNomeSQLServer
     End Function
+    Public Function OpenRecordset(query As String) As DataTable
+        Dim connectionString As String = "Data Source=VAR223\SQLEXPRESS;Initial Catalog=dbOficina;User ID=sa;Password=123456"
+        Dim dt As New DataTable()
+        Using connection As New SqlConnection(connectionString)
+            connection.Open()
+            Using command As New SqlCommand(query, connection)
+                Using reader As SqlDataReader = command.ExecuteReader()
+                    dt.Load(reader)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+    'Public Function OpenRecordset(ByVal Sql As String, Optional ByVal servidor As tpServidor = tpServidor.Access) As DataTable
+    '    Dim factory As DbProviderFactory = DbProviderFactories.GetFactory(GetProviderInvariantName(servidor))
+    '    aConexao = factory.CreateConnection()
+    '    aConexao.ConnectionString = GetConnectionString(servidor)
+
+    '    Dim dt As New DataTable()
+    '    Try
+    '        aConexao.Open()
+    '        Dim cmd As DbCommand = aConexao.CreateCommand()
+    '        cmd.CommandText = Sql
+    '        Dim adapter As DbDataAdapter = factory.CreateDataAdapter()
+    '        adapter.SelectCommand = cmd
+    '        adapter.Fill(dt)
+    '    Catch ex As Exception
+    '        dt = Nothing
+    '        MsgBox("Banco de Dados não encontrado!")
+    '    Finally
+    '        If aConexao.State = ConnectionState.Open Then
+    '            aConexao.Close()
+    '        End If
+    '    End Try
+
+    '    Return dt
+    'End Function
+    Public Sub ExecuteNonQuery(query As String)
+        Using connection As New SqlConnection("sua string de conexão")
+            Using command As New SqlCommand(query, connection)
+                connection.Open()
+                command.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
+    Public Function abrir(ByVal sql As String)
+
+        Dim aResultado As New ADODB.Recordset
+
+        DataBase = "C:\Documents and Settings\Administrador\Meus documentos\Técnico\2º Período\VB.net\Permissões\dbexemplo.mdb"
+        If File.Exists(DataBase) = False Then
+            Return Nothing
+            Exit Function
+        End If
+
+        If sql.ToUpper = "FECHAR" Then
+            aconexao2.Close()
+            Return False
+            Exit Function
+        End If
+
+        If aconexao2.State = 0 Then
+            aconexao2.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & DataBase
+            aconexao2.Open()
+        End If
+
+        'aResultado2.Open(sql, aconexao2, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
+        aResultado.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+        aResultado.Open(sql, aconexao2, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockOptimistic)
+        abrir = aResultado
+        aResultado = Nothing
+
+    End Function
+
 End Module

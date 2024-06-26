@@ -225,13 +225,26 @@ Module mdlFuncoes
 
     End Function
     Public Function tratadata2(ByVal data As String) As Date
+        If data.Length < 8 Then
+            ' Retorna uma data padrão caso a string fornecida seja muito curta
+            Return New Date(1900, 1, 1)
+        End If
+
         Dim novadata As String
         novadata = data.Substring(0, 2) & "/" & data.Substring(2, 2) & "/" & data.Substring(4, 4)
-        If IsDate(novadata) = True Then
-            Return Format(CDate(novadata), "dd/MM/yyyy")
+
+        If IsDate(novadata) Then
+            Return CDate(novadata)
         Else
-            Return Format(CDate("01/01/1900"), "dd/MM/yyyy")
+            Return New Date(1900, 1, 1)
         End If
+        'Dim novadata As String
+        'novadata = data.Substring(0, 2) & "/" & data.Substring(2, 2) & "/" & data.Substring(4, 4)
+        'If IsDate(novadata) = True Then
+        '    Return Format(CDate(novadata), "dd/MM/yyyy")
+        'Else
+        '    Return Format(CDate("01/01/1900"), "dd/MM/yyyy")
+        'End If
     End Function
     Public Function existecaixa() As Boolean
         Dim tbconfig As ADODB.Recordset
