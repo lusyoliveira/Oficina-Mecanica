@@ -36,9 +36,9 @@ Partial Class frmConfig
         Me.gpbConfig.Controls.Add(Me.txtCliente)
         Me.gpbConfig.Controls.Add(Me.chkEsconde)
         Me.gpbConfig.Location = New System.Drawing.Point(13, 13)
-        Me.gpbConfig.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbConfig.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbConfig.Name = "gpbConfig"
-        Me.gpbConfig.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbConfig.Padding = New System.Windows.Forms.Padding(4)
         Me.gpbConfig.Size = New System.Drawing.Size(615, 255)
         Me.gpbConfig.TabIndex = 0
         Me.gpbConfig.TabStop = False
@@ -46,7 +46,7 @@ Partial Class frmConfig
         'btnSalvar
         '
         Me.btnSalvar.Location = New System.Drawing.Point(347, 155)
-        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(209, 54)
         Me.btnSalvar.TabIndex = 6
@@ -56,7 +56,7 @@ Partial Class frmConfig
         'btnAlterar
         '
         Me.btnAlterar.Location = New System.Drawing.Point(49, 155)
-        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAlterar.Name = "btnAlterar"
         Me.btnAlterar.Size = New System.Drawing.Size(209, 54)
         Me.btnAlterar.TabIndex = 5
@@ -76,7 +76,7 @@ Partial Class frmConfig
         'txtCliente
         '
         Me.txtCliente.Location = New System.Drawing.Point(47, 58)
-        Me.txtCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCliente.Name = "txtCliente"
         Me.txtCliente.Size = New System.Drawing.Size(373, 22)
         Me.txtCliente.TabIndex = 8
@@ -85,7 +85,7 @@ Partial Class frmConfig
         '
         Me.chkEsconde.AutoSize = True
         Me.chkEsconde.Location = New System.Drawing.Point(47, 110)
-        Me.chkEsconde.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.chkEsconde.Margin = New System.Windows.Forms.Padding(4)
         Me.chkEsconde.Name = "chkEsconde"
         Me.chkEsconde.Size = New System.Drawing.Size(185, 20)
         Me.chkEsconde.TabIndex = 7
@@ -98,8 +98,10 @@ Partial Class frmConfig
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(642, 292)
         Me.Controls.Add(Me.gpbConfig)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmConfig"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Configurações"
         Me.gpbConfig.ResumeLayout(False)
         Me.gpbConfig.PerformLayout()

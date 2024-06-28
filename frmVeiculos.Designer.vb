@@ -87,9 +87,9 @@ Partial Class frmVeiculos
         Me.gpbVeiculos.Controls.Add(Me.lblPlaca)
         Me.gpbVeiculos.Controls.Add(Me.lblCodigo)
         Me.gpbVeiculos.Location = New System.Drawing.Point(13, 13)
-        Me.gpbVeiculos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbVeiculos.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbVeiculos.Name = "gpbVeiculos"
-        Me.gpbVeiculos.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbVeiculos.Padding = New System.Windows.Forms.Padding(4)
         Me.gpbVeiculos.Size = New System.Drawing.Size(1281, 652)
         Me.gpbVeiculos.TabIndex = 0
         Me.gpbVeiculos.TabStop = False
@@ -98,7 +98,7 @@ Partial Class frmVeiculos
         '
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNovo.Location = New System.Drawing.Point(1150, 148)
-        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNovo.Name = "btnNovo"
         Me.btnNovo.Size = New System.Drawing.Size(109, 42)
         Me.btnNovo.TabIndex = 23
@@ -110,7 +110,7 @@ Partial Class frmVeiculos
         '
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnImpirmir.Location = New System.Drawing.Point(1150, 554)
-        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnImpirmir.Name = "btnImpirmir"
         Me.btnImpirmir.Size = New System.Drawing.Size(109, 42)
         Me.btnImpirmir.TabIndex = 22
@@ -122,7 +122,7 @@ Partial Class frmVeiculos
         '
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSair.Location = New System.Drawing.Point(1150, 487)
-        Me.btnSair.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSair.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSair.Name = "btnSair"
         Me.btnSair.Size = New System.Drawing.Size(109, 42)
         Me.btnSair.TabIndex = 21
@@ -134,7 +134,7 @@ Partial Class frmVeiculos
         '
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluir.Location = New System.Drawing.Point(1150, 342)
-        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(109, 42)
         Me.btnExcluir.TabIndex = 20
@@ -146,7 +146,7 @@ Partial Class frmVeiculos
         '
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConsultar.Location = New System.Drawing.Point(1150, 415)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(109, 42)
         Me.btnConsultar.TabIndex = 19
@@ -158,7 +158,7 @@ Partial Class frmVeiculos
         '
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAlterar.Location = New System.Drawing.Point(1150, 274)
-        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAlterar.Name = "btnAlterar"
         Me.btnAlterar.Size = New System.Drawing.Size(109, 42)
         Me.btnAlterar.TabIndex = 18
@@ -170,7 +170,7 @@ Partial Class frmVeiculos
         '
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalvar.Location = New System.Drawing.Point(1150, 210)
-        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(109, 42)
         Me.btnSalvar.TabIndex = 17
@@ -183,7 +183,7 @@ Partial Class frmVeiculos
         Me.Grade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.placaletra, Me.placanumero, Me.modelo, Me.ano, Me.combustivel, Me.chassiss, Me.renavan})
         Me.Grade.Location = New System.Drawing.Point(8, 122)
-        Me.Grade.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Grade.Margin = New System.Windows.Forms.Padding(4)
         Me.Grade.Name = "Grade"
         Me.Grade.RowHeadersWidth = 51
         Me.Grade.Size = New System.Drawing.Size(1125, 497)
@@ -248,7 +248,7 @@ Partial Class frmVeiculos
         'txtRenavan
         '
         Me.txtRenavan.Location = New System.Drawing.Point(422, 92)
-        Me.txtRenavan.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtRenavan.Margin = New System.Windows.Forms.Padding(4)
         Me.txtRenavan.Name = "txtRenavan"
         Me.txtRenavan.Size = New System.Drawing.Size(199, 22)
         Me.txtRenavan.TabIndex = 15
@@ -256,7 +256,7 @@ Partial Class frmVeiculos
         'txtChassiss
         '
         Me.txtChassiss.Location = New System.Drawing.Point(215, 92)
-        Me.txtChassiss.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtChassiss.Margin = New System.Windows.Forms.Padding(4)
         Me.txtChassiss.Name = "txtChassiss"
         Me.txtChassiss.Size = New System.Drawing.Size(199, 22)
         Me.txtChassiss.TabIndex = 14
@@ -264,7 +264,7 @@ Partial Class frmVeiculos
         'txtCombustivel
         '
         Me.txtCombustivel.Location = New System.Drawing.Point(8, 92)
-        Me.txtCombustivel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCombustivel.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCombustivel.Name = "txtCombustivel"
         Me.txtCombustivel.Size = New System.Drawing.Size(199, 22)
         Me.txtCombustivel.TabIndex = 13
@@ -272,7 +272,7 @@ Partial Class frmVeiculos
         'txtAno
         '
         Me.txtAno.Location = New System.Drawing.Point(448, 43)
-        Me.txtAno.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtAno.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAno.Name = "txtAno"
         Me.txtAno.Size = New System.Drawing.Size(124, 22)
         Me.txtAno.TabIndex = 12
@@ -280,7 +280,7 @@ Partial Class frmVeiculos
         'txtModelo
         '
         Me.txtModelo.Location = New System.Drawing.Point(256, 41)
-        Me.txtModelo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtModelo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtModelo.Name = "txtModelo"
         Me.txtModelo.Size = New System.Drawing.Size(184, 22)
         Me.txtModelo.TabIndex = 11
@@ -298,7 +298,7 @@ Partial Class frmVeiculos
         'txtPlacanumero
         '
         Me.txtPlacanumero.Location = New System.Drawing.Point(187, 41)
-        Me.txtPlacanumero.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPlacanumero.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPlacanumero.Name = "txtPlacanumero"
         Me.txtPlacanumero.Size = New System.Drawing.Size(61, 22)
         Me.txtPlacanumero.TabIndex = 9
@@ -306,7 +306,7 @@ Partial Class frmVeiculos
         'txtPlacaletra
         '
         Me.txtPlacaletra.Location = New System.Drawing.Point(95, 41)
-        Me.txtPlacaletra.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPlacaletra.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPlacaletra.Name = "txtPlacaletra"
         Me.txtPlacaletra.Size = New System.Drawing.Size(61, 22)
         Me.txtPlacaletra.TabIndex = 8
@@ -314,7 +314,7 @@ Partial Class frmVeiculos
         'txtCodigo
         '
         Me.txtCodigo.Location = New System.Drawing.Point(7, 40)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(80, 22)
         Me.txtCodigo.TabIndex = 7
@@ -413,10 +413,11 @@ Partial Class frmVeiculos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1309, 684)
         Me.Controls.Add(Me.gpbVeiculos)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmVeiculos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cadastro de Veículos"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.gpbVeiculos.ResumeLayout(False)
         Me.gpbVeiculos.PerformLayout()
         CType(Me.Grade, System.ComponentModel.ISupportInitialize).EndInit()

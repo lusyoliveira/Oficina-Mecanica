@@ -5,6 +5,8 @@
     End Sub
 
     Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
+        'Dim frmAbrePrincipal As New frmClientes()
+        'frmAbrePrincipal.MdiParent = Me
         frmClientes.Show()
     End Sub
 
@@ -35,4 +37,5 @@
     Private Sub ConfiguraçõesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConfiguraçõesToolStripMenuItem.Click
         frmConfig.Show()
     End Sub
+
 End Class

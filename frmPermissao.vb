@@ -1,5 +1,5 @@
 Public Class frmPermissao
-    Dim tbPermissao As ADODB.Recordset
+    Dim tbPermissao As DataTable 'ADODB.Recordset
     Dim sql As String
     Dim x As Integer
     Private Sub btnSalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalvar.Click
@@ -13,7 +13,7 @@ Public Class frmPermissao
         For x = 0 To lstMenus.Items.Count - 1
             sql = "Select * from tbpermissoes where permissao = '" & cboPermissao.Text & "' and menu ='" & lstMenus.Items(x).ToString & "'"
             tbPermissao = OpenRecordset(sql)
-            If tbPermissao.RecordCount = 0 Then
+            If tbPermissao.Rows.Count = 0 Then
                 sql = "Insert into tbpermissoes (permissao,menu,ativo) values ('" & cboPermissao.Text & "','" & lstMenus.Items(x).ToString & "','" & IIf(lstMenus.GetItemChecked(x) = True, "1", "0") & "')"
             Else
                 sql = "update tbpermissoes set ativo= '" & IIf(lstMenus.GetItemChecked(x) = True, "1", "0") & "' where permissao = '" & cboPermissao.Text & "' and menu ='" & lstMenus.Items(x).ToString & "'"
@@ -26,17 +26,26 @@ Public Class frmPermissao
     End Sub
 
     Private Sub cboPermissao_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cboPermissao.GotFocus
+        'With cboPermissao
+        '    .Items.Clear()
+        '    tbPermissao = OpenRecordset("Select distinct permissao from tbpermissoes order by permissao")
+        '    If tbPermissao.Rows.Count <> 0 Then
+        '        tbPermissao.MoveFirst()
+        '        While tbPermissao.EOF = False
+        '            .Items.Add(tbPermissao.Fields("permissao").Value.ToString)
+        '            tbPermissao.MoveNext()
+        '        End While
+        '    End If
+
+        'End With
         With cboPermissao
             .Items.Clear()
             tbPermissao = OpenRecordset("Select distinct permissao from tbpermissoes order by permissao")
-            If tbPermissao.RecordCount <> 0 Then
-                tbPermissao.MoveFirst()
-                While tbPermissao.EOF = False
-                    .Items.Add(tbPermissao.Fields("permissao").Value.ToString)
-                    tbPermissao.MoveNext()
-                End While
+            If tbPermissao.Rows.Count <> 0 Then
+                For Each row As DataRow In tbPermissao.Rows
+                    .Items.Add(row("permissao").ToString)
+                Next
             End If
-
         End With
     End Sub
 
@@ -52,6 +61,25 @@ Public Class frmPermissao
     End Sub
 
     Private Sub btnConsultar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultar.Click
+        'If cboPermissao.Text = "" Then
+        '    MsgBox("Selecione a permissão para gravar.", MsgBoxStyle.Information)
+        '    cboPermissao.Focus()
+        '    Exit Sub
+        'End If
+        'sql = "Select * from tbpermissoes where permissao = '" & cboPermissao.Text & "'"
+        'tbPermissao = OpenRecordset(sql)
+        'If tbPermissao.RecordCount <> 0 Then
+        '    tbPermissao.MoveFirst()
+        '    While tbPermissao.EOF = False
+        '        For x = 0 To lstMenus.Items.Count - 1
+        '            If tbPermissao.Fields("menu").Value.ToString.ToUpper = lstMenus.Items(x).ToString.ToUpper Then
+        '                lstMenus.SetItemChecked(x, IIf(tbPermissao.Fields("ativo").Value = True, True, False))
+        '            End If
+
+        '        Next
+        '        tbPermissao.MoveNext()
+        '    End While
+        'End If
         If cboPermissao.Text = "" Then
             MsgBox("Selecione a permissão para gravar.", MsgBoxStyle.Information)
             cboPermissao.Focus()
@@ -59,17 +87,14 @@ Public Class frmPermissao
         End If
         sql = "Select * from tbpermissoes where permissao = '" & cboPermissao.Text & "'"
         tbPermissao = OpenRecordset(sql)
-        If tbPermissao.RecordCount <> 0 Then
-            tbPermissao.MoveFirst()
-            While tbPermissao.EOF = False
+        If tbPermissao.Rows.Count <> 0 Then
+            For Each row As DataRow In tbPermissao.Rows
                 For x = 0 To lstMenus.Items.Count - 1
-                    If tbPermissao.Fields("menu").Value.ToString.ToUpper = lstMenus.Items(x).ToString.ToUpper Then
-                        lstMenus.SetItemChecked(x, IIf(tbPermissao.Fields("ativo").Value = True, True, False))
+                    If row("menu").ToString.ToUpper = lstMenus.Items(x).ToString.ToUpper Then
+                        lstMenus.SetItemChecked(x, IIf(row("ativo"), True, False))
                     End If
-
                 Next
-                tbPermissao.MoveNext()
-            End While
+            Next
         End If
     End Sub
 

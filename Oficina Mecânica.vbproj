@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E8E956C3-2507-4861-9803-2760DAC01062}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Oficina_Mecânica.My.MyApplication</StartupObject>
-    <RootNamespace>Oficina_Mecânica</RootNamespace>
+    <StartupObject>OficinaMecanica.My.MyApplication</StartupObject>
+    <RootNamespace>OficinaMecanica</RootNamespace>
     <AssemblyName>Oficina Mecânica</AssemblyName>
     <MyType>WindowsForms</MyType>
     <FileUpgradeFlags>

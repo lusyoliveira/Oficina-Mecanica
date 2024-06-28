@@ -75,7 +75,7 @@ Partial Class frmFuncionarios
         'mkdRg
         '
         Me.mkdRg.Location = New System.Drawing.Point(301, 134)
-        Me.mkdRg.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mkdRg.Margin = New System.Windows.Forms.Padding(4)
         Me.mkdRg.Mask = "MG - 00.000.000"
         Me.mkdRg.Name = "mkdRg"
         Me.mkdRg.Size = New System.Drawing.Size(132, 22)
@@ -84,7 +84,7 @@ Partial Class frmFuncionarios
         'mkdCpf
         '
         Me.mkdCpf.Location = New System.Drawing.Point(161, 134)
-        Me.mkdCpf.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mkdCpf.Margin = New System.Windows.Forms.Padding(4)
         Me.mkdCpf.Mask = "000.000.000-00"
         Me.mkdCpf.Name = "mkdCpf"
         Me.mkdCpf.Size = New System.Drawing.Size(132, 22)
@@ -93,7 +93,7 @@ Partial Class frmFuncionarios
         'mkdCep
         '
         Me.mkdCep.Location = New System.Drawing.Point(670, 89)
-        Me.mkdCep.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mkdCep.Margin = New System.Windows.Forms.Padding(4)
         Me.mkdCep.Mask = "00000-000"
         Me.mkdCep.Name = "mkdCep"
         Me.mkdCep.Size = New System.Drawing.Size(132, 22)
@@ -102,7 +102,7 @@ Partial Class frmFuncionarios
         'mkdTelefone
         '
         Me.mkdTelefone.Location = New System.Drawing.Point(20, 134)
-        Me.mkdTelefone.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.mkdTelefone.Margin = New System.Windows.Forms.Padding(4)
         Me.mkdTelefone.Mask = "(000) 0000-0000"
         Me.mkdTelefone.Name = "mkdTelefone"
         Me.mkdTelefone.Size = New System.Drawing.Size(132, 22)
@@ -111,7 +111,7 @@ Partial Class frmFuncionarios
         'txtCidade
         '
         Me.txtCidade.Location = New System.Drawing.Point(489, 89)
-        Me.txtCidade.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCidade.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCidade.Name = "txtCidade"
         Me.txtCidade.Size = New System.Drawing.Size(173, 22)
         Me.txtCidade.TabIndex = 36
@@ -119,7 +119,7 @@ Partial Class frmFuncionarios
         'txtEstado
         '
         Me.txtEstado.Location = New System.Drawing.Point(301, 89)
-        Me.txtEstado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEstado.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(180, 22)
         Me.txtEstado.TabIndex = 35
@@ -128,7 +128,7 @@ Partial Class frmFuncionarios
         '
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnImpirmir.Location = New System.Drawing.Point(1343, 569)
-        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnImpirmir.Name = "btnImpirmir"
         Me.btnImpirmir.Size = New System.Drawing.Size(109, 42)
         Me.btnImpirmir.TabIndex = 7
@@ -140,7 +140,7 @@ Partial Class frmFuncionarios
         '
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSair.Location = New System.Drawing.Point(1343, 507)
-        Me.btnSair.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSair.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSair.Name = "btnSair"
         Me.btnSair.Size = New System.Drawing.Size(109, 42)
         Me.btnSair.TabIndex = 6
@@ -151,7 +151,7 @@ Partial Class frmFuncionarios
         'txtBairro
         '
         Me.txtBairro.Location = New System.Drawing.Point(20, 89)
-        Me.txtBairro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtBairro.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBairro.Name = "txtBairro"
         Me.txtBairro.Size = New System.Drawing.Size(273, 22)
         Me.txtBairro.TabIndex = 34
@@ -160,7 +160,7 @@ Partial Class frmFuncionarios
         '
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluir.Location = New System.Drawing.Point(1343, 381)
-        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(109, 42)
         Me.btnExcluir.TabIndex = 5
@@ -172,7 +172,7 @@ Partial Class frmFuncionarios
         '
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConsultar.Location = New System.Drawing.Point(1343, 443)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(109, 42)
         Me.btnConsultar.TabIndex = 4
@@ -184,7 +184,7 @@ Partial Class frmFuncionarios
         '
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAlterar.Location = New System.Drawing.Point(1343, 321)
-        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAlterar.Name = "btnAlterar"
         Me.btnAlterar.Size = New System.Drawing.Size(109, 42)
         Me.btnAlterar.TabIndex = 3
@@ -196,7 +196,7 @@ Partial Class frmFuncionarios
         '
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalvar.Location = New System.Drawing.Point(1343, 252)
-        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(109, 42)
         Me.btnSalvar.TabIndex = 2
@@ -208,7 +208,7 @@ Partial Class frmFuncionarios
         '
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNovo.Location = New System.Drawing.Point(1343, 181)
-        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNovo.Name = "btnNovo"
         Me.btnNovo.Size = New System.Drawing.Size(109, 42)
         Me.btnNovo.TabIndex = 1
@@ -219,7 +219,7 @@ Partial Class frmFuncionarios
         'txtEndereco
         '
         Me.txtEndereco.Location = New System.Drawing.Point(489, 39)
-        Me.txtEndereco.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEndereco.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEndereco.Name = "txtEndereco"
         Me.txtEndereco.Size = New System.Drawing.Size(313, 22)
         Me.txtEndereco.TabIndex = 33
@@ -227,7 +227,7 @@ Partial Class frmFuncionarios
         'txtNome
         '
         Me.txtNome.Location = New System.Drawing.Point(111, 39)
-        Me.txtNome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNome.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNome.Name = "txtNome"
         Me.txtNome.Size = New System.Drawing.Size(370, 22)
         Me.txtNome.TabIndex = 32
@@ -235,7 +235,7 @@ Partial Class frmFuncionarios
         'txtCodigo
         '
         Me.txtCodigo.Location = New System.Drawing.Point(20, 39)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(83, 22)
         Me.txtCodigo.TabIndex = 31
@@ -254,8 +254,8 @@ Partial Class frmFuncionarios
         '
         Me.Grade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.nome, Me.endereco, Me.bairro, Me.cidade, Me.estado, Me.telefone, Me.cep, Me.cpf, Me.rg, Me.cargo, Me.salario})
-        Me.Grade.Location = New System.Drawing.Point(19, 164)
-        Me.Grade.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Grade.Location = New System.Drawing.Point(20, 164)
+        Me.Grade.Margin = New System.Windows.Forms.Padding(4)
         Me.Grade.Name = "Grade"
         Me.Grade.RowHeadersWidth = 51
         Me.Grade.Size = New System.Drawing.Size(1316, 473)
@@ -470,9 +470,9 @@ Partial Class frmFuncionarios
         Me.gpbClientes.Controls.Add(Me.lblTelefone)
         Me.gpbClientes.Controls.Add(Me.lblCep)
         Me.gpbClientes.Location = New System.Drawing.Point(13, 13)
-        Me.gpbClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbClientes.Name = "gpbClientes"
-        Me.gpbClientes.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbClientes.Padding = New System.Windows.Forms.Padding(4)
         Me.gpbClientes.Size = New System.Drawing.Size(1473, 659)
         Me.gpbClientes.TabIndex = 41
         Me.gpbClientes.TabStop = False
@@ -480,7 +480,7 @@ Partial Class frmFuncionarios
         'txtSalario
         '
         Me.txtSalario.Location = New System.Drawing.Point(629, 134)
-        Me.txtSalario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSalario.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSalario.Name = "txtSalario"
         Me.txtSalario.Size = New System.Drawing.Size(173, 22)
         Me.txtSalario.TabIndex = 45
@@ -498,7 +498,7 @@ Partial Class frmFuncionarios
         'txtCargo
         '
         Me.txtCargo.Location = New System.Drawing.Point(441, 134)
-        Me.txtCargo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCargo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCargo.Name = "txtCargo"
         Me.txtCargo.Size = New System.Drawing.Size(173, 22)
         Me.txtCargo.TabIndex = 43
@@ -512,9 +512,6 @@ Partial Class frmFuncionarios
         Me.lblCargo.Size = New System.Drawing.Size(44, 16)
         Me.lblCargo.TabIndex = 42
         Me.lblCargo.Text = "Cargo"
-        '
-        'PrintDocument1
-        '
         '
         'PrintPreviewDialog1
         '
@@ -537,10 +534,11 @@ Partial Class frmFuncionarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1509, 694)
         Me.Controls.Add(Me.gpbClientes)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmFuncionarios"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cadastro de Funcionários"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Grade, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gpbClientes.ResumeLayout(False)
         Me.gpbClientes.PerformLayout()

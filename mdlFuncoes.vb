@@ -52,21 +52,34 @@ Module mdlFuncoes
         muncripto = wvRETORNA
 
     End Function
+    'Public Function carregalista(ByVal lista As CheckedListBox, ByVal sql As String, ByVal campo As String, Optional ByVal checa As Boolean = False) As Boolean
+    '    Dim rs As ADODB.Recordset
+    '    rs = OpenRecordset(sql)
+    '    If rs.RecordCount = 0 Then
+    '        carregalista = False
+    '    End If
+    '    rs.MoveFirst()
+
+    '    While rs.EOF = False
+    '        lista.Items.Add(rs.Fields(campo).Value)
+    '        'lista.Select()
+    '        rs.MoveNext()
+    '    End While
+    'End Function
     Public Function carregalista(ByVal lista As CheckedListBox, ByVal sql As String, ByVal campo As String, Optional ByVal checa As Boolean = False) As Boolean
-        Dim rs As ADODB.Recordset
-        rs = OpenRecordset(sql)
-        If rs.RecordCount = 0 Then
-            carregalista = False
+        Dim rs As DataTable
+        rs = OpenRecordset(sql) ' Supondo que OpenRecordset retorne um DataTable
+
+        If rs.Rows.Count = 0 Then
+            Return False
         End If
-        rs.MoveFirst()
 
-        While rs.EOF = False
-            lista.Items.Add(rs.Fields(campo).Value)
-            'lista.Select()
-            rs.MoveNext()
-        End While
+        For Each row As DataRow In rs.Rows
+            lista.Items.Add(row(campo).ToString())
+        Next
+
+        Return True
     End Function
-
     Public Function ProcessFile(ByVal cxTexto As ListBox, ByVal strFile As String)
         'DECLARA UM OBJETO PARA A CLASSE STREAMREADER
 
@@ -117,33 +130,59 @@ Module mdlFuncoes
         montadata = CDate(novadata)
 
     End Function
-    Public Function montargrade(ByVal sql As String, ByVal grade As DataGridView, ByVal textodestino As TextBox, ByVal ParamArray conteudo() As Object) As Boolean
-        Dim tabela As ADODB.Recordset, x As Integer, y As Integer, total As Long
+    'Public Function montargrade(ByVal sql As String, ByVal grade As DataGridView, ByVal textodestino As TextBox, ByVal ParamArray conteudo() As Object) As Boolean
+    '    Dim tabela As ADODB.Recordset, x As Integer, y As Integer, total As Long
 
-        tabela = OpenRecordset(sql)
+    '    tabela = OpenRecordset(sql)
+    '    total = 0
+    '    grade.Rows.Clear()
+    '    If tabela.RecordCount <> 0 Then
+    '        tabela.MoveFirst()
+
+    '        x = 0
+    '        While tabela.EOF = False
+    '            grade.Rows.Add(tabela.Fields(conteudo(0)).Value.ToString)
+    '            For y = 1 To UBound(conteudo)
+    '                grade.Item(y, x).Value = tabela.Fields(conteudo(y)).Value.ToString
+    '            Next
+    '            x = x + 1
+    '            total = total + 1
+    '            tabela.MoveNext()
+    '        End While
+    '        montargrade = True
+    '    Else
+
+    '        montargrade = False
+    '    End If
+    '    textodestino.Text = total
+    'End Function
+    Public Function montargrade(ByVal sql As String, ByVal grade As DataGridView, ByVal textodestino As TextBox, ByVal ParamArray conteudo() As Object) As Boolean
+        Dim tabela As DataTable
+        Dim x As Integer
+        Dim y As Integer
+        Dim total As Long
+
+        tabela = OpenRecordset(sql) ' Supondo que OpenRecordset retorne um DataTable
         total = 0
         grade.Rows.Clear()
-        If tabela.RecordCount <> 0 Then
-            tabela.MoveFirst()
 
+        If tabela.Rows.Count <> 0 Then
             x = 0
-            While tabela.EOF = False
-                grade.Rows.Add(tabela.Fields(conteudo(0)).Value.ToString)
+            For Each row As DataRow In tabela.Rows
+                grade.Rows.Add(row(conteudo(0)).ToString())
                 For y = 1 To UBound(conteudo)
-                    grade.Item(y, x).Value = tabela.Fields(conteudo(y)).Value.ToString
+                    grade.Rows(x).Cells(y).Value = row(conteudo(y)).ToString()
                 Next
                 x = x + 1
                 total = total + 1
-                tabela.MoveNext()
-            End While
+            Next
             montargrade = True
         Else
-
             montargrade = False
         End If
+
         textodestino.Text = total
     End Function
-
     Public Function centraliza(ByVal frase As String, ByVal valor As Integer)
         Return (valor - frase.Length) / 2
     End Function
@@ -193,28 +232,28 @@ Module mdlFuncoes
         Return dd & expr
 
     End Function
-    Public Function meucaixa(ByVal nrcaixa As Integer)
-        Dim tbcaixa As ADODB.Recordset
-        Dim sql As String
-        Dim wcvalor As Decimal
-        sql = "Select * from tbcaixa where nrseqcaixa = " & nrcaixa
-        wcvalor = 0
-        tbcaixa = OpenRecordset(sql)
-        If tbcaixa.RecordCount = 0 Then
-            Return 0
-            Exit Function
-        End If
-        wcvalor = tbcaixa.Fields("valorinicial").Value
-        sql = "Select * from tbcaixadth where nrseqcaixa = " & nrcaixa
-        tbcaixa = OpenRecordset(sql)
-        If tbcaixa.RecordCount <> 0 Then
-            While tbcaixa.EOF = False
-                wcvalor = wcvalor + tbcaixa.Fields("valor").Value
-                tbcaixa.MoveNext()
-            End While
-        End If
-        Return wcvalor
-    End Function
+    'Public Function meucaixa(ByVal nrcaixa As Integer)
+    '    Dim tbcaixa As ADODB.Recordset
+    '    Dim sql As String
+    '    Dim wcvalor As Decimal
+    '    sql = "Select * from tbcaixa where Codigocaixa = " & nrcaixa
+    '    wcvalor = 0
+    '    tbcaixa = OpenRecordset(sql)
+    '    If tbcaixa.RecordCount = 0 Then
+    '        Return 0
+    '        Exit Function
+    '    End If
+    '    wcvalor = tbcaixa.Fields("valorinicial").Value
+    '    sql = "Select * from tbcaixadth where Codigocaixa = " & nrcaixa
+    '    tbcaixa = OpenRecordset(sql)
+    '    If tbcaixa.RecordCount <> 0 Then
+    '        While tbcaixa.EOF = False
+    '            wcvalor = wcvalor + tbcaixa.Fields("valor").Value
+    '            tbcaixa.MoveNext()
+    '        End While
+    '    End If
+    '    Return wcvalor
+    'End Function
     Public Function tratadata(ByVal data As String, Optional ByVal mascara As String = "dd/MM/yyyy") As Date
         If IsDate(data) Then
             Return Format(CDate(data), mascara)
@@ -247,35 +286,65 @@ Module mdlFuncoes
         'End If
     End Function
     Public Function existecaixa() As Boolean
-        Dim tbconfig As ADODB.Recordset
-        tbconfig = OpenRecordset("select * from tbconfig")
-        If tbconfig.RecordCount = 0 Then
+        Dim tbConfig As DataTable
+        tbConfig = OpenRecordset("select * from tbconfig") ' Supondo que OpenRecordset retorne um DataTable
+
+        If tbConfig.Rows.Count = 0 Then
             Return False
             Exit Function
         End If
 
-        If File.Exists(tbconfig.Fields("temporario").Value.ToString) Then
+        If File.Exists(tbConfig.Rows(0)("temporario").ToString()) Then
             Return True
         Else
             Return False
         End If
+        'Dim tbconfig As ADODB.Recordset
+        'tbconfig = OpenRecordset("select * from tbconfig")
+        'If tbconfig.RecordCount = 0 Then
+        '    Return False
+        '    Exit Function
+        'End If
+
+        'If File.Exists(tbconfig.Fields("temporario").Value.ToString) Then
+        '    Return True
+        'Else
+        '    Return False
+        'End If
 
     End Function
     Public Function caixaaberto(ByVal funcionario As String) As Integer
-        Dim tbcaixa As ADODB.Recordset
+        Dim tbCaixa As DataTable
         Dim sql As String
-        If existecaixa() = False Then
+
+        If Not existecaixa() Then
             Return 0
         End If
-        sql = "Select * from tbcaixa where funcionario = '" & funcionario & "' and not fechado order by nrseqcaixa desc"
-        tbcaixa = OpenRecordset(sql)
-        If tbcaixa.RecordCount = 0 Then
+
+        sql = "Select * from tbcaixa where funcionario = '" & funcionario & "' and not fechado order by Codigocaixa desc"
+        tbCaixa = OpenRecordset(sql) ' Supondo que OpenRecordset retorne um DataTable
+
+        If tbCaixa.Rows.Count = 0 Then
             Return -1
         Else
-            tbcaixa.MoveFirst()
-            Return tbcaixa.Fields("nrseqcaixa").Value
+            Return Convert.ToInt32(tbCaixa.Rows(0)("Codigocaixa"))
         End If
     End Function
+    'Public Function caixaaberto(ByVal funcionario As String) As Integer
+    '    Dim tbcaixa As ADODB.Recordset
+    '    Dim sql As String
+    '    If existecaixa() = False Then
+    '        Return 0
+    '    End If
+    '    sql = "Select * from tbcaixa where funcionario = '" & funcionario & "' and not fechado order by Codigocaixa desc"
+    '    tbcaixa = OpenRecordset(sql)
+    '    If tbcaixa.RecordCount = 0 Then
+    '        Return -1
+    '    Else
+    '        tbcaixa.MoveFirst()
+    '        Return tbcaixa.Fields("Codigocaixa").Value
+    '    End If
+    'End Function
 
     'Public Function VAL_CPF(ByVal CPF As String) As Boolean
 
@@ -569,41 +638,54 @@ Module mdlFuncoes
         wcdata = wcdata.AddDays(-1)
         Return wcdata
     End Function
+    'Public Function administrador(ByVal nome As String) As Boolean
+    '    Dim sql As String
+    '    Dim tbaux As ADODB.Recordset
+    '    sql = "Select * from vwUsuariosAdministradores where nome = '" & nome & "'"
+    '    tbaux = OpenRecordset(sql)
+
+    '    If tbaux.RecordCount <> 0 Then
+    '        Return True
+    '    Else
+    '        Return False
+    '    End If
+    'End Function
     Public Function administrador(ByVal nome As String) As Boolean
         Dim sql As String
-        Dim tbaux As ADODB.Recordset
-        sql = "Select * from vwUsuariosAdministradores where nome = '" & nome & "'"
-        tbaux = OpenRecordset(sql)
+        Dim tbAux As DataTable
 
-        If tbaux.RecordCount <> 0 Then
+        sql = "Select * from vwUsuariosAdministradores where nome = '" & nome & "'"
+        tbAux = OpenRecordset(sql) ' Supondo que OpenRecordset retorne um DataTable
+
+        If tbAux.Rows.Count <> 0 Then
             Return True
         Else
             Return False
         End If
     End Function
-    Public Function achanumerodependente(ByVal matricula As String, ByVal nome As String)
-        Dim sql As String
-        Dim x As Integer
-        Dim tbaux3 As ADODB.Recordset
-        sql = "Select * from tbdependentes where matricula = '" & matricula & "' order by nrseq"
-        tbaux3 = OpenRecordset(sql)
-        If tbaux3.RecordCount = 0 Then
-            Return 0
-            Exit Function
-        Else
-            x = 1
-            tbaux3.MoveFirst()
-            While tbaux3.EOF = False
-                If nome.ToUpper.Trim = tbaux3.Fields("nome").Value.ToString.Trim.ToUpper Then
-                    Return x
-                    Exit Function
-                End If
-                x += 1
-                tbaux3.MoveNext()
-            End While
-            Return 0
-        End If
-    End Function
+    'Public Function achanumerodependente(ByVal matricula As String, ByVal nome As String)
+    '    Dim sql As String
+    '    Dim x As Integer
+    '    Dim tbaux3 As ADODB.Recordset
+    '    sql = "Select * from tbdependentes where matricula = '" & matricula & "' order by Codigo"
+    '    tbaux3 = OpenRecordset(sql)
+    '    If tbaux3.RecordCount = 0 Then
+    '        Return 0
+    '        Exit Function
+    '    Else
+    '        x = 1
+    '        tbaux3.MoveFirst()
+    '        While tbaux3.EOF = False
+    '            If nome.ToUpper.Trim = tbaux3.Fields("nome").Value.ToString.Trim.ToUpper Then
+    '                Return x
+    '                Exit Function
+    '            End If
+    '            x += 1
+    '            tbaux3.MoveNext()
+    '        End While
+    '        Return 0
+    '    End If
+    'End Function
     Public Function MesExtenso(ByVal mes As Integer) As String
         Select Case mes
             Case Is = 1
@@ -675,84 +757,164 @@ Module mdlFuncoes
         Next
     End Function
 
-    Public Function ctrlmenusubmenu(ByVal menu As System.Windows.Forms.ToolStripMenuItem, ByVal permissao As String, Optional ByVal esconder As Boolean = False)
-        Dim tbpermissao As ADODB.Recordset
+    'Public Function ctrlmenusubmenu(ByVal menu As System.Windows.Forms.ToolStripMenuItem, ByVal permissao As String, Optional ByVal esconder As Boolean = False)
+    '    Dim tbpermissao As ADODB.Recordset
+    '    Dim sql As String
+    '    Dim z As Integer
+    '    For z = 0 To menu.DropDownItems.Count - 1
+    '        If menu.DropDownItems.Item(z).Text <> "" Then
+    '            sql = "Select * from tbpermissoes where permissao = '" & permissao & "' and menu = '" & menu.DropDownItems.Item(z).Text & "'"
+    '            tbpermissao = OpenRecordset(sql)
+    '            If tbpermissao.RecordCount <> 0 Then
+    '                If tbpermissao.Fields("ativo").Value = True Then
+    '                    If esconder = False Then
+    '                        menu.DropDownItems.Item(z).Enabled = True
+    '                    Else
+    '                        menu.DropDownItems.Item(z).Visible = True
+    '                    End If
+    '                Else
+    '                    If esconder = False Then
+    '                        menu.DropDownItems.Item(z).Enabled = False
+    '                    Else
+    '                        menu.DropDownItems.Item(z).Visible = False
+    '                    End If
+    '                End If
+    '            Else
+    '                If esconder = False Then
+    '                    menu.DropDownItems.Item(z).Enabled = True
+    '                Else
+    '                    menu.DropDownItems.Item(z).Visible = True
+    '                End If
+
+    '            End If
+    '            ctrlmenusubmenu(menu.DropDownItems.Item(z), permissao, esconder)
+    '        End If
+    '    Next
+    '    Return True
+    'End Function
+    Public Function ctrlmenusubmenu(ByVal menu As System.Windows.Forms.ToolStripMenuItem, ByVal permissao As String, Optional ByVal esconder As Boolean = False) As Boolean
+        Dim tbPermissao As DataTable
         Dim sql As String
         Dim z As Integer
+
         For z = 0 To menu.DropDownItems.Count - 1
             If menu.DropDownItems.Item(z).Text <> "" Then
                 sql = "Select * from tbpermissoes where permissao = '" & permissao & "' and menu = '" & menu.DropDownItems.Item(z).Text & "'"
-                tbpermissao = OpenRecordset(sql)
-                If tbpermissao.RecordCount <> 0 Then
-                    If tbpermissao.Fields("ativo").Value = True Then
-                        If esconder = False Then
+                tbPermissao = OpenRecordset(sql) ' Supondo que OpenRecordset retorne um DataTable
+
+                If tbPermissao.Rows.Count <> 0 Then
+                    If Convert.ToBoolean(tbPermissao.Rows(0)("ativo")) Then
+                        If Not esconder Then
                             menu.DropDownItems.Item(z).Enabled = True
                         Else
                             menu.DropDownItems.Item(z).Visible = True
                         End If
                     Else
-                        If esconder = False Then
+                        If Not esconder Then
                             menu.DropDownItems.Item(z).Enabled = False
                         Else
                             menu.DropDownItems.Item(z).Visible = False
                         End If
                     End If
                 Else
-                    If esconder = False Then
+                    If Not esconder Then
                         menu.DropDownItems.Item(z).Enabled = True
                     Else
                         menu.DropDownItems.Item(z).Visible = True
                     End If
-
                 End If
+
                 ctrlmenusubmenu(menu.DropDownItems.Item(z), permissao, esconder)
             End If
         Next
+
         Return True
     End Function
     Public Function CtrlMenu(ByVal permissao As String, Optional ByVal esconder As Boolean = False)
-        Dim tbpermissao As ADODB.Recordset
+        Dim tbPermissao As DataTable
         Dim sql As String
         Dim menu As String
         Dim x As Integer
         Dim submenu As System.Windows.Forms.ToolStripMenuItem
+
         For x = 0 To frmPrincipal.MenuStrip1.Items.Count - 1
             menu = frmPrincipal.MenuStrip1.Items(x).Text
-            If menu.ToString <> "" Then
+            If menu.ToString() <> "" Then
                 sql = "Select * from tbpermissoes where permissao = '" & permissao & "' and menu = '" & menu & "'"
-                tbpermissao = OpenRecordset(sql)
-                If tbpermissao.RecordCount <> 0 Then
-                    If tbpermissao.Fields("ativo").Value = True Then
-                        If esconder = False Then
+                tbPermissao = OpenRecordset(sql) ' Supondo que OpenRecordset retorne um DataTable
+
+                If tbPermissao.Rows.Count <> 0 Then
+                    If tbPermissao.Rows(0)("ativo") = True Then
+                        If Not esconder Then
                             frmPrincipal.MenuStrip1.Items(x).Enabled = True
                         Else
                             frmPrincipal.MenuStrip1.Items(x).Visible = True
                         End If
                     Else
-                        If esconder = False Then
+                        If Not esconder Then
                             frmPrincipal.MenuStrip1.Items(x).Enabled = False
                         Else
                             frmPrincipal.MenuStrip1.Items(x).Visible = False
                         End If
-
-
                     End If
                 Else
-                    If esconder = False Then
+                    If Not esconder Then
                         frmPrincipal.MenuStrip1.Items(x).Enabled = True
                     Else
                         frmPrincipal.MenuStrip1.Items(x).Visible = True
                     End If
-
                 End If
+
                 submenu = frmPrincipal.MenuStrip1.Items(x)
                 ctrlmenusubmenu(submenu, permissao, esconder)
             End If
         Next
 
-
         Return True
     End Function
+    'Public Function CtrlMenu(ByVal permissao As String, Optional ByVal esconder As Boolean = False)
+    '    Dim tbpermissao As ADODB.Recordset
+    '    Dim sql As String
+    '    Dim menu As String
+    '    Dim x As Integer
+    '    Dim submenu As System.Windows.Forms.ToolStripMenuItem
+    '    For x = 0 To frmPrincipal.MenuStrip1.Items.Count - 1
+    '        menu = frmPrincipal.MenuStrip1.Items(x).Text
+    '        If menu.ToString <> "" Then
+    '            sql = "Select * from tbpermissoes where permissao = '" & permissao & "' and menu = '" & menu & "'"
+    '            tbpermissao = OpenRecordset(sql)
+    '            If tbpermissao.RecordCount <> 0 Then
+    '                If tbpermissao.Fields("ativo").Value = True Then
+    '                    If esconder = False Then
+    '                        frmPrincipal.MenuStrip1.Items(x).Enabled = True
+    '                    Else
+    '                        frmPrincipal.MenuStrip1.Items(x).Visible = True
+    '                    End If
+    '                Else
+    '                    If esconder = False Then
+    '                        frmPrincipal.MenuStrip1.Items(x).Enabled = False
+    '                    Else
+    '                        frmPrincipal.MenuStrip1.Items(x).Visible = False
+    '                    End If
+
+
+    '                End If
+    '            Else
+    '                If esconder = False Then
+    '                    frmPrincipal.MenuStrip1.Items(x).Enabled = True
+    '                Else
+    '                    frmPrincipal.MenuStrip1.Items(x).Visible = True
+    '                End If
+
+    '            End If
+    '            submenu = frmPrincipal.MenuStrip1.Items(x)
+    '            ctrlmenusubmenu(submenu, permissao, esconder)
+    '        End If
+    '    Next
+
+
+    '    Return True
+    'End Function
     Public Function pegamenus(ByVal listbox1 As CheckedListBox, ByVal menustrip1 As MenuStrip)
         Dim x, y, z As Integer
         Dim v As System.Windows.Forms.ToolStripMenuItem

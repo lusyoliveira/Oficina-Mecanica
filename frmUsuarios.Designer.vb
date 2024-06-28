@@ -48,8 +48,8 @@ Partial Class frmUsuarios
         Me.nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.permissao = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblSenha = New System.Windows.Forms.Label()
-        Me.lblCod = New System.Windows.Forms.Label()
         Me.lblNome = New System.Windows.Forms.Label()
+        Me.lblCod = New System.Windows.Forms.Label()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
@@ -60,7 +60,7 @@ Partial Class frmUsuarios
         'txtDescricao
         '
         Me.txtDescricao.Location = New System.Drawing.Point(-21, -244)
-        Me.txtDescricao.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDescricao.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescricao.Name = "txtDescricao"
         Me.txtDescricao.Size = New System.Drawing.Size(1388, 22)
         Me.txtDescricao.TabIndex = 74
@@ -68,7 +68,7 @@ Partial Class frmUsuarios
         'txtCodigo
         '
         Me.txtCodigo.Location = New System.Drawing.Point(-183, -244)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(1388, 22)
         Me.txtCodigo.TabIndex = 73
@@ -76,7 +76,7 @@ Partial Class frmUsuarios
         'txtTipo
         '
         Me.txtTipo.Location = New System.Drawing.Point(69, -156)
-        Me.txtTipo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTipo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(1388, 22)
         Me.txtTipo.TabIndex = 77
@@ -84,7 +84,7 @@ Partial Class frmUsuarios
         'txtValor
         '
         Me.txtValor.Location = New System.Drawing.Point(357, -244)
-        Me.txtValor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtValor.Margin = New System.Windows.Forms.Padding(4)
         Me.txtValor.Name = "txtValor"
         Me.txtValor.Size = New System.Drawing.Size(1388, 22)
         Me.txtValor.TabIndex = 75
@@ -112,7 +112,7 @@ Partial Class frmUsuarios
         'txtModelo
         '
         Me.txtModelo.Location = New System.Drawing.Point(-183, -156)
-        Me.txtModelo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtModelo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtModelo.Name = "txtModelo"
         Me.txtModelo.Size = New System.Drawing.Size(1388, 22)
         Me.txtModelo.TabIndex = 76
@@ -161,7 +161,7 @@ Partial Class frmUsuarios
         '
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNovo.Location = New System.Drawing.Point(865, 161)
-        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNovo.Name = "btnNovo"
         Me.btnNovo.Size = New System.Drawing.Size(109, 42)
         Me.btnNovo.TabIndex = 8
@@ -172,7 +172,7 @@ Partial Class frmUsuarios
         'txtNome
         '
         Me.txtNome.Location = New System.Drawing.Point(109, 39)
-        Me.txtNome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNome.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNome.Name = "txtNome"
         Me.txtNome.Size = New System.Drawing.Size(369, 22)
         Me.txtNome.TabIndex = 84
@@ -180,7 +180,7 @@ Partial Class frmUsuarios
         'txtCod
         '
         Me.txtCod.Location = New System.Drawing.Point(18, 39)
-        Me.txtCod.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCod.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCod.Name = "txtCod"
         Me.txtCod.Size = New System.Drawing.Size(83, 22)
         Me.txtCod.TabIndex = 83
@@ -188,7 +188,7 @@ Partial Class frmUsuarios
         'txtSenha
         '
         Me.txtSenha.Location = New System.Drawing.Point(722, 39)
-        Me.txtSenha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSenha.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSenha.Name = "txtSenha"
         Me.txtSenha.Size = New System.Drawing.Size(124, 22)
         Me.txtSenha.TabIndex = 85
@@ -197,7 +197,7 @@ Partial Class frmUsuarios
         '
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnImpirmir.Location = New System.Drawing.Point(865, 567)
-        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnImpirmir.Name = "btnImpirmir"
         Me.btnImpirmir.Size = New System.Drawing.Size(109, 42)
         Me.btnImpirmir.TabIndex = 7
@@ -224,9 +224,9 @@ Partial Class frmUsuarios
         Me.gpbUsuarios.Controls.Add(Me.lblNome)
         Me.gpbUsuarios.Controls.Add(Me.lblCod)
         Me.gpbUsuarios.Location = New System.Drawing.Point(13, 13)
-        Me.gpbUsuarios.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbUsuarios.Name = "gpbUsuarios"
-        Me.gpbUsuarios.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbUsuarios.Padding = New System.Windows.Forms.Padding(4)
         Me.gpbUsuarios.Size = New System.Drawing.Size(997, 773)
         Me.gpbUsuarios.TabIndex = 88
         Me.gpbUsuarios.TabStop = False
@@ -235,7 +235,7 @@ Partial Class frmUsuarios
         '
         Me.cboPermissao.FormattingEnabled = True
         Me.cboPermissao.Location = New System.Drawing.Point(486, 37)
-        Me.cboPermissao.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboPermissao.Margin = New System.Windows.Forms.Padding(4)
         Me.cboPermissao.Name = "cboPermissao"
         Me.cboPermissao.Size = New System.Drawing.Size(228, 24)
         Me.cboPermissao.TabIndex = 82
@@ -244,7 +244,7 @@ Partial Class frmUsuarios
         '
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSair.Location = New System.Drawing.Point(865, 501)
-        Me.btnSair.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSair.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSair.Name = "btnSair"
         Me.btnSair.Size = New System.Drawing.Size(109, 42)
         Me.btnSair.TabIndex = 6
@@ -256,7 +256,7 @@ Partial Class frmUsuarios
         '
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluir.Location = New System.Drawing.Point(865, 355)
-        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(109, 42)
         Me.btnExcluir.TabIndex = 5
@@ -268,7 +268,7 @@ Partial Class frmUsuarios
         '
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConsultar.Location = New System.Drawing.Point(865, 428)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(109, 42)
         Me.btnConsultar.TabIndex = 4
@@ -280,7 +280,7 @@ Partial Class frmUsuarios
         '
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAlterar.Location = New System.Drawing.Point(865, 288)
-        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAlterar.Name = "btnAlterar"
         Me.btnAlterar.Size = New System.Drawing.Size(109, 42)
         Me.btnAlterar.TabIndex = 3
@@ -292,7 +292,7 @@ Partial Class frmUsuarios
         '
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalvar.Location = New System.Drawing.Point(865, 224)
-        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(109, 42)
         Me.btnSalvar.TabIndex = 2
@@ -305,7 +305,7 @@ Partial Class frmUsuarios
         Me.Grade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.nome, Me.permissao})
         Me.Grade.Location = New System.Drawing.Point(18, 69)
-        Me.Grade.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Grade.Margin = New System.Windows.Forms.Padding(4)
         Me.Grade.Name = "Grade"
         Me.Grade.RowHeadersWidth = 51
         Me.Grade.Size = New System.Drawing.Size(828, 656)
@@ -342,16 +342,6 @@ Partial Class frmUsuarios
         Me.lblSenha.TabIndex = 79
         Me.lblSenha.Text = "Senha"
         '
-        'lblCod
-        '
-        Me.lblCod.AutoSize = True
-        Me.lblCod.Location = New System.Drawing.Point(14, 20)
-        Me.lblCod.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblCod.Name = "lblCod"
-        Me.lblCod.Size = New System.Drawing.Size(51, 16)
-        Me.lblCod.TabIndex = 78
-        Me.lblCod.Text = "Código"
-        '
         'lblNome
         '
         Me.lblNome.AutoSize = True
@@ -362,8 +352,15 @@ Partial Class frmUsuarios
         Me.lblNome.TabIndex = 80
         Me.lblNome.Text = "Nome"
         '
-        'PrintDocument1
+        'lblCod
         '
+        Me.lblCod.AutoSize = True
+        Me.lblCod.Location = New System.Drawing.Point(14, 20)
+        Me.lblCod.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCod.Name = "lblCod"
+        Me.lblCod.Size = New System.Drawing.Size(51, 16)
+        Me.lblCod.TabIndex = 78
+        Me.lblCod.Text = "Código"
         '
         'PrintPreviewDialog1
         '
@@ -396,10 +393,11 @@ Partial Class frmUsuarios
         Me.Controls.Add(Me.lblDescricao)
         Me.Controls.Add(Me.lblCodigo)
         Me.Controls.Add(Me.gpbUsuarios)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmUsuarios"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cadastro de Usuario"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.gpbUsuarios.ResumeLayout(False)
         Me.gpbUsuarios.PerformLayout()
         CType(Me.Grade, System.ComponentModel.ISupportInitialize).EndInit()

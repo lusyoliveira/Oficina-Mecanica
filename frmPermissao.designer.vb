@@ -47,7 +47,7 @@ Partial Class frmPermissao
         '
         Me.cboPermissao.FormattingEnabled = True
         Me.cboPermissao.Location = New System.Drawing.Point(22, 42)
-        Me.cboPermissao.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboPermissao.Margin = New System.Windows.Forms.Padding(4)
         Me.cboPermissao.Name = "cboPermissao"
         Me.cboPermissao.Size = New System.Drawing.Size(260, 24)
         Me.cboPermissao.TabIndex = 1
@@ -65,7 +65,7 @@ Partial Class frmPermissao
         'btnSalvar
         '
         Me.btnSalvar.Location = New System.Drawing.Point(22, 221)
-        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(152, 47)
         Me.btnSalvar.TabIndex = 4
@@ -75,7 +75,7 @@ Partial Class frmPermissao
         'btnConsultar
         '
         Me.btnConsultar.Location = New System.Drawing.Point(22, 287)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(152, 47)
         Me.btnConsultar.TabIndex = 5
@@ -85,7 +85,7 @@ Partial Class frmPermissao
         'btnExcluir
         '
         Me.btnExcluir.Location = New System.Drawing.Point(22, 348)
-        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(152, 47)
         Me.btnExcluir.TabIndex = 6
@@ -96,7 +96,7 @@ Partial Class frmPermissao
         '
         Me.lstMenus.FormattingEnabled = True
         Me.lstMenus.Location = New System.Drawing.Point(315, 42)
-        Me.lstMenus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lstMenus.Margin = New System.Windows.Forms.Padding(4)
         Me.lstMenus.Name = "lstMenus"
         Me.lstMenus.Size = New System.Drawing.Size(383, 514)
         Me.lstMenus.TabIndex = 7
@@ -111,9 +111,9 @@ Partial Class frmPermissao
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(714, 587)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
@@ -124,7 +124,8 @@ Partial Class frmPermissao
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(741, 617)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPermissao"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Permissões"
