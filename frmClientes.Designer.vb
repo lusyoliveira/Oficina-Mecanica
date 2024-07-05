@@ -291,7 +291,7 @@ Partial Class frmClientes
         'btnImpirmir
         '
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImpirmir.Location = New System.Drawing.Point(991, 540)
+        Me.btnImpirmir.Location = New System.Drawing.Point(998, 540)
         Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnImpirmir.Name = "btnImpirmir"
         Me.btnImpirmir.Size = New System.Drawing.Size(109, 42)
@@ -303,7 +303,7 @@ Partial Class frmClientes
         'btnSair
         '
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSair.Location = New System.Drawing.Point(991, 602)
+        Me.btnSair.Location = New System.Drawing.Point(998, 602)
         Me.btnSair.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSair.Name = "btnSair"
         Me.btnSair.Size = New System.Drawing.Size(109, 42)
@@ -315,7 +315,7 @@ Partial Class frmClientes
         'btnExcluir
         '
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluir.Location = New System.Drawing.Point(991, 411)
+        Me.btnExcluir.Location = New System.Drawing.Point(998, 411)
         Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(109, 42)
@@ -327,7 +327,7 @@ Partial Class frmClientes
         'btnConsultar
         '
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(991, 474)
+        Me.btnConsultar.Location = New System.Drawing.Point(998, 474)
         Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(109, 42)
@@ -339,7 +339,7 @@ Partial Class frmClientes
         'btnAlterar
         '
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAlterar.Location = New System.Drawing.Point(991, 345)
+        Me.btnAlterar.Location = New System.Drawing.Point(998, 345)
         Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAlterar.Name = "btnAlterar"
         Me.btnAlterar.Size = New System.Drawing.Size(109, 42)
@@ -351,7 +351,7 @@ Partial Class frmClientes
         'btnSalvar
         '
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalvar.Location = New System.Drawing.Point(991, 277)
+        Me.btnSalvar.Location = New System.Drawing.Point(998, 277)
         Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(109, 42)
@@ -363,7 +363,7 @@ Partial Class frmClientes
         'btnNovo
         '
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovo.Location = New System.Drawing.Point(991, 208)
+        Me.btnNovo.Location = New System.Drawing.Point(998, 208)
         Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNovo.Name = "btnNovo"
         Me.btnNovo.Size = New System.Drawing.Size(109, 42)

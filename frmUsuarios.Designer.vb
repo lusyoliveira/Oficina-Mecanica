@@ -160,7 +160,7 @@ Partial Class frmUsuarios
         'btnNovo
         '
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovo.Location = New System.Drawing.Point(865, 161)
+        Me.btnNovo.Location = New System.Drawing.Point(865, 29)
         Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNovo.Name = "btnNovo"
         Me.btnNovo.Size = New System.Drawing.Size(109, 42)
@@ -196,7 +196,7 @@ Partial Class frmUsuarios
         'btnImpirmir
         '
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImpirmir.Location = New System.Drawing.Point(865, 567)
+        Me.btnImpirmir.Location = New System.Drawing.Point(865, 435)
         Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnImpirmir.Name = "btnImpirmir"
         Me.btnImpirmir.Size = New System.Drawing.Size(109, 42)
@@ -223,11 +223,11 @@ Partial Class frmUsuarios
         Me.gpbUsuarios.Controls.Add(Me.txtCod)
         Me.gpbUsuarios.Controls.Add(Me.lblNome)
         Me.gpbUsuarios.Controls.Add(Me.lblCod)
-        Me.gpbUsuarios.Location = New System.Drawing.Point(13, 13)
+        Me.gpbUsuarios.Location = New System.Drawing.Point(15, 13)
         Me.gpbUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbUsuarios.Name = "gpbUsuarios"
         Me.gpbUsuarios.Padding = New System.Windows.Forms.Padding(4)
-        Me.gpbUsuarios.Size = New System.Drawing.Size(997, 773)
+        Me.gpbUsuarios.Size = New System.Drawing.Size(997, 510)
         Me.gpbUsuarios.TabIndex = 88
         Me.gpbUsuarios.TabStop = False
         '
@@ -243,7 +243,7 @@ Partial Class frmUsuarios
         'btnSair
         '
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSair.Location = New System.Drawing.Point(865, 501)
+        Me.btnSair.Location = New System.Drawing.Point(865, 369)
         Me.btnSair.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSair.Name = "btnSair"
         Me.btnSair.Size = New System.Drawing.Size(109, 42)
@@ -255,7 +255,7 @@ Partial Class frmUsuarios
         'btnExcluir
         '
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluir.Location = New System.Drawing.Point(865, 355)
+        Me.btnExcluir.Location = New System.Drawing.Point(865, 223)
         Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(109, 42)
@@ -267,7 +267,7 @@ Partial Class frmUsuarios
         'btnConsultar
         '
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(865, 428)
+        Me.btnConsultar.Location = New System.Drawing.Point(865, 296)
         Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(109, 42)
@@ -279,7 +279,7 @@ Partial Class frmUsuarios
         'btnAlterar
         '
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAlterar.Location = New System.Drawing.Point(865, 288)
+        Me.btnAlterar.Location = New System.Drawing.Point(865, 156)
         Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAlterar.Name = "btnAlterar"
         Me.btnAlterar.Size = New System.Drawing.Size(109, 42)
@@ -291,7 +291,7 @@ Partial Class frmUsuarios
         'btnSalvar
         '
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalvar.Location = New System.Drawing.Point(865, 224)
+        Me.btnSalvar.Location = New System.Drawing.Point(865, 92)
         Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(109, 42)
@@ -308,7 +308,7 @@ Partial Class frmUsuarios
         Me.Grade.Margin = New System.Windows.Forms.Padding(4)
         Me.Grade.Name = "Grade"
         Me.Grade.RowHeadersWidth = 51
-        Me.Grade.Size = New System.Drawing.Size(828, 656)
+        Me.Grade.Size = New System.Drawing.Size(828, 401)
         Me.Grade.TabIndex = 0
         '
         'codigo
@@ -362,6 +362,9 @@ Partial Class frmUsuarios
         Me.lblCod.TabIndex = 78
         Me.lblCod.Text = "Código"
         '
+        'PrintDocument1
+        '
+        '
         'PrintPreviewDialog1
         '
         Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
@@ -381,7 +384,7 @@ Partial Class frmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1029, 806)
+        Me.ClientSize = New System.Drawing.Size(1029, 543)
         Me.Controls.Add(Me.txtDescricao)
         Me.Controls.Add(Me.txtCodigo)
         Me.Controls.Add(Me.txtTipo)

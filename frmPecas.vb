@@ -5,7 +5,6 @@
     Dim wcimagem As Image
     Private Sub frmPecas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         montargrade()
-        MdiParent = frmPrincipal
     End Sub
     Private Sub limpar()
         Grade.Rows.Clear()

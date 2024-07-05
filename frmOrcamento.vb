@@ -5,7 +5,6 @@
     Dim wcimagem As Image
     Dim existe As Boolean
     Private Sub frmOrcamento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        MdiParent = frmPrincipal
         montargradeservico()
         montargradepeca()
     End Sub

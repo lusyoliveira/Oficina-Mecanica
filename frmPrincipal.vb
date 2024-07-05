@@ -5,37 +5,51 @@
     End Sub
 
     Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
-        'Dim frmAbrePrincipal As New frmClientes()
-        'frmAbrePrincipal.MdiParent = Me
-        frmClientes.Show()
+        Dim frmAbreClientes As New frmClientes()
+        frmAbreClientes.MdiParent = Me
+        frmAbreClientes.Show()
     End Sub
 
     Private Sub FuncináriosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FuncináriosToolStripMenuItem.Click
-        frmFuncionarios.Show()
+        Dim frmAbreFuncionarios As New frmFuncionarios()
+        frmAbreFuncionarios.MdiParent = Me
+        frmAbreFuncionarios.Show()
     End Sub
 
     Private Sub PeçasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PeçasToolStripMenuItem.Click
-        frmPecas.Show()
+        Dim frmAbrePecas As New frmPecas()
+        frmAbrePecas.MdiParent = Me
+        frmAbrePecas.Show()
     End Sub
 
     Private Sub VeículosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VeículosToolStripMenuItem.Click
-        frmVeiculos.Show()
+        Dim frmAbreVeiculos As New frmVeiculos
+        frmAbreVeiculos.MdiParent = Me
+        frmAbreVeiculos.Show()
     End Sub
 
     Private Sub FToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FToolStripMenuItem.Click
-        frmOrcamento.Show()
+        Dim frmAbreOrcamento As New frmOrcamento
+        frmAbreOrcamento.MdiParent = Me
+        frmAbreOrcamento.Show()
     End Sub
 
     Private Sub NovoUsuárioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NovoUsuárioToolStripMenuItem.Click
-        frmUsuarios.Show()
+        Dim frmAbreUsuarios = New frmUsuarios()
+        frmAbreUsuarios.MdiParent = Me
+        frmAbreUsuarios.Show()
     End Sub
 
     Private Sub PermissãoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PermissãoToolStripMenuItem.Click
-        frmPermissao.Show()
+        Dim frmAbrePermissao As New frmPermissao
+        frmAbrePermissao.MdiParent = Me
+        frmAbrePermissao.Show()
     End Sub
 
     Private Sub ConfiguraçõesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConfiguraçõesToolStripMenuItem.Click
-        frmConfig.Show()
+        Dim frmAbreConfig As New frmConfig
+        frmAbreConfig.MdiParent = Me
+        frmAbreConfig.Show()
     End Sub
 
 End Class

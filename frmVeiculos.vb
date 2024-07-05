@@ -306,7 +306,6 @@
     End Sub
 
     Private Sub frmVeiculos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        MdiParent = frmPrincipal
         montargrade()
     End Sub
 

@@ -17,32 +17,6 @@ Public Class frmClientes
         mkdRg.Text = ""
 
     End Sub
-    'Private Sub montargrade()
-    '    With Grade
-    '        .Rows.Clear()
-    '        sql = "Select * from tbClientes order by codigo "
-    '        tbClientes = OpenRecordset(sql)
-    '        If tbClientes.RecordCount <> 0 Then
-    '            tbClientes.MoveFirst()
-    '            x = 0
-    '            While tbClientes.EOF = False
-    '                .Rows.Add(False)
-    '                .Item(0, x).Value = tbClientes.Fields("codigo").Value.ToString
-    '                .Item(1, x).Value = tbClientes.Fields("nome").Value.ToString
-    '                .Item(2, x).Value = tbClientes.Fields("endereco").Value.ToString
-    '                .Item(3, x).Value = tbClientes.Fields("bairro").Value.ToString
-    '                .Item(4, x).Value = tbClientes.Fields("cidade").Value.ToString
-    '                .Item(5, x).Value = tbClientes.Fields("estado").Value.ToString
-    '                .Item(6, x).Value = tbClientes.Fields("telefone").Value.ToString
-    '                .Item(7, x).Value = tbClientes.Fields("cep").Value.ToString
-    '                .Item(8, x).Value = tbClientes.Fields("cpf").Value.ToString
-    '                .Item(9, x).Value = tbClientes.Fields("rg").Value
-    '                x += 1
-    '                tbClientes.MoveNext()
-    '            End While
-    '        End If
-    '    End With
-    'End Sub
     Private Sub montargrade()
         Dim x As Integer = 0
         Dim sql As String = "SELECT * FROM tbClientes ORDER BY codigo"
@@ -74,7 +48,6 @@ Public Class frmClientes
     End Sub
 
     Private Sub frmClientes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        MdiParent = frmPrincipal
         montargrade()
     End Sub
 

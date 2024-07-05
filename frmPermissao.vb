@@ -1,5 +1,5 @@
 Public Class frmPermissao
-    Dim tbPermissao As DataTable 'ADODB.Recordset
+    Dim tbPermissao As DataTable
     Dim sql As String
     Dim x As Integer
     Private Sub btnSalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalvar.Click
@@ -26,18 +26,6 @@ Public Class frmPermissao
     End Sub
 
     Private Sub cboPermissao_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cboPermissao.GotFocus
-        'With cboPermissao
-        '    .Items.Clear()
-        '    tbPermissao = OpenRecordset("Select distinct permissao from tbpermissoes order by permissao")
-        '    If tbPermissao.Rows.Count <> 0 Then
-        '        tbPermissao.MoveFirst()
-        '        While tbPermissao.EOF = False
-        '            .Items.Add(tbPermissao.Fields("permissao").Value.ToString)
-        '            tbPermissao.MoveNext()
-        '        End While
-        '    End If
-
-        'End With
         With cboPermissao
             .Items.Clear()
             tbPermissao = OpenRecordset("Select distinct permissao from tbpermissoes order by permissao")
@@ -57,29 +45,9 @@ Public Class frmPermissao
 
     Private Sub frmPermissao_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         pegamenus(lstMenus, frmPrincipal.MenuStrip1)
-        MdiParent = frmPrincipal
     End Sub
 
     Private Sub btnConsultar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultar.Click
-        'If cboPermissao.Text = "" Then
-        '    MsgBox("Selecione a permissão para gravar.", MsgBoxStyle.Information)
-        '    cboPermissao.Focus()
-        '    Exit Sub
-        'End If
-        'sql = "Select * from tbpermissoes where permissao = '" & cboPermissao.Text & "'"
-        'tbPermissao = OpenRecordset(sql)
-        'If tbPermissao.RecordCount <> 0 Then
-        '    tbPermissao.MoveFirst()
-        '    While tbPermissao.EOF = False
-        '        For x = 0 To lstMenus.Items.Count - 1
-        '            If tbPermissao.Fields("menu").Value.ToString.ToUpper = lstMenus.Items(x).ToString.ToUpper Then
-        '                lstMenus.SetItemChecked(x, IIf(tbPermissao.Fields("ativo").Value = True, True, False))
-        '            End If
-
-        '        Next
-        '        tbPermissao.MoveNext()
-        '    End While
-        'End If
         If cboPermissao.Text = "" Then
             MsgBox("Selecione a permissão para gravar.", MsgBoxStyle.Information)
             cboPermissao.Focus()
