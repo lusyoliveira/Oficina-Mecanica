@@ -41,9 +41,8 @@ Partial Class frmLogin
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightSlateGray
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(819, 123)
+        Me.Panel1.Size = New System.Drawing.Size(614, 100)
         Me.Panel1.TabIndex = 0
         '
         'GroupBox1
@@ -59,39 +58,36 @@ Partial Class frmLogin
         Me.GroupBox1.Controls.Add(Me.lblSenha)
         Me.GroupBox1.Controls.Add(Me.lblUsuario)
         Me.GroupBox1.Controls.Add(Me.lblCodigo)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 131)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 106)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(785, 186)
+        Me.GroupBox1.Size = New System.Drawing.Size(589, 151)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
         'lblPermissao
         '
         Me.lblPermissao.AutoSize = True
-        Me.lblPermissao.Location = New System.Drawing.Point(586, 19)
-        Me.lblPermissao.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPermissao.Location = New System.Drawing.Point(440, 15)
         Me.lblPermissao.Name = "lblPermissao"
-        Me.lblPermissao.Size = New System.Drawing.Size(72, 16)
+        Me.lblPermissao.Size = New System.Drawing.Size(55, 13)
         Me.lblPermissao.TabIndex = 87
         Me.lblPermissao.Text = "Permissão"
         '
         'txtPermissao
         '
-        Me.txtPermissao.Location = New System.Drawing.Point(590, 39)
-        Me.txtPermissao.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPermissao.Location = New System.Drawing.Point(442, 32)
         Me.txtPermissao.Name = "txtPermissao"
-        Me.txtPermissao.Size = New System.Drawing.Size(173, 22)
+        Me.txtPermissao.Size = New System.Drawing.Size(131, 20)
         Me.txtPermissao.TabIndex = 88
         '
         'btnSair
         '
+        Me.btnSair.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ball_stop
+        Me.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSair.Location = New System.Drawing.Point(435, 94)
-        Me.btnSair.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSair.Location = New System.Drawing.Point(326, 76)
         Me.btnSair.Name = "btnSair"
-        Me.btnSair.Size = New System.Drawing.Size(109, 42)
+        Me.btnSair.Size = New System.Drawing.Size(90, 56)
         Me.btnSair.TabIndex = 9
         Me.btnSair.Text = "Sair"
         Me.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -99,11 +95,12 @@ Partial Class frmLogin
         '
         'btnEntrar
         '
+        Me.btnEntrar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ok
+        Me.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEntrar.Location = New System.Drawing.Point(253, 94)
-        Me.btnEntrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEntrar.Location = New System.Drawing.Point(190, 76)
         Me.btnEntrar.Name = "btnEntrar"
-        Me.btnEntrar.Size = New System.Drawing.Size(109, 42)
+        Me.btnEntrar.Size = New System.Drawing.Size(90, 56)
         Me.btnEntrar.TabIndex = 8
         Me.btnEntrar.Text = "Entrar"
         Me.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -111,56 +108,50 @@ Partial Class frmLogin
         '
         'txtSenha
         '
-        Me.txtSenha.Location = New System.Drawing.Point(394, 39)
-        Me.txtSenha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSenha.Location = New System.Drawing.Point(296, 32)
         Me.txtSenha.Name = "txtSenha"
         Me.txtSenha.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtSenha.Size = New System.Drawing.Size(188, 22)
+        Me.txtSenha.Size = New System.Drawing.Size(142, 20)
         Me.txtSenha.TabIndex = 7
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(109, 39)
-        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUsuario.Location = New System.Drawing.Point(82, 32)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(277, 22)
+        Me.txtUsuario.Size = New System.Drawing.Size(209, 20)
         Me.txtUsuario.TabIndex = 6
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(23, 39)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCodigo.Location = New System.Drawing.Point(17, 32)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(78, 22)
+        Me.txtCodigo.Size = New System.Drawing.Size(60, 20)
         Me.txtCodigo.TabIndex = 5
         '
         'lblSenha
         '
         Me.lblSenha.AutoSize = True
-        Me.lblSenha.Location = New System.Drawing.Point(390, 19)
-        Me.lblSenha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSenha.Location = New System.Drawing.Point(292, 15)
         Me.lblSenha.Name = "lblSenha"
-        Me.lblSenha.Size = New System.Drawing.Size(46, 16)
+        Me.lblSenha.Size = New System.Drawing.Size(38, 13)
         Me.lblSenha.TabIndex = 4
         Me.lblSenha.Text = "Senha"
         '
         'lblUsuario
         '
         Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Location = New System.Drawing.Point(105, 19)
-        Me.lblUsuario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblUsuario.Location = New System.Drawing.Point(79, 15)
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(54, 16)
+        Me.lblUsuario.Size = New System.Drawing.Size(43, 13)
         Me.lblUsuario.TabIndex = 3
         Me.lblUsuario.Text = "Usuário"
         '
         'lblCodigo
         '
         Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Location = New System.Drawing.Point(19, 19)
-        Me.lblCodigo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCodigo.Location = New System.Drawing.Point(14, 15)
         Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(51, 16)
+        Me.lblCodigo.Size = New System.Drawing.Size(40, 13)
         Me.lblCodigo.TabIndex = 2
         Me.lblCodigo.Text = "Código"
         '
@@ -170,14 +161,13 @@ Partial Class frmLogin
         '
         'frmLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(815, 343)
+        Me.ClientSize = New System.Drawing.Size(611, 279)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"

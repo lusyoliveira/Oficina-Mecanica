@@ -57,13 +57,9 @@
         '    End If
         'End With
     End Sub
-
-    Private Sub btnSair_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSair.Click
-        Me.Close()
-    End Sub
     Private Sub btnSalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalvar.Click
         sql = "update tbVeiculos set placalt = '" & txtPlacaletra.Text & "', placanr = " & txtPlacanumero.Text & ", modelo = '" & txtModelo.Text & "', ano = " & txtAno.Text & ", combustivel = '" & txtCombustivel.Text & "', chassis = " & txtChassiss.Text & ", renvan = " & txtRenavan.Text & " where codigo = " & txtCodigo.Text
-        tbveiculos = OpenRecordset(sql)
+        tbVeiculos = OpenRecordset(sql)
         MsgBox("Peça gravada com sucesso !", MsgBoxStyle.Information)
         btnNovo.Enabled = True
         btnSalvar.Enabled = False

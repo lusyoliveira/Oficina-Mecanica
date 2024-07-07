@@ -53,9 +53,6 @@
             End If
         End With
     End Sub
-    Private Sub btnSair_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSair.Click
-        Me.Close()
-    End Sub
     Private Sub btnSalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalvar.Click
         sql = "update tbPecas set descricao = '" & txtDescricao.Text & "', valor = " & moeda(txtValor.Text) & ", modelo = '" & txtModelo.Text & "', tipo = '" & txtTipo.Text & "' where codigo = " & txtCodigo.Text
         tbPecas = OpenRecordset(sql)

@@ -404,10 +404,6 @@
         txtTotalpeca.Text = FormatCurrency(txtValorpeca.Text * txtQuantidadepeca.Text)
     End Sub
 
-    Private Sub btnSair_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSair.Click
-        Me.Close()
-    End Sub
-
     Private Sub btnExcluirservico_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExcluirservico.Click
         er.Clear()
         If txtNumero.Text = "" Then

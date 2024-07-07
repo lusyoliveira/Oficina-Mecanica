@@ -9,7 +9,7 @@ Module mdlconexao
     Private DataBase = "dbOficina"
     Const user = "sa"
     Const password = "123456"
-    Private Server = "(local)"
+    Private Server = GetNomeSQLServer()
 
     ''' <summary>
     ''' Esta função obtem o nome do servidor SQL Server.
@@ -43,7 +43,7 @@ Module mdlconexao
         Return strNomeSQLServer
     End Function
     Public Function OpenRecordset(query As String) As DataTable
-        Dim connectionString As String = "Data Source=VAR223\SQLEXPRESS;Initial Catalog=dbOficina;User ID=sa;Password=123456"
+        Dim connectionString As String = $"Data Source={Server};Initial Catalog=dbOficina;User ID=sa;Password=123456"
         Dim dt As New DataTable()
         Using connection As New SqlConnection(connectionString)
             connection.Open()

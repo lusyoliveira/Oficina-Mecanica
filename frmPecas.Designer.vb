@@ -23,7 +23,6 @@ Partial Class frmPecas
         Me.btnImpirmir = New System.Windows.Forms.Button()
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.lblValor = New System.Windows.Forms.Label()
-        Me.btnSair = New System.Windows.Forms.Button()
         Me.btnExcluir = New System.Windows.Forms.Button()
         Me.btnConsultar = New System.Windows.Forms.Button()
         Me.lblDescricao = New System.Windows.Forms.Label()
@@ -53,11 +52,12 @@ Partial Class frmPecas
         '
         'btnImpirmir
         '
+        Me.btnImpirmir.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.print_view
+        Me.btnImpirmir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImpirmir.Location = New System.Drawing.Point(840, 548)
-        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnImpirmir.Location = New System.Drawing.Point(630, 381)
         Me.btnImpirmir.Name = "btnImpirmir"
-        Me.btnImpirmir.Size = New System.Drawing.Size(109, 42)
+        Me.btnImpirmir.Size = New System.Drawing.Size(82, 34)
         Me.btnImpirmir.TabIndex = 7
         Me.btnImpirmir.Text = "Imprimir"
         Me.btnImpirmir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -65,41 +65,28 @@ Partial Class frmPecas
         '
         'txtModelo
         '
-        Me.txtModelo.Location = New System.Drawing.Point(18, 92)
-        Me.txtModelo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtModelo.Location = New System.Drawing.Point(14, 75)
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(280, 22)
+        Me.txtModelo.Size = New System.Drawing.Size(211, 20)
         Me.txtModelo.TabIndex = 64
         '
         'lblValor
         '
         Me.lblValor.AutoSize = True
-        Me.lblValor.Location = New System.Drawing.Point(554, 26)
-        Me.lblValor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblValor.Location = New System.Drawing.Point(416, 21)
         Me.lblValor.Name = "lblValor"
-        Me.lblValor.Size = New System.Drawing.Size(39, 16)
+        Me.lblValor.Size = New System.Drawing.Size(31, 13)
         Me.lblValor.TabIndex = 56
         Me.lblValor.Text = "Valor"
         '
-        'btnSair
-        '
-        Me.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSair.Location = New System.Drawing.Point(840, 481)
-        Me.btnSair.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSair.Name = "btnSair"
-        Me.btnSair.Size = New System.Drawing.Size(109, 42)
-        Me.btnSair.TabIndex = 6
-        Me.btnSair.Text = "Sair"
-        Me.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSair.UseVisualStyleBackColor = True
-        '
         'btnExcluir
         '
+        Me.btnExcluir.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ball_stop
+        Me.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluir.Location = New System.Drawing.Point(840, 336)
-        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExcluir.Location = New System.Drawing.Point(630, 273)
         Me.btnExcluir.Name = "btnExcluir"
-        Me.btnExcluir.Size = New System.Drawing.Size(109, 42)
+        Me.btnExcluir.Size = New System.Drawing.Size(82, 34)
         Me.btnExcluir.TabIndex = 5
         Me.btnExcluir.Text = "Excluir"
         Me.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -107,11 +94,12 @@ Partial Class frmPecas
         '
         'btnConsultar
         '
+        Me.btnConsultar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.binoculars
+        Me.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(840, 409)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnConsultar.Location = New System.Drawing.Point(630, 332)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(109, 42)
+        Me.btnConsultar.Size = New System.Drawing.Size(82, 34)
         Me.btnConsultar.TabIndex = 4
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -120,20 +108,18 @@ Partial Class frmPecas
         'lblDescricao
         '
         Me.lblDescricao.AutoSize = True
-        Me.lblDescricao.Location = New System.Drawing.Point(105, 26)
-        Me.lblDescricao.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDescricao.Location = New System.Drawing.Point(79, 21)
         Me.lblDescricao.Name = "lblDescricao"
-        Me.lblDescricao.Size = New System.Drawing.Size(69, 16)
+        Me.lblDescricao.Size = New System.Drawing.Size(55, 13)
         Me.lblDescricao.TabIndex = 57
         Me.lblDescricao.Text = "Descrição"
         '
         'lblCodigo
         '
         Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Location = New System.Drawing.Point(14, 26)
-        Me.lblCodigo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCodigo.Location = New System.Drawing.Point(10, 21)
         Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(51, 16)
+        Me.lblCodigo.Size = New System.Drawing.Size(40, 13)
         Me.lblCodigo.TabIndex = 55
         Me.lblCodigo.Text = "Código"
         '
@@ -144,7 +130,6 @@ Partial Class frmPecas
         Me.gpbVeiculos.Controls.Add(Me.lblValor)
         Me.gpbVeiculos.Controls.Add(Me.btnImpirmir)
         Me.gpbVeiculos.Controls.Add(Me.lblDescricao)
-        Me.gpbVeiculos.Controls.Add(Me.btnSair)
         Me.gpbVeiculos.Controls.Add(Me.lblCodigo)
         Me.gpbVeiculos.Controls.Add(Me.btnExcluir)
         Me.gpbVeiculos.Controls.Add(Me.lblModelo)
@@ -157,21 +142,20 @@ Partial Class frmPecas
         Me.gpbVeiculos.Controls.Add(Me.txtTipo)
         Me.gpbVeiculos.Controls.Add(Me.Grade)
         Me.gpbVeiculos.Controls.Add(Me.lblTipo)
-        Me.gpbVeiculos.Location = New System.Drawing.Point(13, 13)
-        Me.gpbVeiculos.Margin = New System.Windows.Forms.Padding(4)
+        Me.gpbVeiculos.Location = New System.Drawing.Point(10, 11)
         Me.gpbVeiculos.Name = "gpbVeiculos"
-        Me.gpbVeiculos.Padding = New System.Windows.Forms.Padding(4)
-        Me.gpbVeiculos.Size = New System.Drawing.Size(970, 635)
+        Me.gpbVeiculos.Size = New System.Drawing.Size(728, 516)
         Me.gpbVeiculos.TabIndex = 67
         Me.gpbVeiculos.TabStop = False
         '
         'btnNovo
         '
+        Me.btnNovo.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.document
+        Me.btnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovo.Location = New System.Drawing.Point(840, 141)
-        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnNovo.Location = New System.Drawing.Point(630, 115)
         Me.btnNovo.Name = "btnNovo"
-        Me.btnNovo.Size = New System.Drawing.Size(109, 42)
+        Me.btnNovo.Size = New System.Drawing.Size(82, 34)
         Me.btnNovo.TabIndex = 8
         Me.btnNovo.Text = "Novo"
         Me.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -180,28 +164,27 @@ Partial Class frmPecas
         'lblModelo
         '
         Me.lblModelo.AutoSize = True
-        Me.lblModelo.Location = New System.Drawing.Point(14, 72)
-        Me.lblModelo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblModelo.Location = New System.Drawing.Point(10, 58)
         Me.lblModelo.Name = "lblModelo"
-        Me.lblModelo.Size = New System.Drawing.Size(53, 16)
+        Me.lblModelo.Size = New System.Drawing.Size(42, 13)
         Me.lblModelo.TabIndex = 58
         Me.lblModelo.Text = "Modelo"
         '
         'txtDescricao
         '
-        Me.txtDescricao.Location = New System.Drawing.Point(109, 45)
-        Me.txtDescricao.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDescricao.Location = New System.Drawing.Point(82, 37)
         Me.txtDescricao.Name = "txtDescricao"
-        Me.txtDescricao.Size = New System.Drawing.Size(441, 22)
+        Me.txtDescricao.Size = New System.Drawing.Size(332, 20)
         Me.txtDescricao.TabIndex = 62
         '
         'btnAlterar
         '
+        Me.btnAlterar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.doc_info
+        Me.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAlterar.Location = New System.Drawing.Point(840, 268)
-        Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAlterar.Location = New System.Drawing.Point(630, 218)
         Me.btnAlterar.Name = "btnAlterar"
-        Me.btnAlterar.Size = New System.Drawing.Size(109, 42)
+        Me.btnAlterar.Size = New System.Drawing.Size(82, 34)
         Me.btnAlterar.TabIndex = 3
         Me.btnAlterar.Text = "Alterar"
         Me.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -209,27 +192,26 @@ Partial Class frmPecas
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(18, 45)
-        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCodigo.Location = New System.Drawing.Point(14, 37)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(83, 22)
+        Me.txtCodigo.Size = New System.Drawing.Size(63, 20)
         Me.txtCodigo.TabIndex = 61
         '
         'txtValor
         '
-        Me.txtValor.Location = New System.Drawing.Point(558, 45)
-        Me.txtValor.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtValor.Location = New System.Drawing.Point(418, 37)
         Me.txtValor.Name = "txtValor"
-        Me.txtValor.Size = New System.Drawing.Size(124, 22)
+        Me.txtValor.Size = New System.Drawing.Size(94, 20)
         Me.txtValor.TabIndex = 63
         '
         'btnSalvar
         '
+        Me.btnSalvar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.external_hd
+        Me.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalvar.Location = New System.Drawing.Point(840, 204)
-        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSalvar.Location = New System.Drawing.Point(630, 166)
         Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(109, 42)
+        Me.btnSalvar.Size = New System.Drawing.Size(82, 34)
         Me.btnSalvar.TabIndex = 2
         Me.btnSalvar.Text = "Salvar"
         Me.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -237,21 +219,19 @@ Partial Class frmPecas
         '
         'txtTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(306, 92)
-        Me.txtTipo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTipo.Location = New System.Drawing.Point(230, 75)
         Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(173, 22)
+        Me.txtTipo.Size = New System.Drawing.Size(131, 20)
         Me.txtTipo.TabIndex = 65
         '
         'Grade
         '
         Me.Grade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.descricao, Me.valor, Me.modelo, Me.tipo})
-        Me.Grade.Location = New System.Drawing.Point(18, 122)
-        Me.Grade.Margin = New System.Windows.Forms.Padding(4)
+        Me.Grade.Location = New System.Drawing.Point(14, 99)
         Me.Grade.Name = "Grade"
         Me.Grade.RowHeadersWidth = 51
-        Me.Grade.Size = New System.Drawing.Size(799, 486)
+        Me.Grade.Size = New System.Drawing.Size(599, 395)
         Me.Grade.TabIndex = 0
         '
         'codigo
@@ -292,12 +272,14 @@ Partial Class frmPecas
         'lblTipo
         '
         Me.lblTipo.AutoSize = True
-        Me.lblTipo.Location = New System.Drawing.Point(302, 72)
-        Me.lblTipo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTipo.Location = New System.Drawing.Point(226, 58)
         Me.lblTipo.Name = "lblTipo"
-        Me.lblTipo.Size = New System.Drawing.Size(35, 16)
+        Me.lblTipo.Size = New System.Drawing.Size(28, 13)
         Me.lblTipo.TabIndex = 60
         Me.lblTipo.Text = "Tipo"
+        '
+        'PrintDocument1
+        '
         '
         'PrintPreviewDialog1
         '
@@ -316,12 +298,11 @@ Partial Class frmPecas
         '
         'frmPecas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1001, 666)
+        Me.ClientSize = New System.Drawing.Size(751, 541)
         Me.Controls.Add(Me.gpbVeiculos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPecas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cadastro de Peças"
@@ -334,7 +315,6 @@ Partial Class frmPecas
     Friend WithEvents btnImpirmir As System.Windows.Forms.Button
     Friend WithEvents txtModelo As System.Windows.Forms.TextBox
     Friend WithEvents lblValor As System.Windows.Forms.Label
-    Friend WithEvents btnSair As System.Windows.Forms.Button
     Friend WithEvents btnExcluir As System.Windows.Forms.Button
     Friend WithEvents btnConsultar As System.Windows.Forms.Button
     Friend WithEvents lblDescricao As System.Windows.Forms.Label

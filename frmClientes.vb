@@ -43,10 +43,6 @@ Public Class frmClientes
             Next
         End With
     End Sub
-    Private Sub btnSair_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSair.Click
-        Me.Close()
-    End Sub
-
     Private Sub frmClientes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         montargrade()
     End Sub

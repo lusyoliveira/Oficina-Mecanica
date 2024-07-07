@@ -2,12 +2,12 @@
     Private Sub frmFuncionarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
     'Dim sql As String
     'Dim tbFuncionarios As ADODB.Recordset
     'Dim x, wcpagina As Integer
     'Dim wcimagem As Image
     'Private Sub frmFuncionarios_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-    '    MdiParent = frmPrincipal
     '    montargrade()
     'End Sub
     'Private Sub limpar()

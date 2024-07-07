@@ -50,10 +50,6 @@ Public Class frmUsuarios
             End If
         End With
     End Sub
-
-    Private Sub btnSair_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSair.Click
-        Me.Close()
-    End Sub
     Private Sub btnSalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalvar.Click
         'sql = "update tbUsuarios set usuario = '" & txtNome.Text & "', senha = '" & txtSenha.Text & "', permissao = '" & cboPermissao.Text & "' where codigo = " & txtCod.Text
         sql = "INSERT INTO tbUsuarios (usuario,senha,permissao) VALUES ('" & txtNome.Text & "','" & txtSenha.Text & "','" & cboPermissao.Text & "')"
