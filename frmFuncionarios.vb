@@ -19,11 +19,6 @@
         mkdRg.Text = ""
 
     End Sub
-
-
-    Private Sub btnSair_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSair.Click
-        Me.Close()
-    End Sub
     Private Sub btnSalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalvar.Click
         Dim MsgResult As DialogResult = MessageBox.Show("Confirma a inclusão do funcionário?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
@@ -40,7 +35,7 @@
         Dim MsgResult As DialogResult = MessageBox.Show("Confirma a inclusão do fornecedor?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If MsgResult = DialogResult.Yes Then
-            ClasseFuncionario.AlterarFuncionario(lblCodigo.Text, txtNome.Text, txtEndereco.Text, txtBairro.Text, cboCidade.Text, cbouf.Text, mkdCpf.Text, mkdRg.Text, mkdCep.Text, mkdTelefone.Text, txtNumero.Text, mkdcelular.Text, mkdCarteira.Text, txtCargo.Text, txtSalario.Text, mkdPis.Text)
+            ClasseFuncionario.AlterarFuncionario(lblCodigo.Text, txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCidade.Text, txtEstado.Text, mkdCpf.Text, mkdRg.Text, mkdCep.Text, mkdTelefone.Text, txtCargo.Text, txtSalario.Text)
             ClasseFuncionario.ConsultaFuncionario(Grade, Val(lblCodigo.Text), txtNome.Text)
             limpar()
         Else
