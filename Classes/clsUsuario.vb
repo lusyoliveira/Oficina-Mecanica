@@ -181,6 +181,7 @@ Public Class clsUsuario
         Return True
     End Function
     Public Sub SalvarPermissao(Permissao As String, lstBox As ListBox, Ativo As Boolean)
+        Dim x As Integer
 
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
@@ -215,6 +216,8 @@ Public Class clsUsuario
         End Try
     End Sub
     Public Sub ConsultaPermissoes(Permissao As String, lstBox As ListBox)
+        Dim x As Integer
+
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()
