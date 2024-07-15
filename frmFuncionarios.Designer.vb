@@ -73,7 +73,7 @@ Partial Class frmFuncionarios
         '
         'mkdRg
         '
-        Me.mkdRg.Location = New System.Drawing.Point(226, 109)
+        Me.mkdRg.Location = New System.Drawing.Point(472, 32)
         Me.mkdRg.Mask = "MG - 00.000.000"
         Me.mkdRg.Name = "mkdRg"
         Me.mkdRg.Size = New System.Drawing.Size(100, 20)
@@ -81,7 +81,7 @@ Partial Class frmFuncionarios
         '
         'mkdCpf
         '
-        Me.mkdCpf.Location = New System.Drawing.Point(121, 109)
+        Me.mkdCpf.Location = New System.Drawing.Point(367, 32)
         Me.mkdCpf.Mask = "000.000.000-00"
         Me.mkdCpf.Name = "mkdCpf"
         Me.mkdCpf.Size = New System.Drawing.Size(100, 20)
@@ -97,7 +97,7 @@ Partial Class frmFuncionarios
         '
         'mkdTelefone
         '
-        Me.mkdTelefone.Location = New System.Drawing.Point(15, 109)
+        Me.mkdTelefone.Location = New System.Drawing.Point(608, 72)
         Me.mkdTelefone.Mask = "(000) 0000-0000"
         Me.mkdTelefone.Name = "mkdTelefone"
         Me.mkdTelefone.Size = New System.Drawing.Size(100, 20)
@@ -122,9 +122,9 @@ Partial Class frmFuncionarios
         Me.btnImpirmir.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.print_view
         Me.btnImpirmir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImpirmir.Location = New System.Drawing.Point(692, 408)
+        Me.btnImpirmir.Location = New System.Drawing.Point(640, 459)
         Me.btnImpirmir.Name = "btnImpirmir"
-        Me.btnImpirmir.Size = New System.Drawing.Size(82, 34)
+        Me.btnImpirmir.Size = New System.Drawing.Size(94, 59)
         Me.btnImpirmir.TabIndex = 7
         Me.btnImpirmir.Text = "Imprimir"
         Me.btnImpirmir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -142,9 +142,9 @@ Partial Class frmFuncionarios
         Me.btnExcluir.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ball_stop
         Me.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluir.Location = New System.Drawing.Point(692, 309)
+        Me.btnExcluir.Location = New System.Drawing.Point(440, 459)
         Me.btnExcluir.Name = "btnExcluir"
-        Me.btnExcluir.Size = New System.Drawing.Size(82, 34)
+        Me.btnExcluir.Size = New System.Drawing.Size(94, 59)
         Me.btnExcluir.TabIndex = 5
         Me.btnExcluir.Text = "Excluir"
         Me.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -155,9 +155,9 @@ Partial Class frmFuncionarios
         Me.btnConsultar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.binoculars
         Me.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(692, 359)
+        Me.btnConsultar.Location = New System.Drawing.Point(540, 459)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(82, 34)
+        Me.btnConsultar.Size = New System.Drawing.Size(94, 59)
         Me.btnConsultar.TabIndex = 4
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -168,9 +168,9 @@ Partial Class frmFuncionarios
         Me.btnAlterar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.doc_info
         Me.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAlterar.Location = New System.Drawing.Point(692, 260)
+        Me.btnAlterar.Location = New System.Drawing.Point(340, 459)
         Me.btnAlterar.Name = "btnAlterar"
-        Me.btnAlterar.Size = New System.Drawing.Size(82, 34)
+        Me.btnAlterar.Size = New System.Drawing.Size(94, 59)
         Me.btnAlterar.TabIndex = 3
         Me.btnAlterar.Text = "Alterar"
         Me.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -181,9 +181,9 @@ Partial Class frmFuncionarios
         Me.btnSalvar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.external_hd
         Me.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalvar.Location = New System.Drawing.Point(692, 204)
+        Me.btnSalvar.Location = New System.Drawing.Point(240, 459)
         Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(82, 34)
+        Me.btnSalvar.Size = New System.Drawing.Size(94, 59)
         Me.btnSalvar.TabIndex = 2
         Me.btnSalvar.Text = "Salvar"
         Me.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -194,9 +194,9 @@ Partial Class frmFuncionarios
         Me.btnNovo.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.document
         Me.btnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovo.Location = New System.Drawing.Point(692, 146)
+        Me.btnNovo.Location = New System.Drawing.Point(140, 459)
         Me.btnNovo.Name = "btnNovo"
-        Me.btnNovo.Size = New System.Drawing.Size(82, 34)
+        Me.btnNovo.Size = New System.Drawing.Size(94, 59)
         Me.btnNovo.TabIndex = 1
         Me.btnNovo.Text = "Novo"
         Me.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -204,9 +204,9 @@ Partial Class frmFuncionarios
         '
         'txtEndereco
         '
-        Me.txtEndereco.Location = New System.Drawing.Point(367, 32)
+        Me.txtEndereco.Location = New System.Drawing.Point(578, 32)
         Me.txtEndereco.Name = "txtEndereco"
-        Me.txtEndereco.Size = New System.Drawing.Size(236, 20)
+        Me.txtEndereco.Size = New System.Drawing.Size(340, 20)
         Me.txtEndereco.TabIndex = 33
         '
         'txtNome
@@ -226,7 +226,7 @@ Partial Class frmFuncionarios
         'lblRg
         '
         Me.lblRg.AutoSize = True
-        Me.lblRg.Location = New System.Drawing.Point(223, 93)
+        Me.lblRg.Location = New System.Drawing.Point(469, 16)
         Me.lblRg.Name = "lblRg"
         Me.lblRg.Size = New System.Drawing.Size(23, 13)
         Me.lblRg.TabIndex = 30
@@ -236,10 +236,10 @@ Partial Class frmFuncionarios
         '
         Me.Grade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.nome, Me.endereco, Me.bairro, Me.cidade, Me.estado, Me.telefone, Me.cep, Me.cpf, Me.rg, Me.cargo, Me.salario})
-        Me.Grade.Location = New System.Drawing.Point(15, 133)
+        Me.Grade.Location = New System.Drawing.Point(15, 98)
         Me.Grade.Name = "Grade"
         Me.Grade.RowHeadersWidth = 51
-        Me.Grade.Size = New System.Drawing.Size(659, 384)
+        Me.Grade.Size = New System.Drawing.Size(903, 355)
         Me.Grade.TabIndex = 0
         '
         'codigo
@@ -329,7 +329,7 @@ Partial Class frmFuncionarios
         'lblCpf
         '
         Me.lblCpf.AutoSize = True
-        Me.lblCpf.Location = New System.Drawing.Point(118, 93)
+        Me.lblCpf.Location = New System.Drawing.Point(364, 16)
         Me.lblCpf.Name = "lblCpf"
         Me.lblCpf.Size = New System.Drawing.Size(27, 13)
         Me.lblCpf.TabIndex = 29
@@ -347,7 +347,7 @@ Partial Class frmFuncionarios
         'lblTelefone
         '
         Me.lblTelefone.AutoSize = True
-        Me.lblTelefone.Location = New System.Drawing.Point(12, 93)
+        Me.lblTelefone.Location = New System.Drawing.Point(605, 56)
         Me.lblTelefone.Name = "lblTelefone"
         Me.lblTelefone.Size = New System.Drawing.Size(49, 13)
         Me.lblTelefone.TabIndex = 27
@@ -392,7 +392,7 @@ Partial Class frmFuncionarios
         'lblEndereco
         '
         Me.lblEndereco.AutoSize = True
-        Me.lblEndereco.Location = New System.Drawing.Point(364, 15)
+        Me.lblEndereco.Location = New System.Drawing.Point(575, 15)
         Me.lblEndereco.Name = "lblEndereco"
         Me.lblEndereco.Size = New System.Drawing.Size(53, 13)
         Me.lblEndereco.TabIndex = 22
@@ -442,21 +442,21 @@ Partial Class frmFuncionarios
         Me.gpbClientes.Controls.Add(Me.lblCep)
         Me.gpbClientes.Location = New System.Drawing.Point(10, 11)
         Me.gpbClientes.Name = "gpbClientes"
-        Me.gpbClientes.Size = New System.Drawing.Size(791, 535)
+        Me.gpbClientes.Size = New System.Drawing.Size(933, 535)
         Me.gpbClientes.TabIndex = 41
         Me.gpbClientes.TabStop = False
         '
         'txtSalario
         '
-        Me.txtSalario.Location = New System.Drawing.Point(472, 109)
+        Me.txtSalario.Location = New System.Drawing.Point(851, 72)
         Me.txtSalario.Name = "txtSalario"
-        Me.txtSalario.Size = New System.Drawing.Size(131, 20)
+        Me.txtSalario.Size = New System.Drawing.Size(67, 20)
         Me.txtSalario.TabIndex = 45
         '
         'lblSalario
         '
         Me.lblSalario.AutoSize = True
-        Me.lblSalario.Location = New System.Drawing.Point(469, 93)
+        Me.lblSalario.Location = New System.Drawing.Point(848, 56)
         Me.lblSalario.Name = "lblSalario"
         Me.lblSalario.Size = New System.Drawing.Size(39, 13)
         Me.lblSalario.TabIndex = 44
@@ -464,7 +464,7 @@ Partial Class frmFuncionarios
         '
         'txtCargo
         '
-        Me.txtCargo.Location = New System.Drawing.Point(331, 109)
+        Me.txtCargo.Location = New System.Drawing.Point(714, 72)
         Me.txtCargo.Name = "txtCargo"
         Me.txtCargo.Size = New System.Drawing.Size(131, 20)
         Me.txtCargo.TabIndex = 43
@@ -472,7 +472,7 @@ Partial Class frmFuncionarios
         'lblCargo
         '
         Me.lblCargo.AutoSize = True
-        Me.lblCargo.Location = New System.Drawing.Point(328, 93)
+        Me.lblCargo.Location = New System.Drawing.Point(711, 56)
         Me.lblCargo.Name = "lblCargo"
         Me.lblCargo.Size = New System.Drawing.Size(35, 13)
         Me.lblCargo.TabIndex = 42
@@ -497,7 +497,7 @@ Partial Class frmFuncionarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(818, 564)
+        Me.ClientSize = New System.Drawing.Size(955, 564)
         Me.Controls.Add(Me.gpbClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmFuncionarios"
