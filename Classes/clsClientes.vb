@@ -52,7 +52,7 @@ Public Class clsClientes
                                     .Item(6, x).Value = row("telefone").ToString()
                                     .Item(7, x).Value = row("cep").ToString()
                                     .Item(8, x).Value = row("cpf").ToString()
-                                    .Item(9, x).Value = row("rg")
+                                    .Item(9, x).Value = row("rg").ToString()
                                     x += 1
                                 Next
                             End With

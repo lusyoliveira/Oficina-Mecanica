@@ -36,26 +36,29 @@ Partial Class frmPermissao
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 18)
+        Me.Label1.Location = New System.Drawing.Point(19, 22)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.Size = New System.Drawing.Size(72, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Permissão"
         '
         'cboPermissao
         '
         Me.cboPermissao.FormattingEnabled = True
-        Me.cboPermissao.Location = New System.Drawing.Point(16, 34)
+        Me.cboPermissao.Location = New System.Drawing.Point(21, 42)
+        Me.cboPermissao.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboPermissao.Name = "cboPermissao"
-        Me.cboPermissao.Size = New System.Drawing.Size(196, 21)
+        Me.cboPermissao.Size = New System.Drawing.Size(260, 24)
         Me.cboPermissao.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 58)
+        Me.Label2.Location = New System.Drawing.Point(19, 71)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.Size = New System.Drawing.Size(55, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Opções"
         '
@@ -63,9 +66,10 @@ Partial Class frmPermissao
         '
         Me.btnSalvar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ok
         Me.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSalvar.Location = New System.Drawing.Point(202, 419)
+        Me.btnSalvar.Location = New System.Drawing.Point(269, 516)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(114, 52)
+        Me.btnSalvar.Size = New System.Drawing.Size(152, 64)
         Me.btnSalvar.TabIndex = 4
         Me.btnSalvar.Text = "Salvar"
         Me.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -75,9 +79,10 @@ Partial Class frmPermissao
         '
         Me.btnConsultar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.binoculars
         Me.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnConsultar.Location = New System.Drawing.Point(82, 419)
+        Me.btnConsultar.Location = New System.Drawing.Point(109, 516)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(114, 52)
+        Me.btnConsultar.Size = New System.Drawing.Size(152, 64)
         Me.btnConsultar.TabIndex = 5
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -87,9 +92,10 @@ Partial Class frmPermissao
         '
         Me.btnExcluir.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ball_stop
         Me.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnExcluir.Location = New System.Drawing.Point(322, 419)
+        Me.btnExcluir.Location = New System.Drawing.Point(429, 516)
+        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExcluir.Name = "btnExcluir"
-        Me.btnExcluir.Size = New System.Drawing.Size(114, 52)
+        Me.btnExcluir.Size = New System.Drawing.Size(152, 64)
         Me.btnExcluir.TabIndex = 6
         Me.btnExcluir.Text = "Excluir"
         Me.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -98,9 +104,10 @@ Partial Class frmPermissao
         'lstMenus
         '
         Me.lstMenus.FormattingEnabled = True
-        Me.lstMenus.Location = New System.Drawing.Point(16, 74)
+        Me.lstMenus.Location = New System.Drawing.Point(21, 91)
+        Me.lstMenus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lstMenus.Name = "lstMenus"
-        Me.lstMenus.Size = New System.Drawing.Size(504, 334)
+        Me.lstMenus.Size = New System.Drawing.Size(671, 395)
         Me.lstMenus.TabIndex = 7
         '
         'GroupBox1
@@ -112,19 +119,22 @@ Partial Class frmPermissao
         Me.GroupBox1.Controls.Add(Me.btnSalvar)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(10, 11)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 14)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(536, 477)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(715, 587)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         '
         'frmPermissao
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(556, 501)
+        Me.ClientSize = New System.Drawing.Size(741, 617)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmPermissao"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Permissões"

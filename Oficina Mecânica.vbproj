@@ -68,8 +68,11 @@
     <Compile Include="Classes\clsConfiguracao.vb" />
     <Compile Include="Classes\clsFornecedores.vb" />
     <Compile Include="Classes\clsFuncionarios.vb" />
-    <Compile Include="Classes\clsProdutos.vb" />
+    <Compile Include="Classes\clsVeiculos.vb" />
+    <Compile Include="Classes\clsServico.vb" />
+    <Compile Include="Classes\clsPecas.vb" />
     <Compile Include="Classes\clsUsuario.vb" />
+    <Compile Include="clsOrcamento.vb" />
     <Compile Include="frmPermissao.designer.vb">
       <DependentUpon>frmPermissao.vb</DependentUpon>
     </Compile>

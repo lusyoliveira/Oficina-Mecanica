@@ -54,6 +54,10 @@ Public Class frmClientes
         End If
     End Sub
 
+    Private Sub gpbClientes_Enter(sender As Object, e As EventArgs) Handles gpbClientes.Enter
+
+    End Sub
+
     Private Sub btnConsultar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultar.Click
         ClasseClientes.ConsultaCliente(Grade, Val(lblCodigo.Text), txtNome.Text)
     End Sub

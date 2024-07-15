@@ -10,7 +10,7 @@ Public Class clsUsuario
 
 #End Region
 #Region "METODOS"
-    Public Function ConsultaUsuario(lstGrade As ListView, Codigo As Integer, Nome As String) As DataTable
+    Public Function ConsultaUsuario(dgvGrade As DataGridView, Codigo As Integer, Nome As String) As DataTable
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()
@@ -35,24 +35,28 @@ Public Class clsUsuario
                     If Not String.IsNullOrEmpty(Nome) Then
                         command.Parameters.AddWithValue("@Nome", "%" & Nome & "%")
                     End If
-                    Using reader As SqlDataReader = command.ExecuteReader()
+                    Using adapter As New SqlDataAdapter(command)
+                        adapter.Fill(tbUsuarios)
+
                         Dim x As Integer = 0
+                        If tbUsuarios.Rows.Count > 0 Then
+                            With dgvGrade
+                                .Rows.Clear()
 
-                        While reader.Read()
-                            lstGrade.Items.Add(reader("funcionario").ToString())
-                            lstGrade.Items(x).SubItems.Add(reader("nome").ToString())
-                            lstGrade.Items(x).SubItems.Add(reader("permissao").ToString())
-
-                            If x Mod 2 = 0 Then
-                                lstGrade.Items(x).ForeColor = Color.Black
-                                lstGrade.Items(x).BackColor = Color.LightGray
-                            Else
-                                lstGrade.Items(x).ForeColor = Color.Black
-                                lstGrade.Items(x).BackColor = Color.White
-                            End If
-
-                            x += 1
-                        End While
+                                For Each row As DataRow In tbUsuarios.Rows
+                                    .Rows.Add(False)
+                                    .Item(0, x).Value = row("Codigo").ToString()
+                                    .Item(1, x).Value = row("nome").ToString()
+                                    .Item(2, x).Value = row("Permissao").ToString()
+                                    .Item(3, x).Value = row("Senha").ToString()
+                                    .Item(4, x).Value = row("ConfSenha").ToString()
+                                    .Item(5, x).Value = row("Usuario").ToString()
+                                    x += 1
+                                Next
+                            End With
+                        Else
+                            MessageBox.Show("Esse Cliente não Existe!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        End If
                     End Using
                     connection.Close()
                 End Using
@@ -181,6 +185,7 @@ Public Class clsUsuario
         Return True
     End Function
     Public Sub SalvarPermissao(Permissao As String, lstBox As ListBox, Ativo As Boolean)
+        Dim x As Integer
 
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
@@ -215,6 +220,8 @@ Public Class clsUsuario
         End Try
     End Sub
     Public Sub ConsultaPermissoes(Permissao As String, lstBox As ListBox)
+        Dim x As Integer
+
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()
