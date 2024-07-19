@@ -102,9 +102,9 @@ Partial Class frmOrcamento
         Me.gpbOrcamento.Controls.Add(Me.lblNumero)
         Me.gpbOrcamento.Controls.Add(Me.btnImpirmir)
         Me.gpbOrcamento.Location = New System.Drawing.Point(13, 14)
-        Me.gpbOrcamento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbOrcamento.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbOrcamento.Name = "gpbOrcamento"
-        Me.gpbOrcamento.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbOrcamento.Padding = New System.Windows.Forms.Padding(4)
         Me.gpbOrcamento.Size = New System.Drawing.Size(809, 123)
         Me.gpbOrcamento.TabIndex = 21
         Me.gpbOrcamento.TabStop = False
@@ -115,7 +115,7 @@ Partial Class frmOrcamento
         Me.cboFuncionario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboFuncionario.FormattingEnabled = True
         Me.cboFuncionario.Location = New System.Drawing.Point(387, 82)
-        Me.cboFuncionario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboFuncionario.Margin = New System.Windows.Forms.Padding(4)
         Me.cboFuncionario.Name = "cboFuncionario"
         Me.cboFuncionario.Size = New System.Drawing.Size(407, 24)
         Me.cboFuncionario.TabIndex = 4
@@ -136,7 +136,7 @@ Partial Class frmOrcamento
         Me.cboClientes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboClientes.FormattingEnabled = True
         Me.cboClientes.Location = New System.Drawing.Point(19, 82)
-        Me.cboClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.cboClientes.Name = "cboClientes"
         Me.cboClientes.Size = New System.Drawing.Size(359, 24)
         Me.cboClientes.TabIndex = 3
@@ -154,10 +154,11 @@ Partial Class frmOrcamento
         'txtData
         '
         Me.txtData.Location = New System.Drawing.Point(120, 38)
-        Me.txtData.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtData.Margin = New System.Windows.Forms.Padding(4)
         Me.txtData.Name = "txtData"
         Me.txtData.Size = New System.Drawing.Size(93, 22)
         Me.txtData.TabIndex = 15
+        Me.txtData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblData
         '
@@ -173,7 +174,7 @@ Partial Class frmOrcamento
         '
         Me.cbxAprovado.AutoSize = True
         Me.cbxAprovado.Location = New System.Drawing.Point(235, 38)
-        Me.cbxAprovado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbxAprovado.Margin = New System.Windows.Forms.Padding(4)
         Me.cbxAprovado.Name = "cbxAprovado"
         Me.cbxAprovado.Size = New System.Drawing.Size(89, 20)
         Me.cbxAprovado.TabIndex = 1
@@ -183,10 +184,11 @@ Partial Class frmOrcamento
         'txtNumero
         '
         Me.txtNumero.Location = New System.Drawing.Point(19, 38)
-        Me.txtNumero.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNumero.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNumero.Name = "txtNumero"
         Me.txtNumero.Size = New System.Drawing.Size(93, 22)
         Me.txtNumero.TabIndex = 0
+        Me.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblNumero
         '
@@ -201,7 +203,7 @@ Partial Class frmOrcamento
         'btnImpirmir
         '
         Me.btnImpirmir.Location = New System.Drawing.Point(916, 703)
-        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnImpirmir.Name = "btnImpirmir"
         Me.btnImpirmir.Size = New System.Drawing.Size(100, 28)
         Me.btnImpirmir.TabIndex = 7
@@ -224,7 +226,7 @@ Partial Class frmOrcamento
         Me.cboServico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboServico.FormattingEnabled = True
         Me.cboServico.Location = New System.Drawing.Point(19, 38)
-        Me.cboServico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboServico.Margin = New System.Windows.Forms.Padding(4)
         Me.cboServico.Name = "cboServico"
         Me.cboServico.Size = New System.Drawing.Size(412, 24)
         Me.cboServico.TabIndex = 5
@@ -242,10 +244,11 @@ Partial Class frmOrcamento
         'txtTotalservico
         '
         Me.txtTotalservico.Location = New System.Drawing.Point(439, 39)
-        Me.txtTotalservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTotalservico.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalservico.Name = "txtTotalservico"
         Me.txtTotalservico.Size = New System.Drawing.Size(93, 22)
         Me.txtTotalservico.TabIndex = 8
+        Me.txtTotalservico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'gpbServico
         '
@@ -257,9 +260,9 @@ Partial Class frmOrcamento
         Me.gpbServico.Controls.Add(Me.txtTotalservico)
         Me.gpbServico.Controls.Add(Me.lblTotalservico)
         Me.gpbServico.Location = New System.Drawing.Point(13, 144)
-        Me.gpbServico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbServico.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbServico.Name = "gpbServico"
-        Me.gpbServico.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbServico.Padding = New System.Windows.Forms.Padding(4)
         Me.gpbServico.Size = New System.Drawing.Size(809, 278)
         Me.gpbServico.TabIndex = 44
         Me.gpbServico.TabStop = False
@@ -270,7 +273,7 @@ Partial Class frmOrcamento
         Me.btnExcluirservico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnExcluirservico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluirservico.Location = New System.Drawing.Point(683, 18)
-        Me.btnExcluirservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExcluirservico.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluirservico.Name = "btnExcluirservico"
         Me.btnExcluirservico.Size = New System.Drawing.Size(109, 55)
         Me.btnExcluirservico.TabIndex = 24
@@ -284,7 +287,7 @@ Partial Class frmOrcamento
         Me.btnOkservico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnOkservico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnOkservico.Location = New System.Drawing.Point(552, 18)
-        Me.btnOkservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOkservico.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOkservico.Name = "btnOkservico"
         Me.btnOkservico.Size = New System.Drawing.Size(109, 55)
         Me.btnOkservico.TabIndex = 9
@@ -297,7 +300,7 @@ Partial Class frmOrcamento
         Me.dgvServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvServico.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numero, Me.data, Me.cliente, Me.funcionario, Me.servico, Me.valorservico})
         Me.dgvServico.Location = New System.Drawing.Point(19, 81)
-        Me.dgvServico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvServico.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvServico.Name = "dgvServico"
         Me.dgvServico.RowHeadersWidth = 51
         Me.dgvServico.Size = New System.Drawing.Size(773, 175)
@@ -359,9 +362,9 @@ Partial Class frmOrcamento
         Me.gpbPecas.Controls.Add(Me.lblValorpeca)
         Me.gpbPecas.Controls.Add(Me.cboPecas)
         Me.gpbPecas.Location = New System.Drawing.Point(13, 430)
-        Me.gpbPecas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbPecas.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbPecas.Name = "gpbPecas"
-        Me.gpbPecas.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gpbPecas.Padding = New System.Windows.Forms.Padding(4)
         Me.gpbPecas.Size = New System.Drawing.Size(809, 337)
         Me.gpbPecas.TabIndex = 45
         Me.gpbPecas.TabStop = False
@@ -372,7 +375,7 @@ Partial Class frmOrcamento
         Me.btnExcluirpeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnExcluirpeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluirpeca.Location = New System.Drawing.Point(683, 271)
-        Me.btnExcluirpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExcluirpeca.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluirpeca.Name = "btnExcluirpeca"
         Me.btnExcluirpeca.Size = New System.Drawing.Size(109, 53)
         Me.btnExcluirpeca.TabIndex = 25
@@ -386,7 +389,7 @@ Partial Class frmOrcamento
         Me.btnOkpeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnOkpeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnOkpeca.Location = New System.Drawing.Point(552, 271)
-        Me.btnOkpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOkpeca.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOkpeca.Name = "btnOkpeca"
         Me.btnOkpeca.Size = New System.Drawing.Size(109, 53)
         Me.btnOkpeca.TabIndex = 14
@@ -399,7 +402,7 @@ Partial Class frmOrcamento
         Me.dgvPeca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPeca.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nrorcamento1, Me.peca, Me.valorpeca, Me.quantidade, Me.totalpeca})
         Me.dgvPeca.Location = New System.Drawing.Point(19, 78)
-        Me.dgvPeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvPeca.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvPeca.Name = "dgvPeca"
         Me.dgvPeca.RowHeadersWidth = 51
         Me.dgvPeca.Size = New System.Drawing.Size(773, 185)
@@ -442,19 +445,21 @@ Partial Class frmOrcamento
         '
         'txtTotalpeca
         '
-        Me.txtTotalpeca.Location = New System.Drawing.Point(557, 42)
-        Me.txtTotalpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTotalpeca.Location = New System.Drawing.Point(699, 44)
+        Me.txtTotalpeca.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalpeca.Name = "txtTotalpeca"
         Me.txtTotalpeca.Size = New System.Drawing.Size(93, 22)
         Me.txtTotalpeca.TabIndex = 13
+        Me.txtTotalpeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtValorpeca
         '
-        Me.txtValorpeca.Location = New System.Drawing.Point(355, 42)
-        Me.txtValorpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtValorpeca.Location = New System.Drawing.Point(497, 44)
+        Me.txtValorpeca.Margin = New System.Windows.Forms.Padding(4)
         Me.txtValorpeca.Name = "txtValorpeca"
         Me.txtValorpeca.Size = New System.Drawing.Size(93, 22)
         Me.txtValorpeca.TabIndex = 11
+        Me.txtValorpeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblPeca
         '
@@ -468,17 +473,18 @@ Partial Class frmOrcamento
         '
         'txtQuantidadepeca
         '
-        Me.txtQuantidadepeca.Location = New System.Drawing.Point(456, 42)
-        Me.txtQuantidadepeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtQuantidadepeca.Location = New System.Drawing.Point(598, 44)
+        Me.txtQuantidadepeca.Margin = New System.Windows.Forms.Padding(4)
         Me.txtQuantidadepeca.Name = "txtQuantidadepeca"
         Me.txtQuantidadepeca.Size = New System.Drawing.Size(93, 22)
         Me.txtQuantidadepeca.TabIndex = 12
         Me.txtQuantidadepeca.Text = "0"
+        Me.txtQuantidadepeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblTotalpeca
         '
         Me.lblTotalpeca.AutoSize = True
-        Me.lblTotalpeca.Location = New System.Drawing.Point(555, 22)
+        Me.lblTotalpeca.Location = New System.Drawing.Point(697, 24)
         Me.lblTotalpeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalpeca.Name = "lblTotalpeca"
         Me.lblTotalpeca.Size = New System.Drawing.Size(38, 16)
@@ -488,7 +494,7 @@ Partial Class frmOrcamento
         'lblQuantidadepeca
         '
         Me.lblQuantidadepeca.AutoSize = True
-        Me.lblQuantidadepeca.Location = New System.Drawing.Point(453, 22)
+        Me.lblQuantidadepeca.Location = New System.Drawing.Point(595, 24)
         Me.lblQuantidadepeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblQuantidadepeca.Name = "lblQuantidadepeca"
         Me.lblQuantidadepeca.Size = New System.Drawing.Size(77, 16)
@@ -498,7 +504,7 @@ Partial Class frmOrcamento
         'lblValorpeca
         '
         Me.lblValorpeca.AutoSize = True
-        Me.lblValorpeca.Location = New System.Drawing.Point(353, 22)
+        Me.lblValorpeca.Location = New System.Drawing.Point(495, 24)
         Me.lblValorpeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblValorpeca.Name = "lblValorpeca"
         Me.lblValorpeca.Size = New System.Drawing.Size(88, 16)
@@ -511,18 +517,19 @@ Partial Class frmOrcamento
         Me.cboPecas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboPecas.FormattingEnabled = True
         Me.cboPecas.Location = New System.Drawing.Point(19, 42)
-        Me.cboPecas.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboPecas.Margin = New System.Windows.Forms.Padding(4)
         Me.cboPecas.Name = "cboPecas"
-        Me.cboPecas.Size = New System.Drawing.Size(328, 24)
+        Me.cboPecas.Size = New System.Drawing.Size(470, 24)
         Me.cboPecas.TabIndex = 10
         '
         'txtDesconto
         '
         Me.txtDesconto.Location = New System.Drawing.Point(843, 481)
-        Me.txtDesconto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDesconto.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDesconto.Name = "txtDesconto"
         Me.txtDesconto.Size = New System.Drawing.Size(93, 22)
         Me.txtDesconto.TabIndex = 19
+        Me.txtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblDesconto
         '
@@ -538,7 +545,7 @@ Partial Class frmOrcamento
         '
         Me.cbxDesconto.AutoSize = True
         Me.cbxDesconto.Location = New System.Drawing.Point(843, 511)
-        Me.cbxDesconto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbxDesconto.Margin = New System.Windows.Forms.Padding(4)
         Me.cbxDesconto.Name = "cbxDesconto"
         Me.cbxDesconto.Size = New System.Drawing.Size(150, 20)
         Me.cbxDesconto.TabIndex = 20
@@ -548,10 +555,11 @@ Partial Class frmOrcamento
         'txtValortotalservico
         '
         Me.txtValortotalservico.Location = New System.Drawing.Point(841, 559)
-        Me.txtValortotalservico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtValortotalservico.Margin = New System.Windows.Forms.Padding(4)
         Me.txtValortotalservico.Name = "txtValortotalservico"
         Me.txtValortotalservico.Size = New System.Drawing.Size(93, 22)
         Me.txtValortotalservico.TabIndex = 21
+        Me.txtValortotalservico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblValortotalservico
         '
@@ -566,10 +574,11 @@ Partial Class frmOrcamento
         'txtValortotalpeca
         '
         Me.txtValortotalpeca.Location = New System.Drawing.Point(843, 612)
-        Me.txtValortotalpeca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtValortotalpeca.Margin = New System.Windows.Forms.Padding(4)
         Me.txtValortotalpeca.Name = "txtValortotalpeca"
         Me.txtValortotalpeca.Size = New System.Drawing.Size(93, 22)
         Me.txtValortotalpeca.TabIndex = 22
+        Me.txtValortotalpeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblValortotalpeca
         '
@@ -584,10 +593,11 @@ Partial Class frmOrcamento
         'txtTotalgeral
         '
         Me.txtTotalgeral.Location = New System.Drawing.Point(843, 665)
-        Me.txtTotalgeral.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTotalgeral.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalgeral.Name = "txtTotalgeral"
         Me.txtTotalgeral.Size = New System.Drawing.Size(93, 22)
         Me.txtTotalgeral.TabIndex = 23
+        Me.txtTotalgeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblTotalgeral
         '
@@ -605,7 +615,7 @@ Partial Class frmOrcamento
         Me.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnConsultar.Location = New System.Drawing.Point(843, 240)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(119, 56)
         Me.btnConsultar.TabIndex = 17
@@ -628,9 +638,6 @@ Partial Class frmOrcamento
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
-        'PrintDocument1
-        '
-        '
         'PrintDialog1
         '
         Me.PrintDialog1.UseEXDialog = True
@@ -641,7 +648,7 @@ Partial Class frmOrcamento
         Me.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcluir.Location = New System.Drawing.Point(843, 304)
-        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(119, 54)
         Me.btnExcluir.TabIndex = 46
@@ -655,7 +662,7 @@ Partial Class frmOrcamento
         Me.btnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNovo.Location = New System.Drawing.Point(843, 45)
-        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNovo.Name = "btnNovo"
         Me.btnNovo.Size = New System.Drawing.Size(119, 60)
         Me.btnNovo.TabIndex = 2
@@ -669,7 +676,7 @@ Partial Class frmOrcamento
         Me.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalvar.Location = New System.Drawing.Point(843, 113)
-        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(119, 55)
         Me.btnSalvar.TabIndex = 15
@@ -683,7 +690,7 @@ Partial Class frmOrcamento
         Me.btnAprovar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnAprovar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAprovar.Location = New System.Drawing.Point(841, 176)
-        Me.btnAprovar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAprovar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAprovar.Name = "btnAprovar"
         Me.btnAprovar.Size = New System.Drawing.Size(121, 56)
         Me.btnAprovar.TabIndex = 16
@@ -714,7 +721,7 @@ Partial Class frmOrcamento
         Me.Controls.Add(Me.btnAprovar)
         Me.Controls.Add(Me.gpbServico)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmOrcamento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Fazer Orçamento"

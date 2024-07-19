@@ -4,12 +4,39 @@ Public Class clsPecas
     Dim ClasseConexao As New clsConexao, tbPecas As New DataTable()
 
 #Region "PROPRIEDADES"
+    Private Property _CodPecas As Integer
+    Public Property CodPecas As Integer
+        Get
+            Return _CodPecas
+        End Get
+        Set(value As Integer)
+            _CodPecas = value
+        End Set
+    End Property
+    Private Property _Descricao As String
+    Public Property Descricao As String
+        Get
+            Return _Descricao
+        End Get
+        Set(value As String)
+            _Descricao = value
+        End Set
+    End Property
+    Private Property _Valor As Decimal
+    Public Property Valor As Decimal
+        Get
+            Return _Valor
+        End Get
+        Set(value As Decimal)
+            _Valor = value
+        End Set
+    End Property
 #End Region
 #Region "CONSTRUTORES"
 
 #End Region
 #Region "METODOS"
-    Public Function ConsultaPecas(dgvGrade As DataGridView, Codigo As Integer, Peca As String) As DataTable
+    Public Function PesquisaPecas(dgvGrade As DataGridView, Codigo As Integer, Peca As String) As DataTable
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()
@@ -57,6 +84,27 @@ Public Class clsPecas
         End Try
         Return tbPecas
     End Function
+    Public Sub ConsultaPecas(CodPecas As Integer, ByRef DadosPecas As clsPecas)
+        Try
+            Using connection As New SqlConnection(ClasseConexao.connectionString)
+                connection.Open()
+                Dim sql As String = "SELECT * FROM tbServicos WHERE Codigo = @CodPecas"
+                Using cmd As New SqlCommand(sql, connection)
+                    cmd.Parameters.AddWithValue("@CodPecas", CodPecas)
+                    Using reader As SqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            DadosPecas._CodPecas = reader.GetInt32(0)
+                            DadosPecas._Descricao = reader.GetString(1)
+                            DadosPecas._Valor = reader.GetDecimal(2)
+                        End While
+                    End Using
+                End Using
+                connection.Close()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Erro ao consultar o serviço: " & ex.Message)
+        End Try
+    End Sub
     Public Sub SalvarPeca(descricao As String, valor As Decimal, modelo As String, tipo As String)
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)

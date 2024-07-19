@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\clsClientes.vb" />
+    <Compile Include="Classes\clsCombo.vb" />
     <Compile Include="Classes\clsConexao.vb" />
     <Compile Include="Classes\clsConfiguracao.vb" />
     <Compile Include="Classes\clsFornecedores.vb" />
@@ -128,7 +129,6 @@
     <Compile Include="frmVeiculos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mdlConexao.vb" />
     <Compile Include="mdlFuncoes.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

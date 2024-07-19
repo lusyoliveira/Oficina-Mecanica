@@ -4,12 +4,39 @@ Public Class clsServicos
     Dim ClasseConexao As New clsConexao, tbServicos As New DataTable()
 
 #Region "PROPRIEDADES"
+    Private Property _CodServico As Integer
+    Public Property CodServico As Integer
+        Get
+            Return _CodServico
+        End Get
+        Set(value As Integer)
+            _CodServico = value
+        End Set
+    End Property
+    Private Property _Descricao As String
+    Public Property Descricao As String
+        Get
+            Return _Descricao
+        End Get
+        Set(value As String)
+            _Descricao = value
+        End Set
+    End Property
+    Private Property _Valor As Decimal
+    Public Property Valor As Decimal
+        Get
+            Return _Valor
+        End Get
+        Set(value As Decimal)
+            _Valor = value
+        End Set
+    End Property
 #End Region
 #Region "CONSTRUTORES"
 
 #End Region
 #Region "METODOS"
-    Public Function ConsultaServicos(dgvGrade As DataGridView, Codigo As Integer, Peca As String) As DataTable
+    Public Function PesquisaServicos(dgvGrade As DataGridView, Codigo As Integer, Peca As String) As DataTable
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()
@@ -53,10 +80,31 @@ Public Class clsServicos
                 connection.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show("Erro ao consultar o peca: " & ex.Message)
+            MessageBox.Show("Erro ao consultar o serviço: " & ex.Message)
         End Try
         Return tbServicos
     End Function
+    Public Sub ConsultaServico(CodServico As Integer, ByRef DadosServico As clsServicos)
+        Try
+            Using connection As New SqlConnection(ClasseConexao.connectionString)
+                connection.Open()
+                Dim sql As String = "SELECT * FROM tbServicos WHERE Codigo = @CodServico"
+                Using cmd As New SqlCommand(sql, connection)
+                    cmd.Parameters.AddWithValue("@CodServico", CodServico)
+                    Using reader As SqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            DadosServico._CodServico = reader.GetInt32(0)
+                            DadosServico._Descricao = reader.GetString(1)
+                            DadosServico._Valor = reader.GetDecimal(2)
+                        End While
+                    End Using
+                End Using
+                connection.Close()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Erro ao consultar o serviço: " & ex.Message)
+        End Try
+    End Sub
     Public Sub SalvarPeca(descricao As String, valor As Decimal, modelo As String, tipo As String)
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
@@ -70,12 +118,12 @@ Public Class clsServicos
                     command.Parameters.AddWithValue("@tipo", tipo)
 
                     command.ExecuteNonQuery()
-                    MessageBox.Show("Produto salvo com sucesso!")
+                    MessageBox.Show("Serviço salvo com sucesso!")
                 End Using
                 connection.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show("Erro ao salvar peca: " & ex.Message)
+            MessageBox.Show("Erro ao salvar serviço: " & ex.Message)
         End Try
     End Sub
     Public Sub AlterarPeca(Codprod As Integer, descricao As String, valor As Decimal, modelo As String, tipo As String)
@@ -91,12 +139,12 @@ Public Class clsServicos
                     command.Parameters.AddWithValue("@tipo", tipo)
 
                     command.ExecuteNonQuery()
-                    MessageBox.Show("Produto alterado com sucesso!")
+                    MessageBox.Show("Serviço alterado com sucesso!")
                 End Using
                 connection.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show("Erro ao alterar peca: " & ex.Message)
+            MessageBox.Show("Erro ao alterar serviço: " & ex.Message)
 
         End Try
     End Sub
@@ -108,15 +156,13 @@ Public Class clsServicos
                 Using command As New SqlCommand(sql, connection)
                     command.Parameters.AddWithValue("@Codigo", Codigo)
                     command.ExecuteNonQuery()
-                    MessageBox.Show("Produto excluído com sucesso!")
+                    MessageBox.Show("Serviço excluído com sucesso!")
                 End Using
                 connection.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show("Erro ao excluir peca: " & ex.Message)
+            MessageBox.Show("Erro ao excluir serviço: " & ex.Message)
         End Try
     End Sub
-
-
 #End Region
 End Class

@@ -3,9 +3,46 @@ Imports System.Text
 
 Public Class clsOrcamento
     Dim ClasseConexao As New clsConexao, tbOrcamento, tbOrcamento_pecas, tbOrcamento_servico, tbClientes, TbPecas, TbFuncionarios, tbServico As New DataTable()
-
+#Region "PROPRIEDADES"
+    Private Property _CodCli As Integer
+    Public Property CodCli As Integer
+        Get
+            Return _CodCli
+        End Get
+        Set(value As Integer)
+            _CodCli = value
+        End Set
+    End Property
+    Private Property _CodFunc As Integer
+    Public Property CodFunc As Integer
+        Get
+            Return _CodFunc
+        End Get
+        Set(value As Integer)
+            _CodFunc = value
+        End Set
+    End Property
+    Private Property _CodServico As Integer
+    Public Property CodServico As Integer
+        Get
+            Return _CodServico
+        End Get
+        Set(value As Integer)
+            _CodServico = value
+        End Set
+    End Property
+    Private Property _CodPeca As Integer
+    Public Property CodPeca As Integer
+        Get
+            Return _CodPeca
+        End Get
+        Set(value As Integer)
+            _CodPeca = value
+        End Set
+    End Property
+#End Region
 #Region "METODOS"
-    Public Function ConsultaOrcamento(Grade As DataGridView, nrorcamento As Integer) As DataTable
+    Public Function PesquisaOrcamento(Grade As DataGridView, nrorcamento As Integer) As DataTable
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()

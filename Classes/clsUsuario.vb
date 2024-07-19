@@ -1,7 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Net.Mime.MediaTypeNames
 Imports System.Text
-Imports Microsoft.Office.Core
 Public Class clsUsuario
     Dim ClasseConexao As New clsConexao, tbUsuarios, tbPermissao As New DataTable()
 #Region "PROPRIEDADES"
@@ -42,7 +40,6 @@ Public Class clsUsuario
                         If tbUsuarios.Rows.Count > 0 Then
                             With dgvGrade
                                 .Rows.Clear()
-
                                 For Each row As DataRow In tbUsuarios.Rows
                                     .Rows.Add(False)
                                     .Item(0, x).Value = row("Codigo").ToString()
@@ -135,7 +132,6 @@ Public Class clsUsuario
             End Using
         End Using
     End Sub
-
     Public Function CtrlMenuSubmenu(ByVal menu As System.Windows.Forms.ToolStripMenuItem, ByVal permissao As String, Optional ByVal esconder As Boolean = False) As Boolean
         Dim z As Integer
 
@@ -195,7 +191,6 @@ Public Class clsUsuario
                     Using commandCheck As New SqlCommand(sql, connection)
                         commandCheck.Parameters.AddWithValue("@permissao", Permissao)
                         commandCheck.Parameters.AddWithValue("@menu", lstBox.Items(x).ToString())
-
                         Dim count As Integer = Convert.ToInt32(commandCheck.ExecuteScalar())
 
                         If count = 0 Then
@@ -225,18 +220,15 @@ Public Class clsUsuario
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()
-
                 Dim sql As String = "SELECT * FROM tbpermissoes WHERE permissao = @permissao"
                 Using command As New SqlCommand(sql, connection)
                     command.Parameters.AddWithValue("@permissao", Permissao)
-
                     Using reader As SqlDataReader = command.ExecuteReader()
                         If reader.HasRows Then
                             While reader.Read()
                                 Dim Codigo As Integer = reader("Codigo").ToString()
                                 Dim menuNome As String = reader("menu").ToString()
                                 Dim ativo As Boolean = Convert.ToBoolean(reader("ativo"))
-
                                 For x = 0 To lstBox.Items.Count - 1
                                     If menuNome.ToUpper() = lstBox.Items(x).ToString().ToUpper() Then
                                         lstBox.SetSelected(x, ativo)
@@ -247,7 +239,6 @@ Public Class clsUsuario
                         End If
                     End Using
                 End Using
-
                 connection.Close()
             End Using
         Catch ex As Exception
@@ -278,10 +269,10 @@ Public Class clsUsuario
                         Dim sql As String = $"Select * from tbpermissoes where permissao = '{permissao}' and menu = '{menu.Text}'"
                         Using command As New SqlCommand(sql, connection)
                             Using adapter As New SqlDataAdapter(command)
-                                adapter.Fill(tbpermissao)
+                                adapter.Fill(tbPermissao)
                             End Using
-                            If tbpermissao.Rows.Count > 0 Then
-                                If Convert.ToBoolean(tbpermissao.Rows(0)("ativo")) Then
+                            If tbPermissao.Rows.Count > 0 Then
+                                If Convert.ToBoolean(tbPermissao.Rows(0)("ativo")) Then
                                     If Not esconder Then
                                         menu.Enabled = True
                                     Else

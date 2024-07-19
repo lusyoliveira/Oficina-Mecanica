@@ -3,7 +3,7 @@
     Dim x, wcpagina As Integer
     Dim wcimagem As Image
     Private Sub frmPecas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        ClassePecas.ConsultaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
+        ClassePecas.PesquisaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
     End Sub
     Private Sub limpar()
         dgvPeca.Rows.Clear()
@@ -22,7 +22,7 @@
         Else
             Exit Sub
         End If
-        ClassePecas.ConsultaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
+        ClassePecas.PesquisaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
     End Sub
 
     Private Sub btnAlterar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAlterar.Click
@@ -33,7 +33,7 @@
         Else
             Exit Sub
         End If
-        ClassePecas.ConsultaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
+        ClassePecas.PesquisaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
     End Sub
 
     Private Sub btnExcluir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExcluir.Click
@@ -44,10 +44,10 @@
         Else
             Exit Sub
         End If
-        ClassePecas.ConsultaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
+        ClassePecas.PesquisaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
     End Sub
     Private Sub btnConsultar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultar.Click
-        ClassePecas.ConsultaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
+        ClassePecas.PesquisaPecas(dgvPeca, Val(txtCodigo.Text), txtDescricao.Text)
     End Sub
 
 End Class
