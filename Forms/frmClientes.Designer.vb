@@ -41,28 +41,38 @@ Partial Class frmClientes
         Me.mkdCpf = New System.Windows.Forms.MaskedTextBox()
         Me.mkdRg = New System.Windows.Forms.MaskedTextBox()
         Me.gpbClientes = New System.Windows.Forms.GroupBox()
+        Me.mskCel = New System.Windows.Forms.MaskedTextBox()
+        Me.lblEmail = New System.Windows.Forms.Label()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.lblCelular = New System.Windows.Forms.Label()
+        Me.mskDnascimento = New System.Windows.Forms.MaskedTextBox()
+        Me.cboEstadoCivil = New System.Windows.Forms.ComboBox()
+        Me.lblEstadoCivil = New System.Windows.Forms.Label()
+        Me.lblDtNasc = New System.Windows.Forms.Label()
         Me.btnImpirmir = New System.Windows.Forms.Button()
         Me.btnExcluir = New System.Windows.Forms.Button()
         Me.btnConsultar = New System.Windows.Forms.Button()
         Me.btnAlterar = New System.Windows.Forms.Button()
         Me.btnSalvar = New System.Windows.Forms.Button()
         Me.btnNovo = New System.Windows.Forms.Button()
-        Me.Grade = New System.Windows.Forms.DataGridView()
+        Me.dgvCliente = New System.Windows.Forms.DataGridView()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nom = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nascimento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoCivil = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.endereco = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.bairro = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.telefone = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cep = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.telefone = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cpf = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.rg = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.gpbClientes.SuspendLayout()
-        CType(Me.Grade, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblCodigo
@@ -98,7 +108,7 @@ Partial Class frmClientes
         'lblBairro
         '
         Me.lblBairro.AutoSize = True
-        Me.lblBairro.Location = New System.Drawing.Point(371, 78)
+        Me.lblBairro.Location = New System.Drawing.Point(459, 79)
         Me.lblBairro.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBairro.Name = "lblBairro"
         Me.lblBairro.Size = New System.Drawing.Size(43, 16)
@@ -108,7 +118,7 @@ Partial Class frmClientes
         'lblCidade
         '
         Me.lblCidade.AutoSize = True
-        Me.lblCidade.Location = New System.Drawing.Point(806, 78)
+        Me.lblCidade.Location = New System.Drawing.Point(894, 79)
         Me.lblCidade.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCidade.Name = "lblCidade"
         Me.lblCidade.Size = New System.Drawing.Size(51, 16)
@@ -118,7 +128,7 @@ Partial Class frmClientes
         'lblEstado
         '
         Me.lblEstado.AutoSize = True
-        Me.lblEstado.Location = New System.Drawing.Point(550, 78)
+        Me.lblEstado.Location = New System.Drawing.Point(638, 79)
         Me.lblEstado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEstado.Name = "lblEstado"
         Me.lblEstado.Size = New System.Drawing.Size(50, 16)
@@ -128,7 +138,7 @@ Partial Class frmClientes
         'lblTelefone
         '
         Me.lblTelefone.AutoSize = True
-        Me.lblTelefone.Location = New System.Drawing.Point(836, 29)
+        Me.lblTelefone.Location = New System.Drawing.Point(16, 126)
         Me.lblTelefone.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTelefone.Name = "lblTelefone"
         Me.lblTelefone.Size = New System.Drawing.Size(61, 16)
@@ -138,7 +148,7 @@ Partial Class frmClientes
         'lblCep
         '
         Me.lblCep.AutoSize = True
-        Me.lblCep.Location = New System.Drawing.Point(1021, 79)
+        Me.lblCep.Location = New System.Drawing.Point(1021, 28)
         Me.lblCep.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCep.Name = "lblCep"
         Me.lblCep.Size = New System.Drawing.Size(34, 16)
@@ -148,7 +158,7 @@ Partial Class frmClientes
         'lblCpf
         '
         Me.lblCpf.AutoSize = True
-        Me.lblCpf.Location = New System.Drawing.Point(556, 29)
+        Me.lblCpf.Location = New System.Drawing.Point(751, 30)
         Me.lblCpf.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCpf.Name = "lblCpf"
         Me.lblCpf.Size = New System.Drawing.Size(33, 16)
@@ -158,7 +168,7 @@ Partial Class frmClientes
         'lblRg
         '
         Me.lblRg.AutoSize = True
-        Me.lblRg.Location = New System.Drawing.Point(696, 29)
+        Me.lblRg.Location = New System.Drawing.Point(891, 30)
         Me.lblRg.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRg.Name = "lblRg"
         Me.lblRg.Size = New System.Drawing.Size(27, 16)
@@ -178,7 +188,7 @@ Partial Class frmClientes
         Me.txtNome.Location = New System.Drawing.Point(111, 49)
         Me.txtNome.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNome.Name = "txtNome"
-        Me.txtNome.Size = New System.Drawing.Size(441, 22)
+        Me.txtNome.Size = New System.Drawing.Size(375, 22)
         Me.txtNome.TabIndex = 11
         '
         'txtEndereco
@@ -186,12 +196,12 @@ Partial Class frmClientes
         Me.txtEndereco.Location = New System.Drawing.Point(20, 98)
         Me.txtEndereco.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEndereco.Name = "txtEndereco"
-        Me.txtEndereco.Size = New System.Drawing.Size(347, 22)
+        Me.txtEndereco.Size = New System.Drawing.Size(435, 22)
         Me.txtEndereco.TabIndex = 12
         '
         'txtBairro
         '
-        Me.txtBairro.Location = New System.Drawing.Point(375, 97)
+        Me.txtBairro.Location = New System.Drawing.Point(463, 98)
         Me.txtBairro.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBairro.Name = "txtBairro"
         Me.txtBairro.Size = New System.Drawing.Size(171, 22)
@@ -199,7 +209,7 @@ Partial Class frmClientes
         '
         'txtEstado
         '
-        Me.txtEstado.Location = New System.Drawing.Point(554, 97)
+        Me.txtEstado.Location = New System.Drawing.Point(642, 98)
         Me.txtEstado.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEstado.Name = "txtEstado"
         Me.txtEstado.Size = New System.Drawing.Size(248, 22)
@@ -207,7 +217,7 @@ Partial Class frmClientes
         '
         'txtCidade
         '
-        Me.txtCidade.Location = New System.Drawing.Point(810, 97)
+        Me.txtCidade.Location = New System.Drawing.Point(898, 98)
         Me.txtCidade.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCidade.Name = "txtCidade"
         Me.txtCidade.Size = New System.Drawing.Size(209, 22)
@@ -215,42 +225,54 @@ Partial Class frmClientes
         '
         'mkdTelefone
         '
-        Me.mkdTelefone.Location = New System.Drawing.Point(840, 48)
+        Me.mkdTelefone.Location = New System.Drawing.Point(20, 145)
         Me.mkdTelefone.Margin = New System.Windows.Forms.Padding(4)
         Me.mkdTelefone.Mask = "(000) 0000 - 0000"
         Me.mkdTelefone.Name = "mkdTelefone"
         Me.mkdTelefone.Size = New System.Drawing.Size(132, 22)
         Me.mkdTelefone.TabIndex = 16
+        Me.mkdTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
         'mkdCep
         '
-        Me.mkdCep.Location = New System.Drawing.Point(1027, 97)
+        Me.mkdCep.Location = New System.Drawing.Point(1024, 48)
         Me.mkdCep.Margin = New System.Windows.Forms.Padding(4)
         Me.mkdCep.Mask = "00000 - 000"
         Me.mkdCep.Name = "mkdCep"
-        Me.mkdCep.Size = New System.Drawing.Size(80, 22)
+        Me.mkdCep.Size = New System.Drawing.Size(83, 22)
         Me.mkdCep.TabIndex = 17
+        Me.mkdCep.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
         'mkdCpf
         '
-        Me.mkdCpf.Location = New System.Drawing.Point(560, 48)
+        Me.mkdCpf.Location = New System.Drawing.Point(755, 49)
         Me.mkdCpf.Margin = New System.Windows.Forms.Padding(4)
         Me.mkdCpf.Mask = "000.000.000 - 00"
         Me.mkdCpf.Name = "mkdCpf"
         Me.mkdCpf.Size = New System.Drawing.Size(132, 22)
         Me.mkdCpf.TabIndex = 18
+        Me.mkdCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
         'mkdRg
         '
-        Me.mkdRg.Location = New System.Drawing.Point(700, 48)
+        Me.mkdRg.Location = New System.Drawing.Point(895, 49)
         Me.mkdRg.Margin = New System.Windows.Forms.Padding(4)
         Me.mkdRg.Mask = "MG - 00.000.000"
         Me.mkdRg.Name = "mkdRg"
-        Me.mkdRg.Size = New System.Drawing.Size(132, 22)
+        Me.mkdRg.Size = New System.Drawing.Size(121, 22)
         Me.mkdRg.TabIndex = 19
+        Me.mkdRg.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
         'gpbClientes
         '
+        Me.gpbClientes.Controls.Add(Me.mskCel)
+        Me.gpbClientes.Controls.Add(Me.lblEmail)
+        Me.gpbClientes.Controls.Add(Me.txtEmail)
+        Me.gpbClientes.Controls.Add(Me.lblCelular)
+        Me.gpbClientes.Controls.Add(Me.mskDnascimento)
+        Me.gpbClientes.Controls.Add(Me.cboEstadoCivil)
+        Me.gpbClientes.Controls.Add(Me.lblEstadoCivil)
+        Me.gpbClientes.Controls.Add(Me.lblDtNasc)
         Me.gpbClientes.Controls.Add(Me.mkdRg)
         Me.gpbClientes.Controls.Add(Me.btnImpirmir)
         Me.gpbClientes.Controls.Add(Me.mkdCpf)
@@ -265,7 +287,7 @@ Partial Class frmClientes
         Me.gpbClientes.Controls.Add(Me.txtBairro)
         Me.gpbClientes.Controls.Add(Me.btnNovo)
         Me.gpbClientes.Controls.Add(Me.txtEndereco)
-        Me.gpbClientes.Controls.Add(Me.Grade)
+        Me.gpbClientes.Controls.Add(Me.dgvCliente)
         Me.gpbClientes.Controls.Add(Me.txtNome)
         Me.gpbClientes.Controls.Add(Me.txtCodigo)
         Me.gpbClientes.Controls.Add(Me.lblCodigo)
@@ -285,6 +307,84 @@ Partial Class frmClientes
         Me.gpbClientes.Size = New System.Drawing.Size(1121, 579)
         Me.gpbClientes.TabIndex = 20
         Me.gpbClientes.TabStop = False
+        '
+        'mskCel
+        '
+        Me.mskCel.Location = New System.Drawing.Point(160, 145)
+        Me.mskCel.Margin = New System.Windows.Forms.Padding(4)
+        Me.mskCel.Mask = "(00)0000-0000"
+        Me.mskCel.Name = "mskCel"
+        Me.mskCel.Size = New System.Drawing.Size(132, 22)
+        Me.mskCel.TabIndex = 73
+        Me.mskCel.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
+        '
+        'lblEmail
+        '
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Location = New System.Drawing.Point(298, 125)
+        Me.lblEmail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(45, 16)
+        Me.lblEmail.TabIndex = 72
+        Me.lblEmail.Text = "E-mail"
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(300, 145)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(437, 22)
+        Me.txtEmail.TabIndex = 71
+        '
+        'lblCelular
+        '
+        Me.lblCelular.AutoSize = True
+        Me.lblCelular.Location = New System.Drawing.Point(156, 127)
+        Me.lblCelular.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCelular.Name = "lblCelular"
+        Me.lblCelular.Size = New System.Drawing.Size(49, 16)
+        Me.lblCelular.TabIndex = 70
+        Me.lblCelular.Text = "Celular"
+        '
+        'mskDnascimento
+        '
+        Me.mskDnascimento.Location = New System.Drawing.Point(494, 48)
+        Me.mskDnascimento.Margin = New System.Windows.Forms.Padding(4)
+        Me.mskDnascimento.Mask = "00/00/0000"
+        Me.mskDnascimento.Name = "mskDnascimento"
+        Me.mskDnascimento.Size = New System.Drawing.Size(85, 22)
+        Me.mskDnascimento.TabIndex = 69
+        Me.mskDnascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
+        Me.mskDnascimento.ValidatingType = GetType(Date)
+        '
+        'cboEstadoCivil
+        '
+        Me.cboEstadoCivil.FormattingEnabled = True
+        Me.cboEstadoCivil.Location = New System.Drawing.Point(587, 48)
+        Me.cboEstadoCivil.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboEstadoCivil.Name = "cboEstadoCivil"
+        Me.cboEstadoCivil.Size = New System.Drawing.Size(160, 24)
+        Me.cboEstadoCivil.TabIndex = 68
+        '
+        'lblEstadoCivil
+        '
+        Me.lblEstadoCivil.AutoSize = True
+        Me.lblEstadoCivil.Location = New System.Drawing.Point(584, 30)
+        Me.lblEstadoCivil.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblEstadoCivil.Name = "lblEstadoCivil"
+        Me.lblEstadoCivil.Size = New System.Drawing.Size(78, 16)
+        Me.lblEstadoCivil.TabIndex = 67
+        Me.lblEstadoCivil.Text = "Estado Civil"
+        '
+        'lblDtNasc
+        '
+        Me.lblDtNasc.AutoSize = True
+        Me.lblDtNasc.Location = New System.Drawing.Point(491, 30)
+        Me.lblDtNasc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDtNasc.Name = "lblDtNasc"
+        Me.lblDtNasc.Size = New System.Drawing.Size(79, 16)
+        Me.lblDtNasc.TabIndex = 66
+        Me.lblDtNasc.Text = "Nascimento"
         '
         'btnImpirmir
         '
@@ -370,22 +470,26 @@ Partial Class frmClientes
         Me.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNovo.UseVisualStyleBackColor = True
         '
-        'Grade
+        'dgvCliente
         '
-        Me.Grade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Grade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.nom, Me.endereco, Me.bairro, Me.cidade, Me.estado, Me.telefone, Me.cep, Me.cpf, Me.rg})
-        Me.Grade.Location = New System.Drawing.Point(19, 128)
-        Me.Grade.Margin = New System.Windows.Forms.Padding(4)
-        Me.Grade.Name = "Grade"
-        Me.Grade.RowHeadersWidth = 51
-        Me.Grade.Size = New System.Drawing.Size(953, 428)
-        Me.Grade.TabIndex = 0
+        Me.dgvCliente.AllowUserToAddRows = False
+        Me.dgvCliente.AllowUserToDeleteRows = False
+        Me.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.nom, Me.Nascimento, Me.EstadoCivil, Me.endereco, Me.bairro, Me.cidade, Me.estado, Me.cep, Me.telefone, Me.cpf, Me.rg})
+        Me.dgvCliente.Location = New System.Drawing.Point(19, 175)
+        Me.dgvCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvCliente.Name = "dgvCliente"
+        Me.dgvCliente.ReadOnly = True
+        Me.dgvCliente.RowHeadersWidth = 51
+        Me.dgvCliente.Size = New System.Drawing.Size(953, 381)
+        Me.dgvCliente.TabIndex = 0
         '
         'codigo
         '
         Me.codigo.HeaderText = "Código"
         Me.codigo.MinimumWidth = 6
         Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
         Me.codigo.Width = 125
         '
         'nom
@@ -393,13 +497,31 @@ Partial Class frmClientes
         Me.nom.HeaderText = "Nome"
         Me.nom.MinimumWidth = 6
         Me.nom.Name = "nom"
+        Me.nom.ReadOnly = True
         Me.nom.Width = 125
+        '
+        'Nascimento
+        '
+        Me.Nascimento.HeaderText = "Nascimento"
+        Me.Nascimento.MinimumWidth = 6
+        Me.Nascimento.Name = "Nascimento"
+        Me.Nascimento.ReadOnly = True
+        Me.Nascimento.Width = 125
+        '
+        'EstadoCivil
+        '
+        Me.EstadoCivil.HeaderText = "Est. Civil"
+        Me.EstadoCivil.MinimumWidth = 6
+        Me.EstadoCivil.Name = "EstadoCivil"
+        Me.EstadoCivil.ReadOnly = True
+        Me.EstadoCivil.Width = 125
         '
         'endereco
         '
         Me.endereco.HeaderText = "Endereço"
         Me.endereco.MinimumWidth = 6
         Me.endereco.Name = "endereco"
+        Me.endereco.ReadOnly = True
         Me.endereco.Width = 125
         '
         'bairro
@@ -407,6 +529,7 @@ Partial Class frmClientes
         Me.bairro.HeaderText = "Bairro"
         Me.bairro.MinimumWidth = 6
         Me.bairro.Name = "bairro"
+        Me.bairro.ReadOnly = True
         Me.bairro.Width = 125
         '
         'cidade
@@ -414,6 +537,7 @@ Partial Class frmClientes
         Me.cidade.HeaderText = "Cidade"
         Me.cidade.MinimumWidth = 6
         Me.cidade.Name = "cidade"
+        Me.cidade.ReadOnly = True
         Me.cidade.Width = 125
         '
         'estado
@@ -421,27 +545,31 @@ Partial Class frmClientes
         Me.estado.HeaderText = "Estado"
         Me.estado.MinimumWidth = 6
         Me.estado.Name = "estado"
+        Me.estado.ReadOnly = True
         Me.estado.Width = 125
-        '
-        'telefone
-        '
-        Me.telefone.HeaderText = "Telefone"
-        Me.telefone.MinimumWidth = 6
-        Me.telefone.Name = "telefone"
-        Me.telefone.Width = 125
         '
         'cep
         '
         Me.cep.HeaderText = "CEP"
         Me.cep.MinimumWidth = 6
         Me.cep.Name = "cep"
+        Me.cep.ReadOnly = True
         Me.cep.Width = 125
+        '
+        'telefone
+        '
+        Me.telefone.HeaderText = "Telefone"
+        Me.telefone.MinimumWidth = 6
+        Me.telefone.Name = "telefone"
+        Me.telefone.ReadOnly = True
+        Me.telefone.Width = 125
         '
         'cpf
         '
         Me.cpf.HeaderText = "CPF"
         Me.cpf.MinimumWidth = 6
         Me.cpf.Name = "cpf"
+        Me.cpf.ReadOnly = True
         Me.cpf.Width = 125
         '
         'rg
@@ -449,6 +577,7 @@ Partial Class frmClientes
         Me.rg.HeaderText = "RG"
         Me.rg.MinimumWidth = 6
         Me.rg.Name = "rg"
+        Me.rg.ReadOnly = True
         Me.rg.Width = 125
         '
         'PrintPreviewDialog1
@@ -479,7 +608,7 @@ Partial Class frmClientes
         Me.Text = "Cadastro de Clientes"
         Me.gpbClientes.ResumeLayout(False)
         Me.gpbClientes.PerformLayout()
-        CType(Me.Grade, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -509,20 +638,29 @@ Partial Class frmClientes
     Friend WithEvents btnAlterar As System.Windows.Forms.Button
     Friend WithEvents btnSalvar As System.Windows.Forms.Button
     Friend WithEvents btnNovo As System.Windows.Forms.Button
-    Friend WithEvents Grade As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvCliente As System.Windows.Forms.DataGridView
     Friend WithEvents btnImpirmir As System.Windows.Forms.Button
-    Friend WithEvents codigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents nom As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents endereco As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents bairro As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cidade As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents estado As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents telefone As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cep As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cpf As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rg As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
     Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
-
+    Friend WithEvents mskCel As MaskedTextBox
+    Friend WithEvents lblEmail As Label
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents lblCelular As Label
+    Friend WithEvents mskDnascimento As MaskedTextBox
+    Friend WithEvents cboEstadoCivil As ComboBox
+    Friend WithEvents lblEstadoCivil As Label
+    Friend WithEvents lblDtNasc As Label
+    Friend WithEvents codigo As DataGridViewTextBoxColumn
+    Friend WithEvents nom As DataGridViewTextBoxColumn
+    Friend WithEvents Nascimento As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoCivil As DataGridViewTextBoxColumn
+    Friend WithEvents endereco As DataGridViewTextBoxColumn
+    Friend WithEvents bairro As DataGridViewTextBoxColumn
+    Friend WithEvents cidade As DataGridViewTextBoxColumn
+    Friend WithEvents estado As DataGridViewTextBoxColumn
+    Friend WithEvents cep As DataGridViewTextBoxColumn
+    Friend WithEvents telefone As DataGridViewTextBoxColumn
+    Friend WithEvents cpf As DataGridViewTextBoxColumn
+    Friend WithEvents rg As DataGridViewTextBoxColumn
 End Class

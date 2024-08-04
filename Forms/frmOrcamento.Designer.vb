@@ -19,7 +19,6 @@ Partial Class frmOrcamento
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmOrcamento))
         Me.gpbOrcamento = New System.Windows.Forms.GroupBox()
         Me.cboFuncionario = New System.Windows.Forms.ComboBox()
@@ -73,7 +72,7 @@ Partial Class frmOrcamento
         Me.txtTotalgeral = New System.Windows.Forms.TextBox()
         Me.lblTotalgeral = New System.Windows.Forms.Label()
         Me.btnConsultar = New System.Windows.Forms.Button()
-        Me.er = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.er = New System.Windows.Forms.ErrorProvider()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
@@ -297,11 +296,14 @@ Partial Class frmOrcamento
         '
         'dgvServico
         '
+        Me.dgvServico.AllowUserToAddRows = False
+        Me.dgvServico.AllowUserToDeleteRows = False
         Me.dgvServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvServico.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numero, Me.data, Me.cliente, Me.funcionario, Me.servico, Me.valorservico})
         Me.dgvServico.Location = New System.Drawing.Point(19, 81)
         Me.dgvServico.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvServico.Name = "dgvServico"
+        Me.dgvServico.ReadOnly = True
         Me.dgvServico.RowHeadersWidth = 51
         Me.dgvServico.Size = New System.Drawing.Size(773, 175)
         Me.dgvServico.TabIndex = 27
@@ -311,6 +313,7 @@ Partial Class frmOrcamento
         Me.numero.HeaderText = "Número do Orçamento"
         Me.numero.MinimumWidth = 6
         Me.numero.Name = "numero"
+        Me.numero.ReadOnly = True
         Me.numero.Width = 125
         '
         'data
@@ -318,6 +321,7 @@ Partial Class frmOrcamento
         Me.data.HeaderText = "Data"
         Me.data.MinimumWidth = 6
         Me.data.Name = "data"
+        Me.data.ReadOnly = True
         Me.data.Width = 125
         '
         'cliente
@@ -325,6 +329,7 @@ Partial Class frmOrcamento
         Me.cliente.HeaderText = "Cliente"
         Me.cliente.MinimumWidth = 6
         Me.cliente.Name = "cliente"
+        Me.cliente.ReadOnly = True
         Me.cliente.Width = 125
         '
         'funcionario
@@ -332,6 +337,7 @@ Partial Class frmOrcamento
         Me.funcionario.HeaderText = "Funcionário"
         Me.funcionario.MinimumWidth = 6
         Me.funcionario.Name = "funcionario"
+        Me.funcionario.ReadOnly = True
         Me.funcionario.Width = 125
         '
         'servico
@@ -339,6 +345,7 @@ Partial Class frmOrcamento
         Me.servico.HeaderText = "Serviço"
         Me.servico.MinimumWidth = 6
         Me.servico.Name = "servico"
+        Me.servico.ReadOnly = True
         Me.servico.Width = 125
         '
         'valorservico
@@ -346,6 +353,7 @@ Partial Class frmOrcamento
         Me.valorservico.HeaderText = "Valor do Serviço"
         Me.valorservico.MinimumWidth = 6
         Me.valorservico.Name = "valorservico"
+        Me.valorservico.ReadOnly = True
         Me.valorservico.Width = 125
         '
         'gpbPecas
@@ -399,11 +407,14 @@ Partial Class frmOrcamento
         '
         'dgvPeca
         '
+        Me.dgvPeca.AllowUserToAddRows = False
+        Me.dgvPeca.AllowUserToDeleteRows = False
         Me.dgvPeca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPeca.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nrorcamento1, Me.peca, Me.valorpeca, Me.quantidade, Me.totalpeca})
         Me.dgvPeca.Location = New System.Drawing.Point(19, 78)
         Me.dgvPeca.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvPeca.Name = "dgvPeca"
+        Me.dgvPeca.ReadOnly = True
         Me.dgvPeca.RowHeadersWidth = 51
         Me.dgvPeca.Size = New System.Drawing.Size(773, 185)
         Me.dgvPeca.TabIndex = 26
@@ -413,6 +424,7 @@ Partial Class frmOrcamento
         Me.nrorcamento1.HeaderText = "Número do Orcamento"
         Me.nrorcamento1.MinimumWidth = 6
         Me.nrorcamento1.Name = "nrorcamento1"
+        Me.nrorcamento1.ReadOnly = True
         Me.nrorcamento1.Width = 125
         '
         'peca
@@ -420,6 +432,7 @@ Partial Class frmOrcamento
         Me.peca.HeaderText = "Peças"
         Me.peca.MinimumWidth = 6
         Me.peca.Name = "peca"
+        Me.peca.ReadOnly = True
         Me.peca.Width = 125
         '
         'valorpeca
@@ -427,6 +440,7 @@ Partial Class frmOrcamento
         Me.valorpeca.HeaderText = "Valor Unitário"
         Me.valorpeca.MinimumWidth = 6
         Me.valorpeca.Name = "valorpeca"
+        Me.valorpeca.ReadOnly = True
         Me.valorpeca.Width = 125
         '
         'quantidade
@@ -434,6 +448,7 @@ Partial Class frmOrcamento
         Me.quantidade.HeaderText = "Quantidade"
         Me.quantidade.MinimumWidth = 6
         Me.quantidade.Name = "quantidade"
+        Me.quantidade.ReadOnly = True
         Me.quantidade.Width = 125
         '
         'totalpeca
@@ -441,6 +456,7 @@ Partial Class frmOrcamento
         Me.totalpeca.HeaderText = "Total"
         Me.totalpeca.MinimumWidth = 6
         Me.totalpeca.Name = "totalpeca"
+        Me.totalpeca.ReadOnly = True
         Me.totalpeca.Width = 125
         '
         'txtTotalpeca

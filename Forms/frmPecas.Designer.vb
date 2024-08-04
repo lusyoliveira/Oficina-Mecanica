@@ -243,11 +243,14 @@ Partial Class frmPecas
         '
         'dgvPeca
         '
+        Me.dgvPeca.AllowUserToAddRows = False
+        Me.dgvPeca.AllowUserToDeleteRows = False
         Me.dgvPeca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPeca.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.descricao, Me.valor, Me.modelo, Me.tipo})
         Me.dgvPeca.Location = New System.Drawing.Point(19, 122)
         Me.dgvPeca.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvPeca.Name = "dgvPeca"
+        Me.dgvPeca.ReadOnly = True
         Me.dgvPeca.RowHeadersWidth = 51
         Me.dgvPeca.Size = New System.Drawing.Size(799, 380)
         Me.dgvPeca.TabIndex = 0
@@ -257,6 +260,7 @@ Partial Class frmPecas
         Me.codigo.HeaderText = "Código"
         Me.codigo.MinimumWidth = 6
         Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
         Me.codigo.Width = 125
         '
         'descricao
@@ -264,6 +268,7 @@ Partial Class frmPecas
         Me.descricao.HeaderText = "Descrição"
         Me.descricao.MinimumWidth = 6
         Me.descricao.Name = "descricao"
+        Me.descricao.ReadOnly = True
         Me.descricao.Width = 125
         '
         'valor
@@ -271,6 +276,7 @@ Partial Class frmPecas
         Me.valor.HeaderText = "Valor"
         Me.valor.MinimumWidth = 6
         Me.valor.Name = "valor"
+        Me.valor.ReadOnly = True
         Me.valor.Width = 125
         '
         'modelo
@@ -278,6 +284,7 @@ Partial Class frmPecas
         Me.modelo.HeaderText = "Modelo"
         Me.modelo.MinimumWidth = 6
         Me.modelo.Name = "modelo"
+        Me.modelo.ReadOnly = True
         Me.modelo.Width = 125
         '
         'tipo
@@ -285,6 +292,7 @@ Partial Class frmPecas
         Me.tipo.HeaderText = "Tipo"
         Me.tipo.MinimumWidth = 6
         Me.tipo.Name = "tipo"
+        Me.tipo.ReadOnly = True
         Me.tipo.Width = 125
         '
         'lblTipo
@@ -296,9 +304,6 @@ Partial Class frmPecas
         Me.lblTipo.Size = New System.Drawing.Size(35, 16)
         Me.lblTipo.TabIndex = 60
         Me.lblTipo.Text = "Tipo"
-        '
-        'PrintDocument1
-        '
         '
         'PrintPreviewDialog1
         '

@@ -326,5 +326,21 @@ Public Class clsUsuario
             MessageBox.Show("Erro ao consultar o Administrador: " & ex.Message)
         End Try
     End Function
+    Public Sub SalverNivel(Descricao As String)
+        Try
+            Using connection As New SqlConnection(ClasseConexao.connectionString)
+                connection.Open()
+                Dim sql As String = "INSERT INTO tbNivel (Descricao) VALUES (@Descricao)"
+                Using command As New SqlCommand(sql, connection)
+                    command.Parameters.AddWithValue("@Descricao", Descricao)
+                    command.ExecuteNonQuery()
+                End Using
+                connection.Close()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Erro ao salvar nível: " & ex.Message)
+        End Try
+    End Sub
+
 #End Region
 End Class

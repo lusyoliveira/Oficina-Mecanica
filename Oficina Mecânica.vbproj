@@ -67,66 +67,67 @@
     <Compile Include="Classes\clsCombo.vb" />
     <Compile Include="Classes\clsConexao.vb" />
     <Compile Include="Classes\clsConfiguracao.vb" />
+    <Compile Include="Classes\clsEntidades.vb" />
     <Compile Include="Classes\clsFornecedores.vb" />
     <Compile Include="Classes\clsFuncionarios.vb" />
     <Compile Include="Classes\clsVeiculos.vb" />
     <Compile Include="Classes\clsServico.vb" />
     <Compile Include="Classes\clsPecas.vb" />
     <Compile Include="Classes\clsUsuario.vb" />
-    <Compile Include="clsOrcamento.vb" />
-    <Compile Include="frmPermissao.designer.vb">
+    <Compile Include="Classes\clsOrcamento.vb" />
+    <Compile Include="Forms\frmPermissao.designer.vb">
       <DependentUpon>frmPermissao.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPermissao.vb">
+    <Compile Include="Forms\frmPermissao.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientes.vb">
+    <Compile Include="Forms\frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientes.Designer.vb">
+    <Compile Include="Forms\frmClientes.Designer.vb">
       <DependentUpon>frmClientes.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFuncionarios.Designer.vb">
+    <Compile Include="Forms\frmFuncionarios.Designer.vb">
       <DependentUpon>frmFuncionarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmFuncionarios.vb">
+    <Compile Include="Forms\frmFuncionarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.designer.vb">
+    <Compile Include="Forms\frmLogin.designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.vb">
+    <Compile Include="Forms\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOrcamento.Designer.vb">
+    <Compile Include="Forms\frmOrcamento.Designer.vb">
       <DependentUpon>frmOrcamento.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmOrcamento.vb">
+    <Compile Include="Forms\frmOrcamento.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPecas.Designer.vb">
+    <Compile Include="Forms\frmPecas.Designer.vb">
       <DependentUpon>frmPecas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPecas.vb">
+    <Compile Include="Forms\frmPecas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.designer.vb">
+    <Compile Include="Forms\frmPrincipal.designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.vb">
+    <Compile Include="Forms\frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUsuarios.Designer.vb">
+    <Compile Include="Forms\frmUsuarios.Designer.vb">
       <DependentUpon>frmUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmUsuarios.vb">
+    <Compile Include="Forms\frmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVeiculos.Designer.vb">
+    <Compile Include="Forms\frmVeiculos.Designer.vb">
       <DependentUpon>frmVeiculos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmVeiculos.vb">
+    <Compile Include="Forms\frmVeiculos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mdlFuncoes.vb" />
@@ -146,51 +147,51 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="frmConfig.Designer.vb">
+    <Compile Include="Forms\frmConfig.Designer.vb">
       <DependentUpon>frmConfig.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConfig.vb">
+    <Compile Include="Forms\frmConfig.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmConfig.resx">
+    <EmbeddedResource Include="Forms\frmConfig.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmConfig.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPermissao.resx">
+    <EmbeddedResource Include="Forms\frmPermissao.resx">
       <DependentUpon>frmPermissao.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClientes.resx">
+    <EmbeddedResource Include="Forms\frmClientes.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFuncionarios.resx">
+    <EmbeddedResource Include="Forms\frmFuncionarios.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmFuncionarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOrcamento.resx">
+    <EmbeddedResource Include="Forms\frmOrcamento.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmOrcamento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPecas.resx">
+    <EmbeddedResource Include="Forms\frmPecas.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmPecas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUsuarios.resx">
+    <EmbeddedResource Include="Forms\frmUsuarios.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVeiculos.resx">
+    <EmbeddedResource Include="Forms\frmVeiculos.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmVeiculos.vb</DependentUpon>
     </EmbeddedResource>

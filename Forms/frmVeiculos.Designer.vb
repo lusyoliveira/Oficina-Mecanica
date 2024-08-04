@@ -178,11 +178,14 @@ Partial Class frmVeiculos
         '
         'dgvVeiculos
         '
+        Me.dgvVeiculos.AllowUserToAddRows = False
+        Me.dgvVeiculos.AllowUserToDeleteRows = False
         Me.dgvVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVeiculos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.placaletra, Me.placanumero, Me.modelo, Me.ano, Me.combustivel, Me.chassiss, Me.renavan})
         Me.dgvVeiculos.Location = New System.Drawing.Point(8, 75)
         Me.dgvVeiculos.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvVeiculos.Name = "dgvVeiculos"
+        Me.dgvVeiculos.ReadOnly = True
         Me.dgvVeiculos.RowHeadersWidth = 51
         Me.dgvVeiculos.Size = New System.Drawing.Size(1012, 497)
         Me.dgvVeiculos.TabIndex = 16
@@ -192,6 +195,7 @@ Partial Class frmVeiculos
         Me.codigo.HeaderText = "Código"
         Me.codigo.MinimumWidth = 6
         Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
         Me.codigo.Width = 125
         '
         'placaletra
@@ -199,6 +203,7 @@ Partial Class frmVeiculos
         Me.placaletra.HeaderText = "Letra da Placa"
         Me.placaletra.MinimumWidth = 6
         Me.placaletra.Name = "placaletra"
+        Me.placaletra.ReadOnly = True
         Me.placaletra.Width = 125
         '
         'placanumero
@@ -206,6 +211,7 @@ Partial Class frmVeiculos
         Me.placanumero.HeaderText = "Número da Placa"
         Me.placanumero.MinimumWidth = 6
         Me.placanumero.Name = "placanumero"
+        Me.placanumero.ReadOnly = True
         Me.placanumero.Width = 125
         '
         'modelo
@@ -213,6 +219,7 @@ Partial Class frmVeiculos
         Me.modelo.HeaderText = "Modelo"
         Me.modelo.MinimumWidth = 6
         Me.modelo.Name = "modelo"
+        Me.modelo.ReadOnly = True
         Me.modelo.Width = 125
         '
         'ano
@@ -220,6 +227,7 @@ Partial Class frmVeiculos
         Me.ano.HeaderText = "Ano de Fabricação"
         Me.ano.MinimumWidth = 6
         Me.ano.Name = "ano"
+        Me.ano.ReadOnly = True
         Me.ano.Width = 125
         '
         'combustivel
@@ -227,6 +235,7 @@ Partial Class frmVeiculos
         Me.combustivel.HeaderText = "Combustivél"
         Me.combustivel.MinimumWidth = 6
         Me.combustivel.Name = "combustivel"
+        Me.combustivel.ReadOnly = True
         Me.combustivel.Width = 125
         '
         'chassiss
@@ -234,6 +243,7 @@ Partial Class frmVeiculos
         Me.chassiss.HeaderText = "Chassiss"
         Me.chassiss.MinimumWidth = 6
         Me.chassiss.Name = "chassiss"
+        Me.chassiss.ReadOnly = True
         Me.chassiss.Width = 125
         '
         'renavan
@@ -241,6 +251,7 @@ Partial Class frmVeiculos
         Me.renavan.HeaderText = "Renavan"
         Me.renavan.MinimumWidth = 6
         Me.renavan.Name = "renavan"
+        Me.renavan.ReadOnly = True
         Me.renavan.Width = 125
         '
         'txtRenavan

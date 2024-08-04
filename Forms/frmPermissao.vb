@@ -35,4 +35,15 @@ Public Class frmPermissao
             Exit Sub
         End If
     End Sub
+
+    Private Sub btnSalvarNivel_Click(sender As Object, e As EventArgs) Handles btnSalvarNivel.Click
+        Dim MsgResult As DialogResult = MessageBox.Show("Confirma inclusão do nível?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If MsgResult = DialogResult.Yes Then
+            ClasseUsuario.SalverNivel(txtNivel.Text)
+            limpar()
+        Else
+            Exit Sub
+        End If
+    End Sub
 End Class
