@@ -32,6 +32,7 @@ Partial Class frmPrincipal
         Me.FuncináriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PeçasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VeículosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServiçosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServiçosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SairToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -100,7 +101,7 @@ Partial Class frmPrincipal
         '
         'CadastrosToolStripMenuItem
         '
-        Me.CadastrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.FuncináriosToolStripMenuItem, Me.PeçasToolStripMenuItem, Me.VeículosToolStripMenuItem})
+        Me.CadastrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.FuncináriosToolStripMenuItem, Me.PeçasToolStripMenuItem, Me.VeículosToolStripMenuItem, Me.ServiçosToolStripMenuItem1})
         Me.CadastrosToolStripMenuItem.Name = "CadastrosToolStripMenuItem"
         Me.CadastrosToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
         Me.CadastrosToolStripMenuItem.Text = "Cadastros"
@@ -128,6 +129,12 @@ Partial Class frmPrincipal
         Me.VeículosToolStripMenuItem.Name = "VeículosToolStripMenuItem"
         Me.VeículosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.VeículosToolStripMenuItem.Text = "Veículos"
+        '
+        'ServiçosToolStripMenuItem1
+        '
+        Me.ServiçosToolStripMenuItem1.Name = "ServiçosToolStripMenuItem1"
+        Me.ServiçosToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.ServiçosToolStripMenuItem1.Text = "Serviços"
         '
         'ServiçosToolStripMenuItem
         '
@@ -157,7 +164,7 @@ Partial Class frmPrincipal
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmPrincipal"
         Me.Text = "Oficina Mecânica"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -185,4 +192,5 @@ Partial Class frmPrincipal
     Friend WithEvents PermissãoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SairToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfiguraçõesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ServiçosToolStripMenuItem1 As ToolStripMenuItem
 End Class

@@ -1,7 +1,5 @@
 ﻿Public Class frmFuncionarios
-    Dim ClasseFuncionario As New clsEntidades
-    Dim x, wcpagina As Integer
-    Dim wcimagem As Image
+    Dim ClasseFuncionario As New clsEntidades, ClasseCombo As New clsCombo, x, wcpagina As Integer, wcimagem As Image
     Private Sub frmFuncionarios_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ClasseFuncionario.PesquisaEntidade(Grade, Val(lblCodigo.Text), txtNome.Text, "FU")
     End Sub
@@ -17,7 +15,6 @@
         mkdCep.Text = ""
         mkdCpf.Text = ""
         mkdRg.Text = ""
-
     End Sub
 
     Private Sub btnSalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalvar.Click
@@ -26,7 +23,7 @@
         If MsgResult = DialogResult.Yes Then
             ClasseFuncionario.SalvarEntidade(txtNome.Text, txtNome.Text, "", "", txtEndereco.Text, "", txtBairro.Text, txtCidade.Text, txtEstado.Text, mkdCep.Text, "", mkdRg.Text, mkdCpf.Text, "", "FU")
             ClasseFuncionario.SalvarContato(Val(lblCodigo.Text), mkdTelefone.Text, "", mkdcelular.Text, "")
-            ClasseFuncionario.SalvarCargo(Val(lblCodigo.Text), txtNumero.Text, mkdCarteira.Text, txtCargo.Text, txtSalario.Text, "")
+            ClasseFuncionario.SalvarCargo(Val(lblCodigo.Text), Val(txtNumero.Text), Val(mkdCarteira.Text), cboCargo.SelectedValue, txtSalario.Text, "")
             limpar()
             ClasseFuncionario.PesquisaEntidade(Grade, Val(lblCodigo.Text), txtNome.Text, "FU")
         Else
@@ -34,11 +31,30 @@
         End If
     End Sub
 
+    Private Sub cboCargo_Enter(sender As Object, e As EventArgs) Handles cboCargo.Enter
+        Dim ListaCargo = ClasseCombo.PreencherComboBox("SELECT * FROM tbCargo ORDER BY Cargo", "Codigo", "Cargo")
+        With Me.cboCargo
+            .DataSource = ListaCargo
+            .ValueMember = "Codigo"
+            .DisplayMember = "Descricao"
+            .SelectedIndex = "0"
+        End With
+    End Sub
+    Private Sub cboEstadoCivil_Enter(sender As Object, e As EventArgs) Handles cboEstadoCivil.Enter
+        Dim ListaCivil = ClasseCombo.PreencherComboBox("SELECT * FROM tbEstadoCivil ORDER BY Descricao", "Codigo", "Descricao")
+        With Me.cboEstadoCivil
+            .DataSource = ListaCivil
+            .ValueMember = "Codigo"
+            .DisplayMember = "Descricao"
+            .SelectedIndex = "0"
+        End With
+    End Sub
+
     Private Sub btnAlterar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAlterar.Click
         Dim MsgResult As DialogResult = MessageBox.Show("Confirma a inclusão do fornecedor?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If MsgResult = DialogResult.Yes Then
-            ClasseFuncionario.AlterarCargo(Val(lblCodigo.Text), ClasseFuncionario.CodCargo, txtNumero.Text, mkdCarteira.Text, txtCargo.Text, txtSalario.Text, "")
+            ClasseFuncionario.AlterarCargo(Val(lblCodigo.Text), ClasseFuncionario.CodCargo, txtNumero.Text, mkdCarteira.Text, cboCargo.Text, txtSalario.Text, "")
             ClasseFuncionario.AlterarContato(Val(lblCodigo.Text), ClasseFuncionario.CodContato, mkdTelefone.Text, "", mkdcelular.Text, "")
             ClasseFuncionario.AlterarEntidade(Val(lblCodigo.Text), txtNome.Text, txtNome.Text, "", "", txtEndereco.Text, "", txtBairro.Text, txtCidade.Text, txtEstado.Text, mkdCep.Text, "", mkdRg.Text, mkdCpf.Text, "")
             limpar()

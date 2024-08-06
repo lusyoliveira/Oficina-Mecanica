@@ -19,60 +19,59 @@ Partial Class frmOrcamento
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmOrcamento))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gpbOrcamento = New System.Windows.Forms.GroupBox()
+        Me.txtData = New System.Windows.Forms.DateTimePicker()
         Me.cboFuncionario = New System.Windows.Forms.ComboBox()
+        Me.cbxDesconto = New System.Windows.Forms.CheckBox()
+        Me.lblTotalgeral = New System.Windows.Forms.Label()
+        Me.txtTotalgeral = New System.Windows.Forms.TextBox()
         Me.lblFuncionario = New System.Windows.Forms.Label()
         Me.cboClientes = New System.Windows.Forms.ComboBox()
+        Me.lblValortotalpeca = New System.Windows.Forms.Label()
+        Me.txtValortotalpeca = New System.Windows.Forms.TextBox()
         Me.lblCliente = New System.Windows.Forms.Label()
-        Me.txtData = New System.Windows.Forms.TextBox()
+        Me.txtValortotalservico = New System.Windows.Forms.TextBox()
+        Me.lblValortotalservico = New System.Windows.Forms.Label()
         Me.lblData = New System.Windows.Forms.Label()
         Me.cbxAprovado = New System.Windows.Forms.CheckBox()
         Me.txtNumero = New System.Windows.Forms.TextBox()
+        Me.txtDesconto = New System.Windows.Forms.TextBox()
         Me.lblNumero = New System.Windows.Forms.Label()
+        Me.lblDesconto = New System.Windows.Forms.Label()
         Me.btnImpirmir = New System.Windows.Forms.Button()
         Me.lblServico = New System.Windows.Forms.Label()
         Me.cboServico = New System.Windows.Forms.ComboBox()
         Me.lblTotalservico = New System.Windows.Forms.Label()
         Me.txtTotalservico = New System.Windows.Forms.TextBox()
         Me.gpbServico = New System.Windows.Forms.GroupBox()
-        Me.btnExcluirservico = New System.Windows.Forms.Button()
-        Me.btnOkservico = New System.Windows.Forms.Button()
+        Me.btnExcluirServico = New System.Windows.Forms.Button()
+        Me.btnAdicionarSev = New System.Windows.Forms.Button()
         Me.dgvServico = New System.Windows.Forms.DataGridView()
-        Me.numero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.data = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.funcionario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodServ = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.servico = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valorservico = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gpbPecas = New System.Windows.Forms.GroupBox()
-        Me.btnExcluirpeca = New System.Windows.Forms.Button()
-        Me.btnOkpeca = New System.Windows.Forms.Button()
+        Me.btnExcluirPeca = New System.Windows.Forms.Button()
+        Me.btnAdicionarPeca = New System.Windows.Forms.Button()
         Me.dgvPeca = New System.Windows.Forms.DataGridView()
-        Me.nrorcamento1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodPecas = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.peca = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.valorpeca = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.quantidade = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.totalpeca = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.txtTotalpeca = New System.Windows.Forms.TextBox()
-        Me.txtValorpeca = New System.Windows.Forms.TextBox()
+        Me.txtTotalPeca = New System.Windows.Forms.TextBox()
+        Me.txtValorPeca = New System.Windows.Forms.TextBox()
         Me.lblPeca = New System.Windows.Forms.Label()
-        Me.txtQuantidadepeca = New System.Windows.Forms.TextBox()
+        Me.txtQuantidadePeca = New System.Windows.Forms.TextBox()
         Me.lblTotalpeca = New System.Windows.Forms.Label()
         Me.lblQuantidadepeca = New System.Windows.Forms.Label()
         Me.lblValorpeca = New System.Windows.Forms.Label()
         Me.cboPecas = New System.Windows.Forms.ComboBox()
-        Me.txtDesconto = New System.Windows.Forms.TextBox()
-        Me.lblDesconto = New System.Windows.Forms.Label()
-        Me.cbxDesconto = New System.Windows.Forms.CheckBox()
-        Me.txtValortotalservico = New System.Windows.Forms.TextBox()
-        Me.lblValortotalservico = New System.Windows.Forms.Label()
-        Me.txtValortotalpeca = New System.Windows.Forms.TextBox()
-        Me.lblValortotalpeca = New System.Windows.Forms.Label()
-        Me.txtTotalgeral = New System.Windows.Forms.TextBox()
-        Me.lblTotalgeral = New System.Windows.Forms.Label()
         Me.btnConsultar = New System.Windows.Forms.Button()
-        Me.er = New System.Windows.Forms.ErrorProvider()
+        Me.er = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
@@ -80,49 +79,119 @@ Partial Class frmOrcamento
         Me.btnNovo = New System.Windows.Forms.Button()
         Me.btnSalvar = New System.Windows.Forms.Button()
         Me.btnAprovar = New System.Windows.Forms.Button()
+        Me.tcOrcamento = New System.Windows.Forms.TabControl()
+        Me.tpListagem = New System.Windows.Forms.TabPage()
+        Me.dgvOrcamento = New System.Windows.Forms.DataGridView()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Data = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Funcionario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TotalServico = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TotPeca = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Desconto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Aprovado = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.tpOrcamento = New System.Windows.Forms.TabPage()
         Me.gpbOrcamento.SuspendLayout()
         Me.gpbServico.SuspendLayout()
         CType(Me.dgvServico, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gpbPecas.SuspendLayout()
         CType(Me.dgvPeca, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.er, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tcOrcamento.SuspendLayout()
+        Me.tpListagem.SuspendLayout()
+        CType(Me.dgvOrcamento, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpOrcamento.SuspendLayout()
         Me.SuspendLayout()
         '
         'gpbOrcamento
         '
+        Me.gpbOrcamento.Controls.Add(Me.txtData)
         Me.gpbOrcamento.Controls.Add(Me.cboFuncionario)
+        Me.gpbOrcamento.Controls.Add(Me.cbxDesconto)
+        Me.gpbOrcamento.Controls.Add(Me.lblTotalgeral)
+        Me.gpbOrcamento.Controls.Add(Me.txtTotalgeral)
         Me.gpbOrcamento.Controls.Add(Me.lblFuncionario)
         Me.gpbOrcamento.Controls.Add(Me.cboClientes)
+        Me.gpbOrcamento.Controls.Add(Me.lblValortotalpeca)
+        Me.gpbOrcamento.Controls.Add(Me.txtValortotalpeca)
         Me.gpbOrcamento.Controls.Add(Me.lblCliente)
-        Me.gpbOrcamento.Controls.Add(Me.txtData)
+        Me.gpbOrcamento.Controls.Add(Me.txtValortotalservico)
+        Me.gpbOrcamento.Controls.Add(Me.lblValortotalservico)
         Me.gpbOrcamento.Controls.Add(Me.lblData)
         Me.gpbOrcamento.Controls.Add(Me.cbxAprovado)
         Me.gpbOrcamento.Controls.Add(Me.txtNumero)
+        Me.gpbOrcamento.Controls.Add(Me.txtDesconto)
         Me.gpbOrcamento.Controls.Add(Me.lblNumero)
+        Me.gpbOrcamento.Controls.Add(Me.lblDesconto)
         Me.gpbOrcamento.Controls.Add(Me.btnImpirmir)
-        Me.gpbOrcamento.Location = New System.Drawing.Point(13, 14)
+        Me.gpbOrcamento.Location = New System.Drawing.Point(8, 7)
         Me.gpbOrcamento.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbOrcamento.Name = "gpbOrcamento"
         Me.gpbOrcamento.Padding = New System.Windows.Forms.Padding(4)
-        Me.gpbOrcamento.Size = New System.Drawing.Size(809, 123)
+        Me.gpbOrcamento.Size = New System.Drawing.Size(1029, 123)
         Me.gpbOrcamento.TabIndex = 21
         Me.gpbOrcamento.TabStop = False
+        Me.gpbOrcamento.Text = "Orçamento"
+        '
+        'txtData
+        '
+        Me.txtData.Enabled = False
+        Me.txtData.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.txtData.Location = New System.Drawing.Point(118, 37)
+        Me.txtData.Name = "txtData"
+        Me.txtData.Size = New System.Drawing.Size(112, 22)
+        Me.txtData.TabIndex = 44
         '
         'cboFuncionario
         '
         Me.cboFuncionario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboFuncionario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.cboFuncionario.Enabled = False
         Me.cboFuncionario.FormattingEnabled = True
-        Me.cboFuncionario.Location = New System.Drawing.Point(387, 82)
+        Me.cboFuncionario.Location = New System.Drawing.Point(637, 38)
         Me.cboFuncionario.Margin = New System.Windows.Forms.Padding(4)
         Me.cboFuncionario.Name = "cboFuncionario"
-        Me.cboFuncionario.Size = New System.Drawing.Size(407, 24)
+        Me.cboFuncionario.Size = New System.Drawing.Size(379, 24)
         Me.cboFuncionario.TabIndex = 4
+        '
+        'cbxDesconto
+        '
+        Me.cbxDesconto.AutoSize = True
+        Me.cbxDesconto.Enabled = False
+        Me.cbxDesconto.Location = New System.Drawing.Point(424, 88)
+        Me.cbxDesconto.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbxDesconto.Name = "cbxDesconto"
+        Me.cbxDesconto.Size = New System.Drawing.Size(150, 20)
+        Me.cbxDesconto.TabIndex = 20
+        Me.cbxDesconto.Text = "Somente no Serviço"
+        Me.cbxDesconto.UseVisualStyleBackColor = True
+        '
+        'lblTotalgeral
+        '
+        Me.lblTotalgeral.AutoSize = True
+        Me.lblTotalgeral.Location = New System.Drawing.Point(320, 66)
+        Me.lblTotalgeral.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTotalgeral.Name = "lblTotalgeral"
+        Me.lblTotalgeral.Size = New System.Drawing.Size(74, 16)
+        Me.lblTotalgeral.TabIndex = 43
+        Me.lblTotalgeral.Text = "Total Geral"
+        '
+        'txtTotalgeral
+        '
+        Me.txtTotalgeral.Enabled = False
+        Me.txtTotalgeral.Location = New System.Drawing.Point(323, 86)
+        Me.txtTotalgeral.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTotalgeral.Name = "txtTotalgeral"
+        Me.txtTotalgeral.Size = New System.Drawing.Size(93, 22)
+        Me.txtTotalgeral.TabIndex = 23
+        Me.txtTotalgeral.Text = "0"
+        Me.txtTotalgeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblFuncionario
         '
         Me.lblFuncionario.AutoSize = True
-        Me.lblFuncionario.Location = New System.Drawing.Point(383, 63)
+        Me.lblFuncionario.Location = New System.Drawing.Point(634, 18)
         Me.lblFuncionario.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFuncionario.Name = "lblFuncionario"
         Me.lblFuncionario.Size = New System.Drawing.Size(77, 16)
@@ -133,31 +202,65 @@ Partial Class frmOrcamento
         '
         Me.cboClientes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboClientes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.cboClientes.Enabled = False
         Me.cboClientes.FormattingEnabled = True
-        Me.cboClientes.Location = New System.Drawing.Point(19, 82)
+        Me.cboClientes.Location = New System.Drawing.Point(237, 38)
         Me.cboClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.cboClientes.Name = "cboClientes"
-        Me.cboClientes.Size = New System.Drawing.Size(359, 24)
+        Me.cboClientes.Size = New System.Drawing.Size(392, 24)
         Me.cboClientes.TabIndex = 3
+        '
+        'lblValortotalpeca
+        '
+        Me.lblValortotalpeca.AutoSize = True
+        Me.lblValortotalpeca.Location = New System.Drawing.Point(219, 66)
+        Me.lblValortotalpeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblValortotalpeca.Name = "lblValortotalpeca"
+        Me.lblValortotalpeca.Size = New System.Drawing.Size(80, 16)
+        Me.lblValortotalpeca.TabIndex = 42
+        Me.lblValortotalpeca.Text = "Total Peças"
+        '
+        'txtValortotalpeca
+        '
+        Me.txtValortotalpeca.Enabled = False
+        Me.txtValortotalpeca.Location = New System.Drawing.Point(222, 86)
+        Me.txtValortotalpeca.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtValortotalpeca.Name = "txtValortotalpeca"
+        Me.txtValortotalpeca.Size = New System.Drawing.Size(93, 22)
+        Me.txtValortotalpeca.TabIndex = 22
+        Me.txtValortotalpeca.Text = "0"
+        Me.txtValortotalpeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblCliente
         '
         Me.lblCliente.AutoSize = True
-        Me.lblCliente.Location = New System.Drawing.Point(16, 63)
+        Me.lblCliente.Location = New System.Drawing.Point(234, 19)
         Me.lblCliente.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCliente.Name = "lblCliente"
         Me.lblCliente.Size = New System.Drawing.Size(48, 16)
         Me.lblCliente.TabIndex = 30
         Me.lblCliente.Text = "Cliente"
         '
-        'txtData
+        'txtValortotalservico
         '
-        Me.txtData.Location = New System.Drawing.Point(120, 38)
-        Me.txtData.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtData.Name = "txtData"
-        Me.txtData.Size = New System.Drawing.Size(93, 22)
-        Me.txtData.TabIndex = 15
-        Me.txtData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtValortotalservico.Enabled = False
+        Me.txtValortotalservico.Location = New System.Drawing.Point(121, 86)
+        Me.txtValortotalservico.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtValortotalservico.Name = "txtValortotalservico"
+        Me.txtValortotalservico.Size = New System.Drawing.Size(93, 22)
+        Me.txtValortotalservico.TabIndex = 21
+        Me.txtValortotalservico.Text = "0"
+        Me.txtValortotalservico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'lblValortotalservico
+        '
+        Me.lblValortotalservico.AutoSize = True
+        Me.lblValortotalservico.Location = New System.Drawing.Point(118, 66)
+        Me.lblValortotalservico.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblValortotalservico.Name = "lblValortotalservico"
+        Me.lblValortotalservico.Size = New System.Drawing.Size(87, 16)
+        Me.lblValortotalservico.TabIndex = 41
+        Me.lblValortotalservico.Text = "Total Serviço"
         '
         'lblData
         '
@@ -172,7 +275,8 @@ Partial Class frmOrcamento
         'cbxAprovado
         '
         Me.cbxAprovado.AutoSize = True
-        Me.cbxAprovado.Location = New System.Drawing.Point(235, 38)
+        Me.cbxAprovado.Enabled = False
+        Me.cbxAprovado.Location = New System.Drawing.Point(589, 86)
         Me.cbxAprovado.Margin = New System.Windows.Forms.Padding(4)
         Me.cbxAprovado.Name = "cbxAprovado"
         Me.cbxAprovado.Size = New System.Drawing.Size(89, 20)
@@ -182,12 +286,24 @@ Partial Class frmOrcamento
         '
         'txtNumero
         '
+        Me.txtNumero.Enabled = False
         Me.txtNumero.Location = New System.Drawing.Point(19, 38)
         Me.txtNumero.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNumero.Name = "txtNumero"
         Me.txtNumero.Size = New System.Drawing.Size(93, 22)
         Me.txtNumero.TabIndex = 0
         Me.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtDesconto
+        '
+        Me.txtDesconto.Enabled = False
+        Me.txtDesconto.Location = New System.Drawing.Point(19, 86)
+        Me.txtDesconto.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDesconto.Name = "txtDesconto"
+        Me.txtDesconto.Size = New System.Drawing.Size(96, 22)
+        Me.txtDesconto.TabIndex = 19
+        Me.txtDesconto.Text = "0"
+        Me.txtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblNumero
         '
@@ -198,6 +314,16 @@ Partial Class frmOrcamento
         Me.lblNumero.Size = New System.Drawing.Size(91, 16)
         Me.lblNumero.TabIndex = 28
         Me.lblNumero.Text = "Nº Orçamento"
+        '
+        'lblDesconto
+        '
+        Me.lblDesconto.AutoSize = True
+        Me.lblDesconto.Location = New System.Drawing.Point(16, 66)
+        Me.lblDesconto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDesconto.Name = "lblDesconto"
+        Me.lblDesconto.Size = New System.Drawing.Size(65, 16)
+        Me.lblDesconto.TabIndex = 40
+        Me.lblDesconto.Text = "Desconto"
         '
         'btnImpirmir
         '
@@ -223,6 +349,7 @@ Partial Class frmOrcamento
         '
         Me.cboServico.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboServico.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.cboServico.Enabled = False
         Me.cboServico.FormattingEnabled = True
         Me.cboServico.Location = New System.Drawing.Point(19, 38)
         Me.cboServico.Margin = New System.Windows.Forms.Padding(4)
@@ -242,103 +369,82 @@ Partial Class frmOrcamento
         '
         'txtTotalservico
         '
+        Me.txtTotalservico.Enabled = False
         Me.txtTotalservico.Location = New System.Drawing.Point(439, 39)
         Me.txtTotalservico.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalservico.Name = "txtTotalservico"
         Me.txtTotalservico.Size = New System.Drawing.Size(93, 22)
         Me.txtTotalservico.TabIndex = 8
+        Me.txtTotalservico.Text = "0"
         Me.txtTotalservico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'gpbServico
         '
-        Me.gpbServico.Controls.Add(Me.btnExcluirservico)
-        Me.gpbServico.Controls.Add(Me.btnOkservico)
+        Me.gpbServico.Controls.Add(Me.btnExcluirServico)
+        Me.gpbServico.Controls.Add(Me.btnAdicionarSev)
         Me.gpbServico.Controls.Add(Me.dgvServico)
         Me.gpbServico.Controls.Add(Me.cboServico)
         Me.gpbServico.Controls.Add(Me.lblServico)
         Me.gpbServico.Controls.Add(Me.txtTotalservico)
         Me.gpbServico.Controls.Add(Me.lblTotalservico)
-        Me.gpbServico.Location = New System.Drawing.Point(13, 144)
+        Me.gpbServico.Location = New System.Drawing.Point(7, 138)
         Me.gpbServico.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbServico.Name = "gpbServico"
         Me.gpbServico.Padding = New System.Windows.Forms.Padding(4)
-        Me.gpbServico.Size = New System.Drawing.Size(809, 278)
+        Me.gpbServico.Size = New System.Drawing.Size(1029, 253)
         Me.gpbServico.TabIndex = 44
         Me.gpbServico.TabStop = False
+        Me.gpbServico.Text = "Serviços"
         '
-        'btnExcluirservico
+        'btnExcluirServico
         '
-        Me.btnExcluirservico.BackgroundImage = CType(resources.GetObject("btnExcluirservico.BackgroundImage"), System.Drawing.Image)
-        Me.btnExcluirservico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnExcluirservico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluirservico.Location = New System.Drawing.Point(683, 18)
-        Me.btnExcluirservico.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnExcluirservico.Name = "btnExcluirservico"
-        Me.btnExcluirservico.Size = New System.Drawing.Size(109, 55)
-        Me.btnExcluirservico.TabIndex = 24
-        Me.btnExcluirservico.Text = "Excluir"
-        Me.btnExcluirservico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnExcluirservico.UseVisualStyleBackColor = True
+        Me.btnExcluirServico.BackgroundImage = CType(resources.GetObject("btnExcluirServico.BackgroundImage"), System.Drawing.Image)
+        Me.btnExcluirServico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnExcluirServico.Enabled = False
+        Me.btnExcluirServico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExcluirServico.Location = New System.Drawing.Point(958, 151)
+        Me.btnExcluirServico.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExcluirServico.Name = "btnExcluirServico"
+        Me.btnExcluirServico.Size = New System.Drawing.Size(58, 55)
+        Me.btnExcluirServico.TabIndex = 24
+        Me.btnExcluirServico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExcluirServico.UseVisualStyleBackColor = True
         '
-        'btnOkservico
+        'btnAdicionarSev
         '
-        Me.btnOkservico.BackgroundImage = CType(resources.GetObject("btnOkservico.BackgroundImage"), System.Drawing.Image)
-        Me.btnOkservico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnOkservico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOkservico.Location = New System.Drawing.Point(552, 18)
-        Me.btnOkservico.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnOkservico.Name = "btnOkservico"
-        Me.btnOkservico.Size = New System.Drawing.Size(109, 55)
-        Me.btnOkservico.TabIndex = 9
-        Me.btnOkservico.Text = "OK"
-        Me.btnOkservico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnOkservico.UseVisualStyleBackColor = True
+        Me.btnAdicionarSev.BackgroundImage = CType(resources.GetObject("btnAdicionarSev.BackgroundImage"), System.Drawing.Image)
+        Me.btnAdicionarSev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAdicionarSev.Enabled = False
+        Me.btnAdicionarSev.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdicionarSev.Location = New System.Drawing.Point(958, 88)
+        Me.btnAdicionarSev.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAdicionarSev.Name = "btnAdicionarSev"
+        Me.btnAdicionarSev.Size = New System.Drawing.Size(58, 55)
+        Me.btnAdicionarSev.TabIndex = 9
+        Me.btnAdicionarSev.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAdicionarSev.UseVisualStyleBackColor = True
         '
         'dgvServico
         '
         Me.dgvServico.AllowUserToAddRows = False
         Me.dgvServico.AllowUserToDeleteRows = False
         Me.dgvServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvServico.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.numero, Me.data, Me.cliente, Me.funcionario, Me.servico, Me.valorservico})
-        Me.dgvServico.Location = New System.Drawing.Point(19, 81)
+        Me.dgvServico.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodServ, Me.servico, Me.valorservico})
+        Me.dgvServico.Location = New System.Drawing.Point(19, 70)
         Me.dgvServico.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvServico.Name = "dgvServico"
         Me.dgvServico.ReadOnly = True
         Me.dgvServico.RowHeadersWidth = 51
-        Me.dgvServico.Size = New System.Drawing.Size(773, 175)
+        Me.dgvServico.Size = New System.Drawing.Size(931, 161)
         Me.dgvServico.TabIndex = 27
         '
-        'numero
+        'CodServ
         '
-        Me.numero.HeaderText = "Número do Orçamento"
-        Me.numero.MinimumWidth = 6
-        Me.numero.Name = "numero"
-        Me.numero.ReadOnly = True
-        Me.numero.Width = 125
-        '
-        'data
-        '
-        Me.data.HeaderText = "Data"
-        Me.data.MinimumWidth = 6
-        Me.data.Name = "data"
-        Me.data.ReadOnly = True
-        Me.data.Width = 125
-        '
-        'cliente
-        '
-        Me.cliente.HeaderText = "Cliente"
-        Me.cliente.MinimumWidth = 6
-        Me.cliente.Name = "cliente"
-        Me.cliente.ReadOnly = True
-        Me.cliente.Width = 125
-        '
-        'funcionario
-        '
-        Me.funcionario.HeaderText = "Funcionário"
-        Me.funcionario.MinimumWidth = 6
-        Me.funcionario.Name = "funcionario"
-        Me.funcionario.ReadOnly = True
-        Me.funcionario.Width = 125
+        Me.CodServ.HeaderText = "Codigo"
+        Me.CodServ.MinimumWidth = 6
+        Me.CodServ.Name = "CodServ"
+        Me.CodServ.ReadOnly = True
+        Me.CodServ.Width = 125
         '
         'servico
         '
@@ -350,6 +456,8 @@ Partial Class frmOrcamento
         '
         'valorservico
         '
+        DataGridViewCellStyle1.NullValue = "0"
+        Me.valorservico.DefaultCellStyle = DataGridViewCellStyle1
         Me.valorservico.HeaderText = "Valor do Serviço"
         Me.valorservico.MinimumWidth = 6
         Me.valorservico.Name = "valorservico"
@@ -358,74 +466,75 @@ Partial Class frmOrcamento
         '
         'gpbPecas
         '
-        Me.gpbPecas.Controls.Add(Me.btnExcluirpeca)
-        Me.gpbPecas.Controls.Add(Me.btnOkpeca)
+        Me.gpbPecas.Controls.Add(Me.btnExcluirPeca)
+        Me.gpbPecas.Controls.Add(Me.btnAdicionarPeca)
         Me.gpbPecas.Controls.Add(Me.dgvPeca)
-        Me.gpbPecas.Controls.Add(Me.txtTotalpeca)
-        Me.gpbPecas.Controls.Add(Me.txtValorpeca)
+        Me.gpbPecas.Controls.Add(Me.txtTotalPeca)
+        Me.gpbPecas.Controls.Add(Me.txtValorPeca)
         Me.gpbPecas.Controls.Add(Me.lblPeca)
-        Me.gpbPecas.Controls.Add(Me.txtQuantidadepeca)
+        Me.gpbPecas.Controls.Add(Me.txtQuantidadePeca)
         Me.gpbPecas.Controls.Add(Me.lblTotalpeca)
         Me.gpbPecas.Controls.Add(Me.lblQuantidadepeca)
         Me.gpbPecas.Controls.Add(Me.lblValorpeca)
         Me.gpbPecas.Controls.Add(Me.cboPecas)
-        Me.gpbPecas.Location = New System.Drawing.Point(13, 430)
+        Me.gpbPecas.Location = New System.Drawing.Point(8, 399)
         Me.gpbPecas.Margin = New System.Windows.Forms.Padding(4)
         Me.gpbPecas.Name = "gpbPecas"
         Me.gpbPecas.Padding = New System.Windows.Forms.Padding(4)
-        Me.gpbPecas.Size = New System.Drawing.Size(809, 337)
+        Me.gpbPecas.Size = New System.Drawing.Size(1029, 263)
         Me.gpbPecas.TabIndex = 45
         Me.gpbPecas.TabStop = False
+        Me.gpbPecas.Text = "Peças"
         '
-        'btnExcluirpeca
+        'btnExcluirPeca
         '
-        Me.btnExcluirpeca.BackgroundImage = CType(resources.GetObject("btnExcluirpeca.BackgroundImage"), System.Drawing.Image)
-        Me.btnExcluirpeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnExcluirpeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluirpeca.Location = New System.Drawing.Point(683, 271)
-        Me.btnExcluirpeca.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnExcluirpeca.Name = "btnExcluirpeca"
-        Me.btnExcluirpeca.Size = New System.Drawing.Size(109, 53)
-        Me.btnExcluirpeca.TabIndex = 25
-        Me.btnExcluirpeca.Text = "Excluir"
-        Me.btnExcluirpeca.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnExcluirpeca.UseVisualStyleBackColor = True
+        Me.btnExcluirPeca.BackgroundImage = CType(resources.GetObject("btnExcluirPeca.BackgroundImage"), System.Drawing.Image)
+        Me.btnExcluirPeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnExcluirPeca.Enabled = False
+        Me.btnExcluirPeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExcluirPeca.Location = New System.Drawing.Point(957, 165)
+        Me.btnExcluirPeca.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExcluirPeca.Name = "btnExcluirPeca"
+        Me.btnExcluirPeca.Size = New System.Drawing.Size(58, 53)
+        Me.btnExcluirPeca.TabIndex = 25
+        Me.btnExcluirPeca.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExcluirPeca.UseVisualStyleBackColor = True
         '
-        'btnOkpeca
+        'btnAdicionarPeca
         '
-        Me.btnOkpeca.BackgroundImage = CType(resources.GetObject("btnOkpeca.BackgroundImage"), System.Drawing.Image)
-        Me.btnOkpeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnOkpeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOkpeca.Location = New System.Drawing.Point(552, 271)
-        Me.btnOkpeca.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnOkpeca.Name = "btnOkpeca"
-        Me.btnOkpeca.Size = New System.Drawing.Size(109, 53)
-        Me.btnOkpeca.TabIndex = 14
-        Me.btnOkpeca.Text = "OK"
-        Me.btnOkpeca.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnOkpeca.UseVisualStyleBackColor = True
+        Me.btnAdicionarPeca.BackgroundImage = CType(resources.GetObject("btnAdicionarPeca.BackgroundImage"), System.Drawing.Image)
+        Me.btnAdicionarPeca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAdicionarPeca.Enabled = False
+        Me.btnAdicionarPeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdicionarPeca.Location = New System.Drawing.Point(957, 105)
+        Me.btnAdicionarPeca.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAdicionarPeca.Name = "btnAdicionarPeca"
+        Me.btnAdicionarPeca.Size = New System.Drawing.Size(58, 53)
+        Me.btnAdicionarPeca.TabIndex = 14
+        Me.btnAdicionarPeca.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAdicionarPeca.UseVisualStyleBackColor = True
         '
         'dgvPeca
         '
         Me.dgvPeca.AllowUserToAddRows = False
         Me.dgvPeca.AllowUserToDeleteRows = False
         Me.dgvPeca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPeca.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nrorcamento1, Me.peca, Me.valorpeca, Me.quantidade, Me.totalpeca})
+        Me.dgvPeca.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CodPecas, Me.peca, Me.valorpeca, Me.quantidade, Me.totalpeca})
         Me.dgvPeca.Location = New System.Drawing.Point(19, 78)
         Me.dgvPeca.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvPeca.Name = "dgvPeca"
         Me.dgvPeca.ReadOnly = True
         Me.dgvPeca.RowHeadersWidth = 51
-        Me.dgvPeca.Size = New System.Drawing.Size(773, 185)
+        Me.dgvPeca.Size = New System.Drawing.Size(931, 166)
         Me.dgvPeca.TabIndex = 26
         '
-        'nrorcamento1
+        'CodPecas
         '
-        Me.nrorcamento1.HeaderText = "Número do Orcamento"
-        Me.nrorcamento1.MinimumWidth = 6
-        Me.nrorcamento1.Name = "nrorcamento1"
-        Me.nrorcamento1.ReadOnly = True
-        Me.nrorcamento1.Width = 125
+        Me.CodPecas.HeaderText = "Código"
+        Me.CodPecas.MinimumWidth = 6
+        Me.CodPecas.Name = "CodPecas"
+        Me.CodPecas.ReadOnly = True
+        Me.CodPecas.Width = 125
         '
         'peca
         '
@@ -459,23 +568,27 @@ Partial Class frmOrcamento
         Me.totalpeca.ReadOnly = True
         Me.totalpeca.Width = 125
         '
-        'txtTotalpeca
+        'txtTotalPeca
         '
-        Me.txtTotalpeca.Location = New System.Drawing.Point(699, 44)
-        Me.txtTotalpeca.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtTotalpeca.Name = "txtTotalpeca"
-        Me.txtTotalpeca.Size = New System.Drawing.Size(93, 22)
-        Me.txtTotalpeca.TabIndex = 13
-        Me.txtTotalpeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtTotalPeca.Enabled = False
+        Me.txtTotalPeca.Location = New System.Drawing.Point(699, 44)
+        Me.txtTotalPeca.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTotalPeca.Name = "txtTotalPeca"
+        Me.txtTotalPeca.Size = New System.Drawing.Size(93, 22)
+        Me.txtTotalPeca.TabIndex = 13
+        Me.txtTotalPeca.Text = "0"
+        Me.txtTotalPeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'txtValorpeca
+        'txtValorPeca
         '
-        Me.txtValorpeca.Location = New System.Drawing.Point(497, 44)
-        Me.txtValorpeca.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtValorpeca.Name = "txtValorpeca"
-        Me.txtValorpeca.Size = New System.Drawing.Size(93, 22)
-        Me.txtValorpeca.TabIndex = 11
-        Me.txtValorpeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtValorPeca.Enabled = False
+        Me.txtValorPeca.Location = New System.Drawing.Point(497, 44)
+        Me.txtValorPeca.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtValorPeca.Name = "txtValorPeca"
+        Me.txtValorPeca.Size = New System.Drawing.Size(93, 22)
+        Me.txtValorPeca.TabIndex = 11
+        Me.txtValorPeca.Text = "0"
+        Me.txtValorPeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblPeca
         '
@@ -487,15 +600,16 @@ Partial Class frmOrcamento
         Me.lblPeca.TabIndex = 36
         Me.lblPeca.Text = "Peças"
         '
-        'txtQuantidadepeca
+        'txtQuantidadePeca
         '
-        Me.txtQuantidadepeca.Location = New System.Drawing.Point(598, 44)
-        Me.txtQuantidadepeca.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtQuantidadepeca.Name = "txtQuantidadepeca"
-        Me.txtQuantidadepeca.Size = New System.Drawing.Size(93, 22)
-        Me.txtQuantidadepeca.TabIndex = 12
-        Me.txtQuantidadepeca.Text = "0"
-        Me.txtQuantidadepeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtQuantidadePeca.Enabled = False
+        Me.txtQuantidadePeca.Location = New System.Drawing.Point(598, 44)
+        Me.txtQuantidadePeca.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtQuantidadePeca.Name = "txtQuantidadePeca"
+        Me.txtQuantidadePeca.Size = New System.Drawing.Size(93, 22)
+        Me.txtQuantidadePeca.TabIndex = 12
+        Me.txtQuantidadePeca.Text = "0"
+        Me.txtQuantidadePeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblTotalpeca
         '
@@ -531,6 +645,7 @@ Partial Class frmOrcamento
         '
         Me.cboPecas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboPecas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.cboPecas.Enabled = False
         Me.cboPecas.FormattingEnabled = True
         Me.cboPecas.Location = New System.Drawing.Point(19, 42)
         Me.cboPecas.Margin = New System.Windows.Forms.Padding(4)
@@ -538,102 +653,15 @@ Partial Class frmOrcamento
         Me.cboPecas.Size = New System.Drawing.Size(470, 24)
         Me.cboPecas.TabIndex = 10
         '
-        'txtDesconto
-        '
-        Me.txtDesconto.Location = New System.Drawing.Point(843, 481)
-        Me.txtDesconto.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtDesconto.Name = "txtDesconto"
-        Me.txtDesconto.Size = New System.Drawing.Size(93, 22)
-        Me.txtDesconto.TabIndex = 19
-        Me.txtDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'lblDesconto
-        '
-        Me.lblDesconto.AutoSize = True
-        Me.lblDesconto.Location = New System.Drawing.Point(837, 465)
-        Me.lblDesconto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblDesconto.Name = "lblDesconto"
-        Me.lblDesconto.Size = New System.Drawing.Size(65, 16)
-        Me.lblDesconto.TabIndex = 40
-        Me.lblDesconto.Text = "Desconto"
-        '
-        'cbxDesconto
-        '
-        Me.cbxDesconto.AutoSize = True
-        Me.cbxDesconto.Location = New System.Drawing.Point(843, 511)
-        Me.cbxDesconto.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbxDesconto.Name = "cbxDesconto"
-        Me.cbxDesconto.Size = New System.Drawing.Size(150, 20)
-        Me.cbxDesconto.TabIndex = 20
-        Me.cbxDesconto.Text = "Somente no Serviço"
-        Me.cbxDesconto.UseVisualStyleBackColor = True
-        '
-        'txtValortotalservico
-        '
-        Me.txtValortotalservico.Location = New System.Drawing.Point(841, 559)
-        Me.txtValortotalservico.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtValortotalservico.Name = "txtValortotalservico"
-        Me.txtValortotalservico.Size = New System.Drawing.Size(93, 22)
-        Me.txtValortotalservico.TabIndex = 21
-        Me.txtValortotalservico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'lblValortotalservico
-        '
-        Me.lblValortotalservico.AutoSize = True
-        Me.lblValortotalservico.Location = New System.Drawing.Point(837, 539)
-        Me.lblValortotalservico.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblValortotalservico.Name = "lblValortotalservico"
-        Me.lblValortotalservico.Size = New System.Drawing.Size(141, 16)
-        Me.lblValortotalservico.TabIndex = 41
-        Me.lblValortotalservico.Text = "Valor Total do Serviço"
-        '
-        'txtValortotalpeca
-        '
-        Me.txtValortotalpeca.Location = New System.Drawing.Point(843, 612)
-        Me.txtValortotalpeca.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtValortotalpeca.Name = "txtValortotalpeca"
-        Me.txtValortotalpeca.Size = New System.Drawing.Size(93, 22)
-        Me.txtValortotalpeca.TabIndex = 22
-        Me.txtValortotalpeca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'lblValortotalpeca
-        '
-        Me.lblValortotalpeca.AutoSize = True
-        Me.lblValortotalpeca.Location = New System.Drawing.Point(839, 592)
-        Me.lblValortotalpeca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblValortotalpeca.Name = "lblValortotalpeca"
-        Me.lblValortotalpeca.Size = New System.Drawing.Size(134, 16)
-        Me.lblValortotalpeca.TabIndex = 42
-        Me.lblValortotalpeca.Text = "Valor Total do Peças"
-        '
-        'txtTotalgeral
-        '
-        Me.txtTotalgeral.Location = New System.Drawing.Point(843, 665)
-        Me.txtTotalgeral.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtTotalgeral.Name = "txtTotalgeral"
-        Me.txtTotalgeral.Size = New System.Drawing.Size(93, 22)
-        Me.txtTotalgeral.TabIndex = 23
-        Me.txtTotalgeral.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'lblTotalgeral
-        '
-        Me.lblTotalgeral.AutoSize = True
-        Me.lblTotalgeral.Location = New System.Drawing.Point(837, 644)
-        Me.lblTotalgeral.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblTotalgeral.Name = "lblTotalgeral"
-        Me.lblTotalgeral.Size = New System.Drawing.Size(74, 16)
-        Me.lblTotalgeral.TabIndex = 43
-        Me.lblTotalgeral.Text = "Total Geral"
-        '
         'btnConsultar
         '
         Me.btnConsultar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.binoculars
-        Me.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(843, 240)
+        Me.btnConsultar.Location = New System.Drawing.Point(722, 721)
         Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(119, 56)
+        Me.btnConsultar.Size = New System.Drawing.Size(119, 54)
         Me.btnConsultar.TabIndex = 17
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -661,9 +689,10 @@ Partial Class frmOrcamento
         'btnExcluir
         '
         Me.btnExcluir.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ball_stop
-        Me.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnExcluir.Enabled = False
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluir.Location = New System.Drawing.Point(843, 304)
+        Me.btnExcluir.Location = New System.Drawing.Point(595, 721)
         Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(119, 54)
@@ -675,12 +704,12 @@ Partial Class frmOrcamento
         'btnNovo
         '
         Me.btnNovo.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.document
-        Me.btnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovo.Location = New System.Drawing.Point(843, 45)
+        Me.btnNovo.Location = New System.Drawing.Point(212, 721)
         Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNovo.Name = "btnNovo"
-        Me.btnNovo.Size = New System.Drawing.Size(119, 60)
+        Me.btnNovo.Size = New System.Drawing.Size(119, 54)
         Me.btnNovo.TabIndex = 2
         Me.btnNovo.Text = "Novo"
         Me.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -689,9 +718,10 @@ Partial Class frmOrcamento
         'btnSalvar
         '
         Me.btnSalvar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.external_hd
-        Me.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnSalvar.Enabled = False
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalvar.Location = New System.Drawing.Point(843, 113)
+        Me.btnSalvar.Location = New System.Drawing.Point(339, 720)
         Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
         Me.btnSalvar.Size = New System.Drawing.Size(119, 55)
@@ -703,39 +733,149 @@ Partial Class frmOrcamento
         'btnAprovar
         '
         Me.btnAprovar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ok1
-        Me.btnAprovar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnAprovar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAprovar.Enabled = False
         Me.btnAprovar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAprovar.Location = New System.Drawing.Point(841, 176)
+        Me.btnAprovar.Location = New System.Drawing.Point(466, 721)
         Me.btnAprovar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAprovar.Name = "btnAprovar"
-        Me.btnAprovar.Size = New System.Drawing.Size(121, 56)
+        Me.btnAprovar.Size = New System.Drawing.Size(121, 54)
         Me.btnAprovar.TabIndex = 16
         Me.btnAprovar.Text = "Aprovar"
         Me.btnAprovar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAprovar.UseVisualStyleBackColor = True
         '
+        'tcOrcamento
+        '
+        Me.tcOrcamento.Controls.Add(Me.tpListagem)
+        Me.tcOrcamento.Controls.Add(Me.tpOrcamento)
+        Me.tcOrcamento.Location = New System.Drawing.Point(12, 12)
+        Me.tcOrcamento.Name = "tcOrcamento"
+        Me.tcOrcamento.SelectedIndex = 0
+        Me.tcOrcamento.Size = New System.Drawing.Size(1051, 698)
+        Me.tcOrcamento.TabIndex = 40
+        '
+        'tpListagem
+        '
+        Me.tpListagem.Controls.Add(Me.dgvOrcamento)
+        Me.tpListagem.Location = New System.Drawing.Point(4, 25)
+        Me.tpListagem.Name = "tpListagem"
+        Me.tpListagem.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpListagem.Size = New System.Drawing.Size(1043, 669)
+        Me.tpListagem.TabIndex = 1
+        Me.tpListagem.Text = "Listagem"
+        Me.tpListagem.UseVisualStyleBackColor = True
+        '
+        'dgvOrcamento
+        '
+        Me.dgvOrcamento.AllowUserToAddRows = False
+        Me.dgvOrcamento.AllowUserToDeleteRows = False
+        Me.dgvOrcamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvOrcamento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Data, Me.Cliente, Me.Funcionario, Me.TotalServico, Me.TotPeca, Me.Desconto, Me.Aprovado, Me.Total})
+        Me.dgvOrcamento.Location = New System.Drawing.Point(6, 6)
+        Me.dgvOrcamento.Name = "dgvOrcamento"
+        Me.dgvOrcamento.ReadOnly = True
+        Me.dgvOrcamento.RowHeadersWidth = 51
+        Me.dgvOrcamento.RowTemplate.Height = 24
+        Me.dgvOrcamento.Size = New System.Drawing.Size(1031, 657)
+        Me.dgvOrcamento.TabIndex = 0
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Código"
+        Me.Codigo.MinimumWidth = 6
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        Me.Codigo.Width = 125
+        '
+        'Data
+        '
+        Me.Data.HeaderText = "Data"
+        Me.Data.MinimumWidth = 6
+        Me.Data.Name = "Data"
+        Me.Data.ReadOnly = True
+        Me.Data.Width = 125
+        '
+        'Cliente
+        '
+        Me.Cliente.HeaderText = "Cliente"
+        Me.Cliente.MinimumWidth = 6
+        Me.Cliente.Name = "Cliente"
+        Me.Cliente.ReadOnly = True
+        Me.Cliente.Width = 125
+        '
+        'Funcionario
+        '
+        Me.Funcionario.HeaderText = "Funcionário"
+        Me.Funcionario.MinimumWidth = 6
+        Me.Funcionario.Name = "Funcionario"
+        Me.Funcionario.ReadOnly = True
+        Me.Funcionario.Width = 125
+        '
+        'TotalServico
+        '
+        Me.TotalServico.HeaderText = "Tot. Serviço"
+        Me.TotalServico.MinimumWidth = 6
+        Me.TotalServico.Name = "TotalServico"
+        Me.TotalServico.ReadOnly = True
+        Me.TotalServico.Width = 125
+        '
+        'TotPeca
+        '
+        Me.TotPeca.HeaderText = "Tot. Peças"
+        Me.TotPeca.MinimumWidth = 6
+        Me.TotPeca.Name = "TotPeca"
+        Me.TotPeca.ReadOnly = True
+        Me.TotPeca.Width = 125
+        '
+        'Desconto
+        '
+        Me.Desconto.HeaderText = "Desconto"
+        Me.Desconto.MinimumWidth = 6
+        Me.Desconto.Name = "Desconto"
+        Me.Desconto.ReadOnly = True
+        Me.Desconto.Width = 125
+        '
+        'Aprovado
+        '
+        Me.Aprovado.HeaderText = "Aprovado"
+        Me.Aprovado.MinimumWidth = 6
+        Me.Aprovado.Name = "Aprovado"
+        Me.Aprovado.ReadOnly = True
+        Me.Aprovado.Width = 125
+        '
+        'Total
+        '
+        Me.Total.HeaderText = "Total"
+        Me.Total.MinimumWidth = 6
+        Me.Total.Name = "Total"
+        Me.Total.ReadOnly = True
+        Me.Total.Width = 125
+        '
+        'tpOrcamento
+        '
+        Me.tpOrcamento.Controls.Add(Me.gpbPecas)
+        Me.tpOrcamento.Controls.Add(Me.gpbServico)
+        Me.tpOrcamento.Controls.Add(Me.gpbOrcamento)
+        Me.tpOrcamento.Location = New System.Drawing.Point(4, 25)
+        Me.tpOrcamento.Name = "tpOrcamento"
+        Me.tpOrcamento.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpOrcamento.Size = New System.Drawing.Size(1043, 669)
+        Me.tpOrcamento.TabIndex = 0
+        Me.tpOrcamento.Text = "Orçamento"
+        Me.tpOrcamento.UseVisualStyleBackColor = True
+        '
         'frmOrcamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1008, 791)
+        Me.ClientSize = New System.Drawing.Size(1074, 791)
+        Me.Controls.Add(Me.tcOrcamento)
         Me.Controls.Add(Me.btnExcluir)
-        Me.Controls.Add(Me.txtTotalgeral)
-        Me.Controls.Add(Me.lblTotalgeral)
-        Me.Controls.Add(Me.txtValortotalpeca)
-        Me.Controls.Add(Me.lblValortotalpeca)
-        Me.Controls.Add(Me.txtValortotalservico)
-        Me.Controls.Add(Me.lblValortotalservico)
-        Me.Controls.Add(Me.cbxDesconto)
-        Me.Controls.Add(Me.txtDesconto)
-        Me.Controls.Add(Me.gpbPecas)
-        Me.Controls.Add(Me.lblDesconto)
-        Me.Controls.Add(Me.gpbOrcamento)
         Me.Controls.Add(Me.btnNovo)
         Me.Controls.Add(Me.btnSalvar)
         Me.Controls.Add(Me.btnConsultar)
         Me.Controls.Add(Me.btnAprovar)
-        Me.Controls.Add(Me.gpbServico)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmOrcamento"
@@ -750,8 +890,11 @@ Partial Class frmOrcamento
         Me.gpbPecas.PerformLayout()
         CType(Me.dgvPeca, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.er, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tcOrcamento.ResumeLayout(False)
+        Me.tpListagem.ResumeLayout(False)
+        CType(Me.dgvOrcamento, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpOrcamento.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents gpbOrcamento As System.Windows.Forms.GroupBox
@@ -767,24 +910,23 @@ Partial Class frmOrcamento
     Friend WithEvents lblFuncionario As System.Windows.Forms.Label
     Friend WithEvents cboClientes As System.Windows.Forms.ComboBox
     Friend WithEvents lblCliente As System.Windows.Forms.Label
-    Friend WithEvents txtData As System.Windows.Forms.TextBox
     Friend WithEvents lblData As System.Windows.Forms.Label
     Friend WithEvents lblServico As System.Windows.Forms.Label
     Friend WithEvents cboServico As System.Windows.Forms.ComboBox
     Friend WithEvents lblTotalservico As System.Windows.Forms.Label
     Friend WithEvents txtTotalservico As System.Windows.Forms.TextBox
     Friend WithEvents gpbServico As System.Windows.Forms.GroupBox
-    Friend WithEvents btnExcluirservico As System.Windows.Forms.Button
-    Friend WithEvents btnOkservico As System.Windows.Forms.Button
+    Friend WithEvents btnExcluirServico As System.Windows.Forms.Button
+    Friend WithEvents btnAdicionarSev As System.Windows.Forms.Button
     Friend WithEvents dgvServico As System.Windows.Forms.DataGridView
     Friend WithEvents gpbPecas As System.Windows.Forms.GroupBox
-    Friend WithEvents btnExcluirpeca As System.Windows.Forms.Button
-    Friend WithEvents btnOkpeca As System.Windows.Forms.Button
+    Friend WithEvents btnExcluirPeca As System.Windows.Forms.Button
+    Friend WithEvents btnAdicionarPeca As System.Windows.Forms.Button
     Friend WithEvents dgvPeca As System.Windows.Forms.DataGridView
-    Friend WithEvents txtTotalpeca As System.Windows.Forms.TextBox
-    Friend WithEvents txtValorpeca As System.Windows.Forms.TextBox
+    Friend WithEvents txtTotalPeca As System.Windows.Forms.TextBox
+    Friend WithEvents txtValorPeca As System.Windows.Forms.TextBox
     Friend WithEvents lblPeca As System.Windows.Forms.Label
-    Friend WithEvents txtQuantidadepeca As System.Windows.Forms.TextBox
+    Friend WithEvents txtQuantidadePeca As System.Windows.Forms.TextBox
     Friend WithEvents lblTotalpeca As System.Windows.Forms.Label
     Friend WithEvents lblQuantidadepeca As System.Windows.Forms.Label
     Friend WithEvents lblValorpeca As System.Windows.Forms.Label
@@ -798,20 +940,31 @@ Partial Class frmOrcamento
     Friend WithEvents lblValortotalpeca As System.Windows.Forms.Label
     Friend WithEvents txtTotalgeral As System.Windows.Forms.TextBox
     Friend WithEvents lblTotalgeral As System.Windows.Forms.Label
-    Friend WithEvents nrorcamento1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents peca As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents valorpeca As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents quantidade As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents totalpeca As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents er As System.Windows.Forms.ErrorProvider
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
-    Friend WithEvents numero As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents data As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents cliente As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents funcionario As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents servico As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents valorservico As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnExcluir As System.Windows.Forms.Button
+    Friend WithEvents txtData As DateTimePicker
+    Friend WithEvents CodPecas As DataGridViewTextBoxColumn
+    Friend WithEvents peca As DataGridViewTextBoxColumn
+    Friend WithEvents valorpeca As DataGridViewTextBoxColumn
+    Friend WithEvents quantidade As DataGridViewTextBoxColumn
+    Friend WithEvents totalpeca As DataGridViewTextBoxColumn
+    Friend WithEvents CodServ As DataGridViewTextBoxColumn
+    Friend WithEvents servico As DataGridViewTextBoxColumn
+    Friend WithEvents valorservico As DataGridViewTextBoxColumn
+    Friend WithEvents tcOrcamento As TabControl
+    Friend WithEvents tpOrcamento As TabPage
+    Friend WithEvents tpListagem As TabPage
+    Friend WithEvents dgvOrcamento As DataGridView
+    Friend WithEvents Codigo As DataGridViewTextBoxColumn
+    Friend WithEvents Data As DataGridViewTextBoxColumn
+    Friend WithEvents Cliente As DataGridViewTextBoxColumn
+    Friend WithEvents Funcionario As DataGridViewTextBoxColumn
+    Friend WithEvents TotalServico As DataGridViewTextBoxColumn
+    Friend WithEvents TotPeca As DataGridViewTextBoxColumn
+    Friend WithEvents Desconto As DataGridViewTextBoxColumn
+    Friend WithEvents Aprovado As DataGridViewCheckBoxColumn
+    Friend WithEvents Total As DataGridViewCheckBoxColumn
 End Class

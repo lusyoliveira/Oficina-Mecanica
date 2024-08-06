@@ -1,8 +1,6 @@
 Public Class frmClientes
-    Dim ClasseClientes As New clsEntidades
-    Dim x, wcpagina As Integer
-    Dim wcimagem As Image
-    Private Sub limpar()
+    Dim ClasseClientes As New clsEntidades, ClasseCombo As New clsCombo, x, wcpagina As Integer, wcimagem As Image
+    Private Sub Limpar()
         dgvCliente.Rows.Clear()
         txtCodigo.Text = ""
         txtNome.Text = ""
@@ -14,7 +12,6 @@ Public Class frmClientes
         mkdCep.Text = ""
         mkdCpf.Text = ""
         mkdRg.Text = ""
-
     End Sub
 
     Private Sub frmClientes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -60,8 +57,14 @@ Public Class frmClientes
         End If
     End Sub
 
-    Private Sub gpbClientes_Enter(sender As Object, e As EventArgs) Handles gpbClientes.Enter
-
+    Private Sub cboEstadoCivil_Enter(sender As Object, e As EventArgs) Handles cboEstadoCivil.Enter
+        Dim ListaCivil = ClasseCombo.PreencherComboBox("SELECT * FROM tbEstadoCivil ORDER BY Descricao", "Codigo", "Descricao")
+        With Me.cboEstadoCivil
+            .DataSource = ListaCivil
+            .ValueMember = "Codigo"
+            .DisplayMember = "Descricao"
+            .SelectedIndex = "0"
+        End With
     End Sub
 
     Private Sub btnConsultar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConsultar.Click

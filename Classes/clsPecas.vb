@@ -22,13 +22,13 @@ Public Class clsPecas
             _Descricao = value
         End Set
     End Property
-    Private Property _Valor As Decimal
-    Public Property Valor As Decimal
+    Private Property _ValorUnit As Decimal
+    Public Property ValorUnit As Decimal
         Get
-            Return _Valor
+            Return _ValorUnit
         End Get
         Set(value As Decimal)
-            _Valor = value
+            _ValorUnit = value
         End Set
     End Property
 #End Region
@@ -84,25 +84,25 @@ Public Class clsPecas
         End Try
         Return tbPecas
     End Function
-    Public Sub ConsultaPecas(CodPecas As Integer, ByRef DadosPecas As clsPecas)
+    Public Sub ObterPecas(ByRef DadosPecas As clsPecas, sql As String)
         Try
-            Using connection As New SqlConnection(ClasseConexao.connectionString)
-                connection.Open()
-                Dim sql As String = "SELECT * FROM tbServicos WHERE Codigo = @CodPecas"
-                Using cmd As New SqlCommand(sql, connection)
-                    cmd.Parameters.AddWithValue("@CodPecas", CodPecas)
-                    Using reader As SqlDataReader = cmd.ExecuteReader()
-                        While reader.Read()
-                            DadosPecas._CodPecas = reader.GetInt32(0)
-                            DadosPecas._Descricao = reader.GetString(1)
-                            DadosPecas._Valor = reader.GetDecimal(2)
+            Using cn = New SqlConnection(ClasseConexao.connectionString)
+                cn.Open()
+                Using CMD = New SqlCommand(sql, cn)
+                    Using RDR As SqlDataReader = CMD.ExecuteReader()
+                        While RDR.Read()
+                            DadosPecas._CodPecas = RDR.Item("Codigo")
+                            DadosPecas._Descricao = RDR.Item("Descricao")
+                            DadosPecas._ValorUnit = RDR.Item("Valor")
                         End While
+                        RDR.Close()
                     End Using
                 End Using
-                connection.Close()
+                cn.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show("Erro ao consultar o serviço: " & ex.Message)
+            MessageBox.Show("Não foi possível realizar a consulta!" & vbCrLf & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Throw
         End Try
     End Sub
     Public Sub SalvarPeca(descricao As String, valor As Decimal, modelo As String, tipo As String)
@@ -116,7 +116,6 @@ Public Class clsPecas
                     command.Parameters.AddWithValue("@valor", valor)
                     command.Parameters.AddWithValue("@modelo", modelo)
                     command.Parameters.AddWithValue("@tipo", tipo)
-
                     command.ExecuteNonQuery()
                     MessageBox.Show("Produto salvo com sucesso!")
                 End Using
@@ -164,7 +163,5 @@ Public Class clsPecas
             MessageBox.Show("Erro ao excluir peca: " & ex.Message)
         End Try
     End Sub
-
-
 #End Region
 End Class

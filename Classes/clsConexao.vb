@@ -4,7 +4,7 @@ Imports System.ServiceProcess
 Public Class clsConexao
 
     Private sqlServer = GetNomeSQLServer()  ' Substitua pelo nome do seu servidor
-    Private sqlDatabase = "dbPadaria"  ' Substitua pelo nome do seu banco de dados
+    Private sqlDatabase = "dbOficina"  ' Substitua pelo nome do seu banco de dados
     Private sqlUser = "sa"  ' Substitua pelo seu usuário
     Private sqlPassword = "123456"  ' Substitua pela sua senha
     Public connectionString As String = $"Server={sqlServer};Database={sqlDatabase};User Id={sqlUser};Password={sqlPassword};"

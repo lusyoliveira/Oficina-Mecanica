@@ -1,7 +1,5 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
-
 Public Class clsEntidades
     Dim ClasseConexao As New clsConexao, tbClientes, TbDependentes As New DataTable()
 #Region "CONSTRUTORES"
@@ -137,7 +135,7 @@ Public Class clsEntidades
 
 #End Region
 #Region "METODOS"
-    Public Function PesquisaEntidade(Grid As DataGridView, Codigo As Integer, NomeFantasia As String, Tipo As String) As DataTable
+    Public Sub PesquisaEntidade(Grid As DataGridView, Codigo As Integer, NomeFantasia As String, Tipo As String)
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()
@@ -173,42 +171,25 @@ Public Class clsEntidades
                     Dim adapter As New SqlDataAdapter(command)
                     adapter.Fill(tbClientes)
 
-                    'If tbClientes.Rows.Count > 0 Then
-                    '    Grid.Rows.Add(RDR.Item("Codigo").ToString,
-                    '           If(Not IsDBNull(RDR("NomeFantasia")), RDR("NomeFantasia"), ""),
-                    '               End If
-                    'For Each row As DataRow In tbClientes.Rows
-                    '        DgvGrade.Items.Add(row("Codigo").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("NomeFantasia").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("RazaoSocial").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("DataNasc").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("EstadoCivil").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("endereco").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("Complemento").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("bairro").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("Cidade").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("Uf").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("Cep").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("Sexo").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("Rg").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("Documento").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("obs").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("DataCadastro").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("DataAlteracao").ToString())
-                    '        lstGrade.Items(x).SubItems.Add(row("DataInativacao").ToString())
-                    '        x += 1
-                    '    Next
-                    'Else
-                    '    MessageBox.Show("Esse Cliente não Existe!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    'End If
+                    ' Verifica se o DataTable contém registros
+                    If tbClientes.Rows.Count > 0 Then
+
+                        ' Limpa as colunas existentes no DataGridView
+                        Grid.Columns.Clear()
+                        ' Configura o DataGridView para exibir os dados
+                        Grid.DataSource = tbClientes
+                    Else
+                        ' Se nenhum dado for encontrado, limpa o DataGridView e exibe uma mensagem
+                        Grid.DataSource = Nothing
+                        MessageBox.Show("Nenhum cliente encontrado com os critérios fornecidos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
                 End Using
                 connection.Close()
             End Using
         Catch ex As Exception
             MessageBox.Show("Erro ao consultar o produto: " & ex.Message)
         End Try
-        Return tbClientes
-    End Function
+    End Sub
     Public Sub ObterEntidade(Codigo As Integer, ByRef DadosEntidades As clsEntidades)
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)

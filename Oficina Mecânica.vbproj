@@ -63,18 +63,21 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\clsClientes.vb" />
     <Compile Include="Classes\clsCombo.vb" />
     <Compile Include="Classes\clsConexao.vb" />
     <Compile Include="Classes\clsConfiguracao.vb" />
     <Compile Include="Classes\clsEntidades.vb" />
-    <Compile Include="Classes\clsFornecedores.vb" />
-    <Compile Include="Classes\clsFuncionarios.vb" />
     <Compile Include="Classes\clsVeiculos.vb" />
     <Compile Include="Classes\clsServico.vb" />
     <Compile Include="Classes\clsPecas.vb" />
     <Compile Include="Classes\clsUsuario.vb" />
     <Compile Include="Classes\clsOrcamento.vb" />
+    <Compile Include="Forms\frmServico.Designer.vb">
+      <DependentUpon>frmServico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmServico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmPermissao.designer.vb">
       <DependentUpon>frmPermissao.vb</DependentUpon>
     </Compile>
@@ -155,6 +158,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\frmServico.resx">
+      <DependentUpon>frmServico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmConfig.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmConfig.vb</DependentUpon>

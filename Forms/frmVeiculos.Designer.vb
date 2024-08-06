@@ -20,7 +20,6 @@ Partial Class frmVeiculos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVeiculos))
-        Me.gpbVeiculos = New System.Windows.Forms.GroupBox()
         Me.btnNovo = New System.Windows.Forms.Button()
         Me.btnImpirmir = New System.Windows.Forms.Button()
         Me.btnExcluir = New System.Windows.Forms.Button()
@@ -55,49 +54,21 @@ Partial Class frmVeiculos
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.gpbVeiculos.SuspendLayout()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.tpListagem = New System.Windows.Forms.TabPage()
+        Me.tpCadastro = New System.Windows.Forms.TabPage()
         CType(Me.dgvVeiculos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.tpListagem.SuspendLayout()
+        Me.tpCadastro.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'gpbVeiculos
-        '
-        Me.gpbVeiculos.Controls.Add(Me.btnNovo)
-        Me.gpbVeiculos.Controls.Add(Me.btnImpirmir)
-        Me.gpbVeiculos.Controls.Add(Me.btnExcluir)
-        Me.gpbVeiculos.Controls.Add(Me.btnConsultar)
-        Me.gpbVeiculos.Controls.Add(Me.btnAlterar)
-        Me.gpbVeiculos.Controls.Add(Me.btnSalvar)
-        Me.gpbVeiculos.Controls.Add(Me.dgvVeiculos)
-        Me.gpbVeiculos.Controls.Add(Me.txtRenavan)
-        Me.gpbVeiculos.Controls.Add(Me.txtChassiss)
-        Me.gpbVeiculos.Controls.Add(Me.txtCombustivel)
-        Me.gpbVeiculos.Controls.Add(Me.txtAno)
-        Me.gpbVeiculos.Controls.Add(Me.txtModelo)
-        Me.gpbVeiculos.Controls.Add(Me.txtTraco)
-        Me.gpbVeiculos.Controls.Add(Me.txtPlacanumero)
-        Me.gpbVeiculos.Controls.Add(Me.txtPlacaletra)
-        Me.gpbVeiculos.Controls.Add(Me.txtCodigo)
-        Me.gpbVeiculos.Controls.Add(Me.lblRenavan)
-        Me.gpbVeiculos.Controls.Add(Me.lblChassiss)
-        Me.gpbVeiculos.Controls.Add(Me.lblCombustivel)
-        Me.gpbVeiculos.Controls.Add(Me.lblAno)
-        Me.gpbVeiculos.Controls.Add(Me.lblModelo)
-        Me.gpbVeiculos.Controls.Add(Me.lblPlaca)
-        Me.gpbVeiculos.Controls.Add(Me.lblCodigo)
-        Me.gpbVeiculos.Location = New System.Drawing.Point(13, 14)
-        Me.gpbVeiculos.Margin = New System.Windows.Forms.Padding(4)
-        Me.gpbVeiculos.Name = "gpbVeiculos"
-        Me.gpbVeiculos.Padding = New System.Windows.Forms.Padding(4)
-        Me.gpbVeiculos.Size = New System.Drawing.Size(1192, 593)
-        Me.gpbVeiculos.TabIndex = 0
-        Me.gpbVeiculos.TabStop = False
         '
         'btnNovo
         '
         Me.btnNovo.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.document
         Me.btnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNovo.Location = New System.Drawing.Point(1050, 119)
+        Me.btnNovo.Location = New System.Drawing.Point(273, 539)
         Me.btnNovo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNovo.Name = "btnNovo"
         Me.btnNovo.Size = New System.Drawing.Size(109, 55)
@@ -111,10 +82,10 @@ Partial Class frmVeiculos
         Me.btnImpirmir.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.print_view
         Me.btnImpirmir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnImpirmir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImpirmir.Location = New System.Drawing.Point(1050, 450)
+        Me.btnImpirmir.Location = New System.Drawing.Point(870, 539)
         Me.btnImpirmir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnImpirmir.Name = "btnImpirmir"
-        Me.btnImpirmir.Size = New System.Drawing.Size(109, 56)
+        Me.btnImpirmir.Size = New System.Drawing.Size(109, 55)
         Me.btnImpirmir.TabIndex = 22
         Me.btnImpirmir.Text = "Imprimir"
         Me.btnImpirmir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -125,10 +96,10 @@ Partial Class frmVeiculos
         Me.btnExcluir.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.ball_stop
         Me.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcluir.Location = New System.Drawing.Point(1050, 314)
+        Me.btnExcluir.Location = New System.Drawing.Point(624, 539)
         Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExcluir.Name = "btnExcluir"
-        Me.btnExcluir.Size = New System.Drawing.Size(109, 59)
+        Me.btnExcluir.Size = New System.Drawing.Size(109, 55)
         Me.btnExcluir.TabIndex = 20
         Me.btnExcluir.Text = "Excluir"
         Me.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -139,10 +110,10 @@ Partial Class frmVeiculos
         Me.btnConsultar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.binoculars
         Me.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConsultar.Location = New System.Drawing.Point(1050, 381)
+        Me.btnConsultar.Location = New System.Drawing.Point(741, 539)
         Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(109, 61)
+        Me.btnConsultar.Size = New System.Drawing.Size(121, 55)
         Me.btnConsultar.TabIndex = 19
         Me.btnConsultar.Text = "Consultar"
         Me.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -153,10 +124,10 @@ Partial Class frmVeiculos
         Me.btnAlterar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.doc_info
         Me.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAlterar.Location = New System.Drawing.Point(1050, 246)
+        Me.btnAlterar.Location = New System.Drawing.Point(507, 539)
         Me.btnAlterar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAlterar.Name = "btnAlterar"
-        Me.btnAlterar.Size = New System.Drawing.Size(109, 60)
+        Me.btnAlterar.Size = New System.Drawing.Size(109, 55)
         Me.btnAlterar.TabIndex = 18
         Me.btnAlterar.Text = "Alterar"
         Me.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -167,10 +138,10 @@ Partial Class frmVeiculos
         Me.btnSalvar.BackgroundImage = Global.OficinaMecanica.My.Resources.Resources.external_hd
         Me.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalvar.Location = New System.Drawing.Point(1050, 182)
+        Me.btnSalvar.Location = New System.Drawing.Point(390, 539)
         Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(109, 56)
+        Me.btnSalvar.Size = New System.Drawing.Size(109, 55)
         Me.btnSalvar.TabIndex = 17
         Me.btnSalvar.Text = "Salvar"
         Me.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -182,12 +153,12 @@ Partial Class frmVeiculos
         Me.dgvVeiculos.AllowUserToDeleteRows = False
         Me.dgvVeiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVeiculos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.placaletra, Me.placanumero, Me.modelo, Me.ano, Me.combustivel, Me.chassiss, Me.renavan})
-        Me.dgvVeiculos.Location = New System.Drawing.Point(8, 75)
+        Me.dgvVeiculos.Location = New System.Drawing.Point(7, 7)
         Me.dgvVeiculos.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvVeiculos.Name = "dgvVeiculos"
         Me.dgvVeiculos.ReadOnly = True
         Me.dgvVeiculos.RowHeadersWidth = 51
-        Me.dgvVeiculos.Size = New System.Drawing.Size(1012, 497)
+        Me.dgvVeiculos.Size = New System.Drawing.Size(1177, 477)
         Me.dgvVeiculos.TabIndex = 16
         '
         'codigo
@@ -256,7 +227,8 @@ Partial Class frmVeiculos
         '
         'txtRenavan
         '
-        Me.txtRenavan.Location = New System.Drawing.Point(995, 43)
+        Me.txtRenavan.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtRenavan.Location = New System.Drawing.Point(1005, 33)
         Me.txtRenavan.Margin = New System.Windows.Forms.Padding(4)
         Me.txtRenavan.Name = "txtRenavan"
         Me.txtRenavan.Size = New System.Drawing.Size(164, 22)
@@ -264,7 +236,8 @@ Partial Class frmVeiculos
         '
         'txtChassiss
         '
-        Me.txtChassiss.Location = New System.Drawing.Point(788, 43)
+        Me.txtChassiss.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtChassiss.Location = New System.Drawing.Point(798, 33)
         Me.txtChassiss.Margin = New System.Windows.Forms.Padding(4)
         Me.txtChassiss.Name = "txtChassiss"
         Me.txtChassiss.Size = New System.Drawing.Size(199, 22)
@@ -272,7 +245,8 @@ Partial Class frmVeiculos
         '
         'txtCombustivel
         '
-        Me.txtCombustivel.Location = New System.Drawing.Point(581, 43)
+        Me.txtCombustivel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtCombustivel.Location = New System.Drawing.Point(591, 33)
         Me.txtCombustivel.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCombustivel.Name = "txtCombustivel"
         Me.txtCombustivel.Size = New System.Drawing.Size(199, 22)
@@ -280,7 +254,8 @@ Partial Class frmVeiculos
         '
         'txtAno
         '
-        Me.txtAno.Location = New System.Drawing.Point(448, 43)
+        Me.txtAno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtAno.Location = New System.Drawing.Point(458, 33)
         Me.txtAno.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAno.Name = "txtAno"
         Me.txtAno.Size = New System.Drawing.Size(124, 22)
@@ -288,7 +263,8 @@ Partial Class frmVeiculos
         '
         'txtModelo
         '
-        Me.txtModelo.Location = New System.Drawing.Point(256, 41)
+        Me.txtModelo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtModelo.Location = New System.Drawing.Point(266, 31)
         Me.txtModelo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtModelo.Name = "txtModelo"
         Me.txtModelo.Size = New System.Drawing.Size(184, 22)
@@ -297,7 +273,7 @@ Partial Class frmVeiculos
         'txtTraco
         '
         Me.txtTraco.AutoSize = True
-        Me.txtTraco.Location = New System.Drawing.Point(164, 43)
+        Me.txtTraco.Location = New System.Drawing.Point(174, 33)
         Me.txtTraco.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.txtTraco.Name = "txtTraco"
         Me.txtTraco.Size = New System.Drawing.Size(11, 16)
@@ -306,7 +282,8 @@ Partial Class frmVeiculos
         '
         'txtPlacanumero
         '
-        Me.txtPlacanumero.Location = New System.Drawing.Point(187, 41)
+        Me.txtPlacanumero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtPlacanumero.Location = New System.Drawing.Point(193, 30)
         Me.txtPlacanumero.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPlacanumero.Name = "txtPlacanumero"
         Me.txtPlacanumero.Size = New System.Drawing.Size(61, 22)
@@ -314,7 +291,8 @@ Partial Class frmVeiculos
         '
         'txtPlacaletra
         '
-        Me.txtPlacaletra.Location = New System.Drawing.Point(95, 41)
+        Me.txtPlacaletra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtPlacaletra.Location = New System.Drawing.Point(105, 31)
         Me.txtPlacaletra.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPlacaletra.Name = "txtPlacaletra"
         Me.txtPlacaletra.Size = New System.Drawing.Size(61, 22)
@@ -322,7 +300,8 @@ Partial Class frmVeiculos
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(7, 40)
+        Me.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtCodigo.Location = New System.Drawing.Point(17, 30)
         Me.txtCodigo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Size = New System.Drawing.Size(80, 22)
@@ -331,7 +310,7 @@ Partial Class frmVeiculos
         'lblRenavan
         '
         Me.lblRenavan.AutoSize = True
-        Me.lblRenavan.Location = New System.Drawing.Point(992, 22)
+        Me.lblRenavan.Location = New System.Drawing.Point(1002, 13)
         Me.lblRenavan.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRenavan.Name = "lblRenavan"
         Me.lblRenavan.Size = New System.Drawing.Size(62, 16)
@@ -341,7 +320,7 @@ Partial Class frmVeiculos
         'lblChassiss
         '
         Me.lblChassiss.AutoSize = True
-        Me.lblChassiss.Location = New System.Drawing.Point(785, 22)
+        Me.lblChassiss.Location = New System.Drawing.Point(795, 13)
         Me.lblChassiss.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblChassiss.Name = "lblChassiss"
         Me.lblChassiss.Size = New System.Drawing.Size(62, 16)
@@ -351,7 +330,7 @@ Partial Class frmVeiculos
         'lblCombustivel
         '
         Me.lblCombustivel.AutoSize = True
-        Me.lblCombustivel.Location = New System.Drawing.Point(579, 22)
+        Me.lblCombustivel.Location = New System.Drawing.Point(588, 13)
         Me.lblCombustivel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCombustivel.Name = "lblCombustivel"
         Me.lblCombustivel.Size = New System.Drawing.Size(81, 16)
@@ -361,7 +340,7 @@ Partial Class frmVeiculos
         'lblAno
         '
         Me.lblAno.AutoSize = True
-        Me.lblAno.Location = New System.Drawing.Point(445, 18)
+        Me.lblAno.Location = New System.Drawing.Point(455, 13)
         Me.lblAno.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAno.Name = "lblAno"
         Me.lblAno.Size = New System.Drawing.Size(122, 16)
@@ -371,7 +350,7 @@ Partial Class frmVeiculos
         'lblModelo
         '
         Me.lblModelo.AutoSize = True
-        Me.lblModelo.Location = New System.Drawing.Point(253, 21)
+        Me.lblModelo.Location = New System.Drawing.Point(263, 12)
         Me.lblModelo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblModelo.Name = "lblModelo"
         Me.lblModelo.Size = New System.Drawing.Size(53, 16)
@@ -381,7 +360,7 @@ Partial Class frmVeiculos
         'lblPlaca
         '
         Me.lblPlaca.AutoSize = True
-        Me.lblPlaca.Location = New System.Drawing.Point(92, 21)
+        Me.lblPlaca.Location = New System.Drawing.Point(105, 12)
         Me.lblPlaca.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPlaca.Name = "lblPlaca"
         Me.lblPlaca.Size = New System.Drawing.Size(42, 16)
@@ -391,7 +370,7 @@ Partial Class frmVeiculos
         'lblCodigo
         '
         Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Location = New System.Drawing.Point(4, 20)
+        Me.lblCodigo.Location = New System.Drawing.Point(14, 12)
         Me.lblCodigo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCodigo.Name = "lblCodigo"
         Me.lblCodigo.Size = New System.Drawing.Size(51, 16)
@@ -413,24 +392,78 @@ Partial Class frmVeiculos
         '
         Me.PrintDialog1.UseEXDialog = True
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.tpListagem)
+        Me.TabControl1.Controls.Add(Me.tpCadastro)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(1196, 520)
+        Me.TabControl1.TabIndex = 24
+        '
+        'tpListagem
+        '
+        Me.tpListagem.Controls.Add(Me.dgvVeiculos)
+        Me.tpListagem.Location = New System.Drawing.Point(4, 25)
+        Me.tpListagem.Name = "tpListagem"
+        Me.tpListagem.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpListagem.Size = New System.Drawing.Size(1188, 491)
+        Me.tpListagem.TabIndex = 0
+        Me.tpListagem.Text = "Listagem"
+        Me.tpListagem.UseVisualStyleBackColor = True
+        '
+        'tpCadastro
+        '
+        Me.tpCadastro.Controls.Add(Me.txtRenavan)
+        Me.tpCadastro.Controls.Add(Me.txtChassiss)
+        Me.tpCadastro.Controls.Add(Me.lblCodigo)
+        Me.tpCadastro.Controls.Add(Me.txtCombustivel)
+        Me.tpCadastro.Controls.Add(Me.lblPlaca)
+        Me.tpCadastro.Controls.Add(Me.txtAno)
+        Me.tpCadastro.Controls.Add(Me.lblModelo)
+        Me.tpCadastro.Controls.Add(Me.txtModelo)
+        Me.tpCadastro.Controls.Add(Me.lblAno)
+        Me.tpCadastro.Controls.Add(Me.txtTraco)
+        Me.tpCadastro.Controls.Add(Me.lblCombustivel)
+        Me.tpCadastro.Controls.Add(Me.txtPlacanumero)
+        Me.tpCadastro.Controls.Add(Me.lblChassiss)
+        Me.tpCadastro.Controls.Add(Me.txtPlacaletra)
+        Me.tpCadastro.Controls.Add(Me.lblRenavan)
+        Me.tpCadastro.Controls.Add(Me.txtCodigo)
+        Me.tpCadastro.Location = New System.Drawing.Point(4, 25)
+        Me.tpCadastro.Name = "tpCadastro"
+        Me.tpCadastro.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpCadastro.Size = New System.Drawing.Size(1188, 491)
+        Me.tpCadastro.TabIndex = 1
+        Me.tpCadastro.Text = "Cadastro"
+        Me.tpCadastro.UseVisualStyleBackColor = True
+        '
         'frmVeiculos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1220, 620)
-        Me.Controls.Add(Me.gpbVeiculos)
+        Me.Controls.Add(Me.btnNovo)
+        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.btnImpirmir)
+        Me.Controls.Add(Me.btnExcluir)
+        Me.Controls.Add(Me.btnConsultar)
+        Me.Controls.Add(Me.btnSalvar)
+        Me.Controls.Add(Me.btnAlterar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmVeiculos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cadastro de Veículos"
-        Me.gpbVeiculos.ResumeLayout(False)
-        Me.gpbVeiculos.PerformLayout()
         CType(Me.dgvVeiculos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.tpListagem.ResumeLayout(False)
+        Me.tpCadastro.ResumeLayout(False)
+        Me.tpCadastro.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents gpbVeiculos As System.Windows.Forms.GroupBox
     Friend WithEvents txtRenavan As System.Windows.Forms.TextBox
     Friend WithEvents txtChassiss As System.Windows.Forms.TextBox
     Friend WithEvents txtCombustivel As System.Windows.Forms.TextBox
@@ -465,4 +498,7 @@ Partial Class frmVeiculos
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
     Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents tpListagem As TabPage
+    Friend WithEvents tpCadastro As TabPage
 End Class

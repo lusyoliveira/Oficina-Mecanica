@@ -13,12 +13,13 @@ Public Class clsVeiculos
         Try
             Using connection As New SqlConnection(ClasseConexao.connectionString)
                 connection.Open()
-                Dim sql As New StringBuilder("SELECT * FROM tbVeiculos WHERE 1=1 ")
+                Dim sql As New StringBuilder("SELECT * FROM tbVeiculos WHERE 1=1")
+
                 If Codigo <> 0 Then
                     sql.AppendLine("AND Codigo = @Codigo")
                 End If
 
-                sql.AppendLine("ORDER BY Descricao")
+                sql.AppendLine("ORDER BY Modelo")
 
                 Using command As New SqlCommand(sql.ToString(), connection)
 
@@ -28,21 +29,18 @@ Public Class clsVeiculos
 
                     Dim adapter As New SqlDataAdapter(command)
                     adapter.Fill(tbVeiculos)
+
+                    ' Verifica se o DataTable contém registros
                     If tbVeiculos.Rows.Count > 0 Then
-                        With dgvGrade
-                            .Rows.Clear()
-                            For Each row As DataRow In tbVeiculos.Rows
-                                .Rows.Add(False)
-                                Dim x As Integer = tbVeiculos.Rows.Count - 1
-                                .Rows(x).Cells(0).Value = row("placalt").ToString()
-                                .Rows(x).Cells(1).Value = row("placanr").ToString()
-                                .Rows(x).Cells(3).Value = row("modelo").ToString()
-                                .Rows(x).Cells(4).Value = row("ano").ToString()
-                                .Rows(x).Cells(4).Value = row("combustivel").ToString()
-                                .Rows(x).Cells(4).Value = row("chassiss").ToString()
-                                .Rows(x).Cells(4).Value = row("renavan").ToString()
-                            Next
-                        End With
+
+                        ' Limpa as colunas existentes no DataGridView
+                        dgvGrade.Columns.Clear()
+                        ' Configura o DataGridView para exibir os dados
+                        dgvGrade.DataSource = tbVeiculos
+                    Else
+                        ' Se nenhum dado for encontrado, limpa o DataGridView e exibe uma mensagem
+                        dgvGrade.DataSource = Nothing
+                        MessageBox.Show("Nenhum cliente encontrado com os critérios fornecidos.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End If
                 End Using
                 connection.Close()

@@ -52,4 +52,9 @@
         frmAbreConfig.Show()
     End Sub
 
+    Private Sub ServiçosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ServiçosToolStripMenuItem1.Click
+        Dim frmAbreServico As New frmServico
+        frmAbreServico.MdiParent = Me
+        frmAbreServico.Show()
+    End Sub
 End Class
