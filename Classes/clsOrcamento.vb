@@ -66,7 +66,7 @@ Public Class clsOrcamento
                 cn.Close()
             End Using
         Catch ex As Exception
-            MessageBox.Show("Não foi possível realizar a consulta!" & vbCrLf & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Não foi possível realizar obter orçamento!" & vbCrLf & ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Throw
         End Try
     End Sub
@@ -291,7 +291,6 @@ Public Class clsOrcamento
         End Try
         Return tbOrcamento
     End Function
-
     Public Function CalcularOrcamento(GridServico As DataGridView, GridPecas As DataGridView, Desconto As Decimal) As (TotalServico As Decimal, TotalPecas As Decimal, TotalGeral As Decimal)
         Dim TotalServico, TotalPecas, TotalGeral As Decimal
 
